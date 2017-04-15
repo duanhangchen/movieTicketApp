@@ -10,23 +10,23 @@ public class Theater {
 
 	@Id
 	@GeneratedValue
-	private Integer id;
+	private Integer theaterId;
 	
 	private String theaterName;
 
 	public Integer getId() {
-		return id;
+		return theaterId;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setId(Integer theaterId) {
+		this.theaterId = theaterId;
 	}
 
-	public String getTheaterName() {
+	public String getName() {
 		return theaterName;
 	}
 
-	public void setTheaterName(String theaterName) {
+	public void setName(String theaterName) {
 		this.theaterName = theaterName;
 	}
 	

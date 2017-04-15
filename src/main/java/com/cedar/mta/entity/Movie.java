@@ -37,15 +37,18 @@ public class Movie {
 
 	@Enumerated(EnumType.STRING)
     private Category category;
+	@Enumerated(EnumType.STRING)
 	private Genre genre1;
+	@Enumerated(EnumType.STRING)
 	private Genre genre2;
+	@Enumerated(EnumType.STRING)
 	private Genre genre3;
 	
 	//Getters Setters
-	public Integer getMovieId() {
+	public Integer getId() {
 		return movieId;
 	}
-	public void setMovieId(Integer movieId) {
+	public void setId(Integer movieId) {
 		this.movieId = movieId;
 	}
 	public String getName() {
