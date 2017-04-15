@@ -2,6 +2,7 @@ package com.cedar.mta.entity;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -17,13 +18,16 @@ public class Movie {
 	
 	@Id
 	@GeneratedValue
-	private Integer movieId;
+	@Column(name = "movieId")
+	private Integer id;
 	
+	@Column(name = "movieName")
 	private String name;
 	
 	private Date releaseDate;
 	
-	private String moviePoster;
+	@Column(name = "moviePoster")
+	private String url;
 	
 	private String plot;
 	
@@ -43,13 +47,11 @@ public class Movie {
 	private Genre genre2;
 	@Enumerated(EnumType.STRING)
 	private Genre genre3;
-	
-	//Getters Setters
 	public Integer getId() {
-		return movieId;
+		return id;
 	}
-	public void setId(Integer movieId) {
-		this.movieId = movieId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;
@@ -63,11 +65,11 @@ public class Movie {
 	public void setReleaseDate(Date releaseDate) {
 		this.releaseDate = releaseDate;
 	}
-	public String getMoviePoster() {
-		return moviePoster;
+	public String getUrl() {
+		return url;
 	}
-	public void setMoviePoster(String moviePoster) {
-		this.moviePoster = moviePoster;
+	public void setUrl(String url) {
+		this.url = url;
 	}
 	public String getPlot() {
 		return plot;
@@ -124,7 +126,6 @@ public class Movie {
 		this.genre3 = genre3;
 	}
 	
-	
-	
+	//Getters Setters
 	
 }
