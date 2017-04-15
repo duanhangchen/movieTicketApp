@@ -7,6 +7,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+	<link href="<c:url value="/resources/css/footer.css" />" rel="stylesheet">
+    <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+    <link href="<c:url value="/resources/css/sign-up.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/navbar.css" />" rel="stylesheet">
+    <link href="<c:url value="/resources/css/blur.css" />" rel="stylesheet">
+    <link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet">
     <script src="<c:url value="/resources/js/jquery.1.10.2.min.js" />"></script>
     <script src="<c:url value="/resources/js/main.js" />"></script>
     <meta charset="UTF-8">
@@ -17,7 +23,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <%--<script src="./semantic/dist/semantic.min.js"></script>--%>
-    <script src="<c:url value="/resources//semantic/dist/semantic.min.js" />"></script>
     <script src="<c:url value="/resources/js/carousel.js" />"></script>
     <style>
         .container {
