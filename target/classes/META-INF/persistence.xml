@@ -4,5 +4,7 @@
 		<class>com.cedar.mta.entity.User</class>
 		<class>com.cedar.mta.entity.Role</class>
 		<class>com.cedar.mta.entity.Movie</class>
+		<class>com.cedar.mta.entity.Actor</class>
+		<class>com.cedar.mta.entity.Theater</class>
 	</persistence-unit>
 </persistence>

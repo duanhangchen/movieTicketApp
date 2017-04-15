@@ -51,7 +51,7 @@ public class InitDbService {
 		
 		Movie batman = new Movie();
 		batman.setName("Batman");
-		batman.setUrl("https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg");
+		batman.setMoviePoster("https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg");
 		movieRepository.save(batman);
 		
 		Movie logan= new Movie();
