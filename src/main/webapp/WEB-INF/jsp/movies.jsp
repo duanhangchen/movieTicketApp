@@ -12,7 +12,7 @@
 	<tbody>
 		<c:forEach items="${movies}" var="movie">
 			<tr>
-				<a href="<spring:url value="/movies/${movie.id}.html"/>">
+				<a href="<spring:url value="/movies/${movie.id}"/>">
 					${movie.name}
 				</a>
 			</tr>

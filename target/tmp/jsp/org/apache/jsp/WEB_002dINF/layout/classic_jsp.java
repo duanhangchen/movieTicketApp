@@ -113,10 +113,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<script\r\n");
       out.write("\tsrc=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\r\n");
       out.write("\r\n");
-      out.write("<script src=\"");
-      if (_jspx_meth_c_url_8(_jspx_page_context))
-        return;
-      out.write("\"></script>\r\n");
       out.write("<style>\r\n");
       out.write(".container {\r\n");
       out.write("\twidth: 90%;\r\n");
@@ -153,8 +149,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_spring_url_0(_jspx_page_context))
         return;
       out.write("'><img\r\n");
-      out.write("\t\t\t\tsrc=\"http://www.southjersey.com//images/page_movies.jpg\"\r\n");
-      out.write("\t\t\t\talt=\"Team Cedar\"></a>\r\n");
+      out.write("\t\t\t\tsrc=\"\" alt=\"Team Cedar\"></a>\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\r\n");
       out.write("\t\t<!-- Collect the nav links, forms, and other content for toggling -->\r\n");
@@ -520,24 +515,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
-  private boolean _jspx_meth_c_url_8(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:url
-    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_8 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
-    _jspx_th_c_url_8.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_8.setParent(null);
-    _jspx_th_c_url_8.setValue("/resources/js/carousel.js");
-    int _jspx_eval_c_url_8 = _jspx_th_c_url_8.doStartTag();
-    if (_jspx_th_c_url_8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_8);
-      return true;
-    }
-    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_8);
-    return false;
-  }
-
   private boolean _jspx_meth_tiles_getAsString_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -585,7 +562,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_1 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
     _jspx_th_spring_url_1.setPageContext(_jspx_page_context);
     _jspx_th_spring_url_1.setParent(null);
-    _jspx_th_spring_url_1.setValue("/movies.html");
+    _jspx_th_spring_url_1.setValue("/movies");
     int[] _jspx_push_body_count_spring_url_1 = new int[] { 0 };
     try {
       int _jspx_eval_spring_url_1 = _jspx_th_spring_url_1.doStartTag();

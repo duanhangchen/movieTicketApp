@@ -30,7 +30,6 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <%--<script src="./semantic/dist/semantic.min.js"></script>--%>
-<script src="<c:url value="/resources/js/carousel.js" />"></script>
 <style>
 .container {
 	width: 90%;
@@ -61,8 +60,7 @@
 			</button>
 
 			<a class="navbar-brand" href='<spring:url value="/" />'><img
-				src="http://www.southjersey.com//images/page_movies.jpg"
-				alt="Team Cedar"></a>
+				src="" alt="Team Cedar"></a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -85,7 +83,7 @@
 			<ul class="nav navbar-nav navbar-right">
 
 				<li class="dropdown"><a
-					href='<spring:url value="/movies.html" />' class="dropdown">MOVIES<b
+					href='<spring:url value="/movies" />' class="dropdown">MOVIES<b
 						class="caret"></b></a>
 					<ul class="dropdown-menu multi-column columns-4">
 						<div class="row">
