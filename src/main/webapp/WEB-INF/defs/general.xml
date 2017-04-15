@@ -14,4 +14,8 @@
 		<put-attribute name="title" value="Lists of Movies" />
 		<put-attribute name="body" value="/WEB-INF/jsp/movies.jsp" />
 	</definition>
+	<definition name="movie-detail" extends="common">
+		<put-attribute name="title" value="Movie Detail Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/movie-detail.jsp" />
+	</definition>
 </tiles-definitions>

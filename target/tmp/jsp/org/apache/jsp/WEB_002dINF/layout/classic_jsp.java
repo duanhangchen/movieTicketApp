@@ -148,12 +148,13 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\tclass=\"icon-bar\"></span> <span class=\"icon-bar\"></span> <span\r\n");
       out.write("\t\t\t\t\tclass=\"icon-bar\"></span>\r\n");
       out.write("\t\t\t</button>\r\n");
-      out.write("\t\t\t\r\n");
+      out.write("\r\n");
       out.write("\t\t\t<a class=\"navbar-brand\" href='");
       if (_jspx_meth_spring_url_0(_jspx_page_context))
         return;
       out.write("'><img\r\n");
-      out.write("\t\t\t\tsrc=\"http://www.southjersey.com//images/page_movies.jpg\" alt=\"Team Cedar\"></a>\r\n");
+      out.write("\t\t\t\tsrc=\"http://www.southjersey.com//images/page_movies.jpg\"\r\n");
+      out.write("\t\t\t\talt=\"Team Cedar\"></a>\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\r\n");
       out.write("\t\t<!-- Collect the nav links, forms, and other content for toggling -->\r\n");
@@ -175,11 +176,12 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t</ul>\r\n");
       out.write("\t\t\t<ul class=\"nav navbar-nav navbar-right\">\r\n");
       out.write("\r\n");
-      out.write("\t\t\t\t<li class=\"dropdown\"><a href='");
+      out.write("\t\t\t\t<li class=\"dropdown\"><a\r\n");
+      out.write("\t\t\t\t\thref='");
       if (_jspx_meth_spring_url_1(_jspx_page_context))
         return;
-      out.write("'\r\n");
-      out.write("\t\t\t\t\tclass=\"dropdown\">MOVIES<b class=\"caret\"></b></a>\r\n");
+      out.write("' class=\"dropdown\">MOVIES<b\r\n");
+      out.write("\t\t\t\t\t\tclass=\"caret\"></b></a>\r\n");
       out.write("\t\t\t\t\t<ul class=\"dropdown-menu multi-column columns-4\">\r\n");
       out.write("\t\t\t\t\t\t<div class=\"row\">\r\n");
       out.write("\t\t\t\t\t\t\t<div class=\"col-sm-3\">\r\n");
