@@ -1,0 +1,83 @@
+body {
+	background:
+		url(//images.fandango.com/fandango-www/screenplay/assets/images/pop/pop-header-bg.aa292583a36.jpg)
+		center center no-repeat #412522;
+	background-image:
+		url(//images.fandango.com/fandango-www/screenplay/assets/images/pop/pop-header-bg.aa292583a36.jpg);
+	background-position-x: center;
+	background-position-y: center;
+	background-size: cover;
+	background-repeat-x: no-repeat;
+	background-repeat-y: no-repeat;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(65, 37, 34);
+	background-size: cover;
+	position: relative;
+	color: whitesmoke;
+}
+
+#exTab1 .tab-content {
+	color: white;
+	padding: 5px 15px;
+}
+
+.pop-headshot--photo-img {
+	width: 160px;
+	padding-left: 20px;
+}
+
+.col-sm-6.biographyAndPhoto {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.col-sm-3.biographyAndPhoto {
+	padding-left: 0px;
+	/*padding-right: 0px;*/
+}
+
+.dob {
+	padding-top: 30px;
+	margin-left: 10px;
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-size: 13px;
+	line-height: 1.5;
+	font-style: italic;
+}
+
+.heading-center {
+	text-align: center;
+	padding-top: 10px;
+	/*font-family: alternate-gothic-no-1-d,"Futura Condensed","Arial Narrow",Arial,sans-serif;*/
+	/*font-size: 38px;*/
+	/*line-height:35px;*/
+}
+
+.para {
+	margin: 0;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 10px;
+}
+
+.row.bio {
+	background-color: rgba(51, 51, 51, .4);
+	padding-bottom: 30px;
+}
+
+.row.photo {
+	padding-top: 30px;
+	background-color: rgba(51, 51, 51, .4);
+	/*background-color: #262626;*/
+}
+
+.video-description {
+	padding-top: 10px;
+	color: #ccc;
+}
+
+.actor-name {
+	margin-top: 20px;
+}
