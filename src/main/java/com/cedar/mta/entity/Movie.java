@@ -1,12 +1,15 @@
 package com.cedar.mta.entity;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.GeneratedValue;
 
 
@@ -47,6 +50,14 @@ public class Movie {
 	private Genre genre2;
 	@Enumerated(EnumType.STRING)
 	private Genre genre3;
+	
+	@ManyToMany(mappedBy="movies")
+	private List<Accounts> accounts;
+	
+	@ManyToMany
+	@JoinTable(name="CastIn")
+	private List<Actor> actors;
+	
 	public Integer getId() {
 		return id;
 	}

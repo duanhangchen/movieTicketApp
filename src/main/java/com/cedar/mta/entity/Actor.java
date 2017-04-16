@@ -1,9 +1,11 @@
 package com.cedar.mta.entity;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.GeneratedValue;
 
 
@@ -23,6 +25,9 @@ public class Actor {
 	private String biography;
 	
 	private String awards;
+	
+	@ManyToMany(mappedBy="actors")
+	private List<Movie> movies;
 
 	public Integer getActorId() {
 		return actorId;
