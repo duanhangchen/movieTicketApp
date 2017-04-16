@@ -13,10 +13,9 @@ public class IndexController {
 	@Autowired
 	private MovieService movieService;
 	
-	@RequestMapping("/index")
+	@RequestMapping("/")
 	public String index(Model model){
 		model.addAttribute("movies",movieService.findAll());
 		return "index";
 	}
-
 }
