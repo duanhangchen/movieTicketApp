@@ -63,7 +63,7 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("<div id=\"exTab1\" class=\"container\">\r\n");
       out.write("\t<h1 class=\"actor-name\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("Overview</h1>\r\n");
+      out.write(" Overview</h1>\r\n");
       out.write("\t<ul class=\"nav nav-pills\">\r\n");
       out.write("\t\t<li class=\"active\"><a href=\"#1a\" data-toggle=\"tab\">Overview</a></li>\r\n");
       out.write("\t\t<li><a href=\"#2a\" data-toggle=\"tab\">Biography</a></li>\r\n");

@@ -56,7 +56,18 @@ public class InitDbService {
 		
 		Movie logan= new Movie();
 		logan.setName("Logan");
+		logan.setUrl("https://images-na.ssl-images-amazon.com/images/M/MV5BMjI1MjkzMjczMV5BMl5BanBnXkFtZTgwNDk4NjYyMTI@._V1_SX300.jpg");
 		movieRepository.save(logan);
+		
+		Movie getOut = new Movie();
+		getOut.setName("Get Out");
+		getOut.setUrl("https://images-na.ssl-images-amazon.com/images/M/MV5BNTE2Nzg1NjkzNV5BMl5BanBnXkFtZTgwOTgyODMyMTI@._V1_SX300.jpg");
+		movieRepository.save(getOut);
+		
+		Movie theGreatWall = new Movie();
+		theGreatWall.setName("The Great Wall");
+		theGreatWall.setUrl("https://images-na.ssl-images-amazon.com/images/M/MV5BMjA3MjAzOTQxNF5BMl5BanBnXkFtZTgwOTc5OTY1OTE@._V1_SX300.jpg");
+		movieRepository.save(theGreatWall);
 		
 		
 		

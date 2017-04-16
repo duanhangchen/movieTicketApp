@@ -6,7 +6,7 @@
 	rel="stylesheet">
 
 <div id="exTab1" class="container">
-	<h1 class="actor-name">${movie.name}Overview</h1>
+	<h1 class="actor-name">${movie.name} Overview</h1>
 	<ul class="nav nav-pills">
 		<li class="active"><a href="#1a" data-toggle="tab">Overview</a></li>
 		<li><a href="#2a" data-toggle="tab">Biography</a></li>

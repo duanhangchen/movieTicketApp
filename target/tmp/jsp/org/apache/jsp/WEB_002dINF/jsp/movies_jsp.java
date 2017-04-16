@@ -12,6 +12,7 @@ public final class movies_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_spring_url_value_nobody;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -22,11 +23,13 @@ public final class movies_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspInit() {
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_spring_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_forEach_var_items.release();
+    _jspx_tagPool_c_url_value_nobody.release();
     _jspx_tagPool_spring_url_value_nobody.release();
   }
 
@@ -57,22 +60,87 @@ public final class movies_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("<table>\r\n");
-      out.write("\t<thead>\r\n");
-      out.write("\t\t<tr>\r\n");
-      out.write("\t\t\t<th>Movie Name</th>\r\n");
-      out.write("\t\t</tr>\r\n");
-      out.write("\t</thead>\r\n");
+      out.write("<link\r\n");
+      out.write("\thref=\"http://fonts.googleapis.com/css?family=Roboto:100,300,400,700|\"\r\n");
+      out.write("\trel=\"stylesheet\" type=\"text/css\">\r\n");
+      out.write("<link href=\"");
+      if (_jspx_meth_c_url_0(_jspx_page_context))
+        return;
+      out.write("\" rel=\"stylesheet\">\r\n");
+      out.write("<link href=\"");
+      if (_jspx_meth_c_url_1(_jspx_page_context))
+        return;
+      out.write("\"\r\n");
+      out.write("\trel=\"stylesheet\">\r\n");
+      out.write("<link href=\"");
+      if (_jspx_meth_c_url_2(_jspx_page_context))
+        return;
+      out.write("\"\r\n");
+      out.write("\trel=\"stylesheet\">\r\n");
+      out.write("<script src=\"");
+      if (_jspx_meth_c_url_3(_jspx_page_context))
+        return;
+      out.write("\"></script>\r\n");
+      out.write("<script src=\"");
+      if (_jspx_meth_c_url_4(_jspx_page_context))
+        return;
+      out.write("\"></script>\r\n");
+      out.write("<script src=\"");
+      if (_jspx_meth_c_url_5(_jspx_page_context))
+        return;
+      out.write("\"></script>\r\n");
       out.write("\r\n");
-      out.write("\t<tbody>\r\n");
-      out.write("\t\t");
+      out.write("\r\n");
+      out.write("<div id=\"site-content\">\r\n");
+      out.write("\t<div class=\"site-header\">\r\n");
+      out.write("\t\t<div class=\"container\">\r\n");
+      out.write("\t\t\t<div class=\"main-navigation\">\r\n");
+      out.write("\t\t\t\t<button class=\"toggle-menu\">\r\n");
+      out.write("\t\t\t\t\t<i class=\"fa fa-bars\"></i>\r\n");
+      out.write("\t\t\t\t</button>\r\n");
+      out.write("\t\t\t\t<ul class=\"menu\">\r\n");
+      out.write("\t\t\t\t\t<li class=\"menu-item home current-menu-item\"></li>\r\n");
+      out.write("\t\t\t\t\t<li class=\"menu-item\"><a>Action</a></li>\r\n");
+      out.write("\t\t\t\t\t<li class=\"menu-item\"><a>Drama</a></li>\r\n");
+      out.write("\t\t\t\t\t<li class=\"menu-item\"><a>Comedy</a></li>\r\n");
+      out.write("\t\t\t\t\t<li class=\"menu-item\"><a>Kids</a></li>\r\n");
+      out.write("\t\t\t\t\t<li class=\"menu-item\"><a>Horror</a></li>\r\n");
+      out.write("\t\t\t\t\t<li class=\"menu-item\"><a>Romance</a></li>\r\n");
+      out.write("\t\t\t\t\t<li class=\"menu-item\"><a>Sci-Fi</a></li>\r\n");
+      out.write("\t\t\t\t\t<li class=\"menu-item\"><a>Animated</a></li>\r\n");
+      out.write("\t\t\t\t</ul>\r\n");
+      out.write("\t\t\t\t<div class=\"mobile-navigation\"></div>\r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\t</div>\r\n");
+      out.write("\t<main class=\"main-content\">\r\n");
+      out.write("\t<div class=\"container\">\r\n");
+      out.write("\t\t<div class=\"page\">\r\n");
+      out.write("\t\t\t<section>\r\n");
+      out.write("\t\t\t\t<header>\r\n");
+      out.write("\t\t\t\t\t<h2 class=\"section-title\">New Products</h2>\r\n");
+      out.write("\t\t\t\t\t<a href=\"#\" class=\"all\">Show All</a>\r\n");
+      out.write("\t\t\t\t</header>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t\t<div class=\"product-list\">\r\n");
+      out.write("\t\t\t\t\t");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\r\n");
+      out.write("\t\t\t\t</div>\r\n");
       out.write("\r\n");
-      out.write("\t</tbody>\r\n");
       out.write("\r\n");
-      out.write("</table>");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t</section>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\t</div>\r\n");
+      out.write("\t</main>\r\n");
+      out.write("</div>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -84,6 +152,114 @@ public final class movies_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_url_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_0 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_0.setParent(null);
+    _jspx_th_c_url_0.setValue("/resources/css/style.css");
+    int _jspx_eval_c_url_0 = _jspx_th_c_url_0.doStartTag();
+    if (_jspx_th_c_url_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_0);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_1 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_1.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_1.setParent(null);
+    _jspx_th_c_url_1.setValue("/resources/css/style2.css");
+    int _jspx_eval_c_url_1 = _jspx_th_c_url_1.doStartTag();
+    if (_jspx_th_c_url_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_1);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_2(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_2 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_2.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_2.setParent(null);
+    _jspx_th_c_url_2.setValue("/resources/css/font-awesome.min.css");
+    int _jspx_eval_c_url_2 = _jspx_th_c_url_2.doStartTag();
+    if (_jspx_th_c_url_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_2);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_2);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_3(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_3 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_3.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_3.setParent(null);
+    _jspx_th_c_url_3.setValue("/resources/js/jquery-1.11.1.min.js");
+    int _jspx_eval_c_url_3 = _jspx_th_c_url_3.doStartTag();
+    if (_jspx_th_c_url_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_3);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_3);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_4(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_4 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_4.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_4.setParent(null);
+    _jspx_th_c_url_4.setValue("/resources/js/plugins.js");
+    int _jspx_eval_c_url_4 = _jspx_th_c_url_4.doStartTag();
+    if (_jspx_th_c_url_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_4);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_4);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_5(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_5 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_5.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_5.setParent(null);
+    _jspx_th_c_url_5.setValue("/resources/js/app.js");
+    int _jspx_eval_c_url_5 = _jspx_th_c_url_5.doStartTag();
+    if (_jspx_th_c_url_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_5);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_5);
+    return false;
   }
 
   private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
@@ -102,17 +278,29 @@ public final class movies_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("\t\t\t<tr>\r\n");
-          out.write("\t\t\t\t<a href=\"");
+          out.write("\r\n");
+          out.write("\t\t\t\t\t\t<div class=\"product\">\r\n");
+          out.write("\t\t\t\t\t\t\t<div class=\"inner-product\">\r\n");
+          out.write("\t\t\t\t\t\t\t\t<div class=\"figure-image\">\r\n");
+          out.write("\t\t\t\t\t\t\t\t\t<a href=\"single.html\"><img src=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\" alt=\"Game 1\"></a>\r\n");
+          out.write("\t\t\t\t\t\t\t\t</div>\r\n");
+          out.write("\t\t\t\t\t\t\t\t<h3 class=\"product-title\">\r\n");
+          out.write("\t\t\t\t\t\t\t\t\t<a href=\"");
           if (_jspx_meth_spring_url_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
-          out.write("\">\r\n");
-          out.write("\t\t\t\t\t");
+          out.write('"');
+          out.write('>');
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a>\r\n");
+          out.write("\t\t\t\t\t\t\t\t</h3>\r\n");
+          out.write("\t\t\t\t\t\t\t\t<a href=\"cart.html\" class=\"button\">Add to cart</a> <a href=\"#\"\r\n");
+          out.write("\t\t\t\t\t\t\t\t\tclass=\"button muted\">Read Details</a>\r\n");
+          out.write("\t\t\t\t\t\t\t</div>\r\n");
+          out.write("\t\t\t\t\t\t</div>\r\n");
           out.write("\r\n");
-          out.write("\t\t\t\t</a>\r\n");
-          out.write("\t\t\t</tr>\r\n");
-          out.write("\t\t");
+          out.write("\t\t\t\t\t");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
