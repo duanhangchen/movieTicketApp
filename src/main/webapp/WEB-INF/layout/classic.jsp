@@ -8,20 +8,23 @@
  -->
 <html>
 <head>
-<link href="<c:url value="/resources/css/footer.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/footer.css" />"
+	rel="stylesheet">
 <%-- <link href="<c:url value="/resources/css/sign-up.css" />" rel="stylesheet"> --%>
 
 
-<link href="<c:url value="/resources/css/navbar.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/css/navbar.css" />"
+	rel="stylesheet">
 <script src="<c:url value="/resources/js/jquery-3.2.1.min.js" />"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <%--<link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css">--%>
 <%--<linl rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css"/>--%>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-	
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 <%--<script src="./semantic/dist/semantic.min.js"></script>--%>
 <script src="<c:url value="/resources/js/validator.min.js" />"></script>
 <style>
@@ -225,23 +228,30 @@
 						</ul></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false"> <c:if test="${not empty name}">
-                            ${name}
-                        </c:if> <c:if test="${empty name}">
+						aria-expanded="false"> <c:if test="${not empty user}">
+                            ${user.firstName}
+                        </c:if> <c:if test="${empty user}">
                             LOGIN
-                        </c:if><span class="caret"></span></a>
+                        </c:if> <span class="caret"></span></a>
 						<ul class="dropdown-menu login">
-							<a href="/sign-up" class="btn btn-lg btn-primary"><span
-								class="glyphicon glyphicon-fire"></span> JOIN CEDAR FOR FREE</a>
-							<br>
-							<p class="text-muted">
-								<em>(it only takes few moments to join)</em>
-							</p>
-							<p>
-								Already a Cedar Member? <a href="/login" class="text-primary"><strong>Sign
-										In</strong></a>
-							</p>
-
+							<c:if test="${empty user}">
+								<a href="/sign-up" class="btn btn-lg btn-primary"><span
+									class="glyphicon glyphicon-fire"></span> JOIN CEDAR FOR FREE</a>
+								<br>
+								<p class="text-muted">
+									<em>(it only takes few moments to join)</em>
+								</p>
+								<p>
+									Already a Cedar Member? <a href="/login" class="text-primary"><strong>Sign
+											In</strong></a>
+								</p>
+							</c:if>
+							<c:if test="${not empty user}">
+								<a href="/" class="btn btn-lg btn-primary"><span
+									class="glyphicon glyphicon-fire"></span> MY ACCOUNT SETTINGS</a>
+								<br>
+								<p> <a href="/logout" class="text-primary"><strong>LOGOUT</strong></a></p>
+							</c:if>
 						</ul></li>
 				</ul>
 			</div>

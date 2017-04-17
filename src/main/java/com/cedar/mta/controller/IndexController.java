@@ -19,8 +19,10 @@ public class IndexController {
 	
 	@RequestMapping("/")
 	public String index(Model model,HttpSession session){
-		User some = (User)session.getAttribute("user");
-		System.out.println("From Index"+some.getLastName());
+		User user = (User)session.getAttribute("user");
+		if(user !=null){
+			model.addAttribute("user",user);
+		}
 		model.addAttribute("movies",movieService.findAll());
 		return "index";
 	}

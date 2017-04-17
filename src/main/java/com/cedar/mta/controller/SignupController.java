@@ -29,8 +29,7 @@ public class SignupController {
 			@RequestParam String email, @RequestParam String password) {
 		User currentUser = userService.createNewUser(firstName, lastName, email, password);
 		session.setAttribute("user",currentUser);
-		model.put("user", currentUser);
-		System.out.println(currentUser.getFirstName());
+		//System.out.println(currentUser.getFirstName());
 		return "redirect: ";
 	}
 }
