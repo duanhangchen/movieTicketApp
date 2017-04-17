@@ -6,6 +6,10 @@
 	<definition name="common" template="/WEB-INF/layout/classic.jsp">
 		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
 	</definition>
+		<definition name="common2" template="/WEB-INF/layout/classic.jsp">
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+	</definition>
+	
 	<definition name="index" extends="common">
 		<put-attribute name="title" value="Movie Ticket App" />
 		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
@@ -17,5 +21,13 @@
 	<definition name="movie-detail" extends="common">
 		<put-attribute name="title" value="Movie Detail Page" />
 		<put-attribute name="body" value="/WEB-INF/jsp/movie-detail.jsp" />
+	</definition>
+	<definition name="login" extends="common">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+	</definition>
+	<definition name="sign-up" extends="common">
+		<put-attribute name="title" value="SIGN-UP" />
+		<put-attribute name="body" value="/WEB-INF/jsp/sign-up.jsp" />
 	</definition>
 </tiles-definitions>
