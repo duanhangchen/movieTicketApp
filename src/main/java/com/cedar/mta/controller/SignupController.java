@@ -25,12 +25,12 @@ public class SignupController {
 	}
 
 	@RequestMapping(value = "/sign-up", method = RequestMethod.POST)
-	public ModelAndView handleSignUp(HttpSession session,ModelMap model, @RequestParam String firstName, @RequestParam String lastName,
+	public String handleSignUp(HttpSession session,ModelMap model, @RequestParam String firstName, @RequestParam String lastName,
 			@RequestParam String email, @RequestParam String password) {
 		User currentUser = userService.createNewUser(firstName, lastName, email, password);
 		session.setAttribute("user",currentUser);
 		model.put("user", currentUser);
 		System.out.println(currentUser.getFirstName());
-		return new ModelAndView("redirect:"+"");
+		return "redirect: ";
 	}
 }

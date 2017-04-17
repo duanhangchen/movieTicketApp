@@ -18,10 +18,10 @@ public class IndexController {
 	private MovieService movieService;
 	
 	@RequestMapping("/")
-	public ModelAndView index(Model model,HttpSession session){
+	public String index(Model model,HttpSession session){
 		User some = (User)session.getAttribute("user");
 		System.out.println("From Index"+some.getLastName());
 		model.addAttribute("movies",movieService.findAll());
-		return new ModelAndView("index");
+		return "index";
 	}
 }
