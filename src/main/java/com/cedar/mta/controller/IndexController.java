@@ -1,10 +1,14 @@
 package com.cedar.mta.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.portlet.ModelAndView;
 
+import com.cedar.mta.entity.User;
 import com.cedar.mta.service.MovieService;
 
 @Controller
@@ -14,7 +18,9 @@ public class IndexController {
 	private MovieService movieService;
 	
 	@RequestMapping("/")
-	public String index(Model model){
+	public String index(Model model,HttpSession session){
+		User some = (User)session.getAttribute("user");
+		System.out.println("From Index"+some.getLastName());
 		model.addAttribute("movies",movieService.findAll());
 		return "index";
 	}

@@ -8,6 +8,7 @@ C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\controller\ActorControl
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\controller\MovieController.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Theater.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\repository\ActorRepository.java
+C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\UserService.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Trailer.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Movie.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Showing.java
