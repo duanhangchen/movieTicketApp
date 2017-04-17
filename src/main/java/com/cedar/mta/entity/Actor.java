@@ -3,8 +3,10 @@ package com.cedar.mta.entity;
 import java.sql.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.GeneratedValue;
 
@@ -16,12 +18,12 @@ public class Actor {
 	@GeneratedValue
 	private Integer actorId;
 	
-	private String lastName;
-	
-	private String firstName;
+	private String name;
 	
 	private Date doB;
 	
+	@Lob
+	@Column
 	private String biography;
 	
 	private String awards;
@@ -37,20 +39,13 @@ public class Actor {
 		this.actorId = actorId;
 	}
 
-	public String getLastName() {
-		return lastName;
+
+	public String getName() {
+		return name;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Date getDoB() {

@@ -63,6 +63,9 @@
 			<div class="col-sm-3"></div>
 		</div>
 	</div>
+	
+	
+	
 	<div class="tab-pane" id="2a">
 		<h3>We use the class nav-pills instead of nav-tabs which
 			automatically creates a background color for the tab</h3>
@@ -75,5 +78,24 @@
 		<h3>We use css to change the background color of the content to
 			be equal to the tab</h3>
 	</div>
+	
+				<div class="product-list">
+					<c:forEach items="${actors}" var="actor">
+
+						<div class="product">
+							<div class="inner-product">
+								<div class="figure-image">
+									<a href="single.html"><img src="${actor.actorUrl}" alt="Game 1"></a>
+								</div>
+								<h3 class="product-title">
+									<a href="<spring:url value="/actors/${actor.id}"/>">${actor.name}</a>
+								</h3>
+								<a href="cart.html" class="button">Add to cart</a> <a href="#"
+									class="button muted">Read Details</a>
+							</div>
+						</div>
+
+					</c:forEach>
+				</div>
 </div>
 </div>

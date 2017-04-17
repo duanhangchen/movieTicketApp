@@ -1,8 +1,10 @@
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\controller\IndexController.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Photo.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Transactions.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\service\ActorService.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Showing.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\repository\RoleRepository.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\controller\ActorController.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Accounts.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Role.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Address.java
@@ -12,6 +14,7 @@ C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\repository\U
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\service\MovieService.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Movie.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Screen.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\repository\ActorRepository.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\repository\MovieRepository.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Actor.java
 C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\controller\MovieController.java
