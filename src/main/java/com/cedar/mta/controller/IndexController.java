@@ -18,5 +18,4 @@ public class IndexController {
 		model.addAttribute("movies",movieService.findAll());
 		return "index";
 	}
-
 }
