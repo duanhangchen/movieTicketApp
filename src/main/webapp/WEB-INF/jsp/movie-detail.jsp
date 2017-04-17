@@ -25,20 +25,15 @@
 						</div>
 						<div class="col-sm-6">
 							<div class="dob">
-								Date of Birth:<br>Jul 18, 1967
+								Release Date: Jul 18, 1967
+								<input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="1">
 							</div>
 						</div>
 					</div>
 					<div class="row bio">
 						<div class="col-sm-12">
 							<h2 class="heading-center">BIOGRAPHY</h2>
-							<p class="para">Actor, producer, writer, and director Vin
-								Diesel had a charmed entry into the world of screen acting:
-								after seeing Multi-Facial, a short that Diesel wrote, produced,
-								financed, directed, and starred in, Steven Spielberg created the
-								role of Private Caparzo specifically for the talented young
-								newcomer in his Saving Private Ryan (1998). Born in New York
-								City on July 18, 1967,...</p>
+							
 						</div>
 					</div>
 
