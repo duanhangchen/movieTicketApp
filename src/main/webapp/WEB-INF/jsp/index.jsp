@@ -2,11 +2,15 @@
 	pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<link href="<c:url value="/resources/css/carousel.css" />" rel="stylesheet">
+<script src="<c:url value="/resources/js/carousel.js" />"></script>
+<link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+<script src="<c:url value="/resources/js/main.js" />"></script>
+<link href="<c:url value="/resources/css/blur.css" />" rel="stylesheet">
 
 <h1 class="ui block header">
     Buy Movie Tickets
 </h1>
-
 <br>
 <div class="container">
     <div class="row">
