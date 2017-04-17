@@ -1,6 +1,5 @@
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Actor.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\PaymentMethod.java
-C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Role.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\MovieService.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Address.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\InitDbService.java
@@ -11,10 +10,8 @@ C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\repository\ActorReposit
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Trailer.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Movie.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Showing.java
-C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\repository\RoleRepository.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Screen.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\repository\UserRepository.java
-C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Accounts.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\User.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Transactions.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\ActorService.java
