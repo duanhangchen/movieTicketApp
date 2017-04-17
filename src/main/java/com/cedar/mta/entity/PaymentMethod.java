@@ -33,7 +33,7 @@ public class PaymentMethod {
 	@ManyToOne
 	@JoinColumn(name = "accountId")
 	@OnDelete(action = OnDeleteAction.CASCADE)
-	private Accounts account;
+	private User account;
 
 	public Integer getPaymentId() {
 		return paymentId;
@@ -83,11 +83,11 @@ public class PaymentMethod {
 		this.securityCode = securityCode;
 	}
 
-	public Accounts getAccount() {
+	public User getAccount() {
 		return account;
 	}
 
-	public void setAccount(Accounts account) {
+	public void setAccount(User account) {
 		this.account = account;
 	}
 

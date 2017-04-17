@@ -52,7 +52,7 @@ public class Movie {
 	private Genre genre3;
 	
 	@ManyToMany(mappedBy="movies")
-	private List<Accounts> accounts;
+	private List<User> accounts;
 	
 	@ManyToMany
 	@JoinTable(name="CastIn")

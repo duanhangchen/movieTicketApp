@@ -12,10 +12,8 @@ import org.springframework.stereotype.Service;
 
 import com.cedar.mta.entity.Actor;
 import com.cedar.mta.entity.Movie;
-import com.cedar.mta.entity.Role;
 import com.cedar.mta.entity.User;
 import com.cedar.mta.repository.MovieRepository;
-import com.cedar.mta.repository.RoleRepository;
 import com.cedar.mta.repository.UserRepository;
 import com.cedar.mta.repository.ActorRepository;
 import java.util.List;
@@ -23,9 +21,6 @@ import java.util.List;
 @Transactional
 @Service
 public class InitDbService {
-	
-	@Autowired
-	private RoleRepository roleRepository;
 	
 	@Autowired
 	private UserRepository userRepository;
@@ -38,24 +33,7 @@ public class InitDbService {
 	
 	@PostConstruct
 	public void init(){
-		Role roleUser = new Role();
-		roleUser.setName("ROLE_USER");
-		roleRepository.save(roleUser);
-		
-		Role roleAdmin = new Role();
-		roleAdmin.setName("ROLE_ADMIN");
-		roleRepository.save(roleAdmin);
-		
-		User userAdmin = new User();
-		userAdmin.setName("admin");
-		userAdmin.setEmail("duan@gmail.com");
-		userAdmin.setPassword("abc123");
-		List<Role> roles=new ArrayList<Role>();
-		roles.add(roleAdmin);
-		roles.add(roleUser);
-		userAdmin.setRoles(roles);
-		userRepository.save(userAdmin);
-		
+
 		Movie batman = new Movie();
 		batman.setName("Batman");
 		batman.setUrl("https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg");

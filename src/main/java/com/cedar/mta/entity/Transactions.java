@@ -26,7 +26,7 @@ public class Transactions {
 	@ManyToOne
 	@JoinColumn(name = "accountId")
 	@OnDelete(action = OnDeleteAction.CASCADE)
-	private Accounts account;
+	private User account;
 
 	public Integer getTransactionId() {
 		return transactionId;
@@ -52,11 +52,11 @@ public class Transactions {
 		this.transactionAmount = transactionAmount;
 	}
 
-	public Accounts getAccount() {
+	public User getAccount() {
 		return account;
 	}
 
-	public void setAccount(Accounts account) {
+	public void setAccount(User account) {
 		this.account = account;
 	}
 }
