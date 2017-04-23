@@ -1,7 +1,7 @@
 package com.cedar.mta.controller;
 
+import java.security.NoSuchAlgorithmException;
 import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,20 +20,24 @@ public class SignupController {
 
 	@Autowired
 	private UserService userService;
+
 	@Autowired
 	private MailService mailService;
 	
+
 	@RequestMapping("/sign-up")
 	public String showSignUpPage() {
 		return "sign-up";
 	}
 
 	@RequestMapping(value = "/sign-up", method = RequestMethod.POST)
-	public String handleSignUp(HttpSession session,ModelMap model, @RequestParam String firstName, @RequestParam String lastName,
-			@RequestParam String email, @RequestParam String password) {
+	public String handleSignUp(HttpSession session, ModelMap model, @RequestParam String firstName,
+			@RequestParam String lastName, @RequestParam String email, @RequestParam String password) throws NoSuchAlgorithmException {
 		User currentUser = userService.createNewUser(firstName, lastName, email, password);
 		session.setAttribute("user",currentUser);
 		mailService.sentMail("subject","this is body");
 		return "redirect: ";
 	}
+
+	
 }
