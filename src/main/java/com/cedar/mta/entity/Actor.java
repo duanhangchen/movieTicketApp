@@ -1,6 +1,6 @@
 package com.cedar.mta.entity;
 
-import java.sql.Date;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -20,7 +20,7 @@ public class Actor {
 	
 	private String name;
 	
-	private Date doB;
+	private Calendar doB;
 	
 	@Lob
 	@Column
@@ -48,11 +48,11 @@ public class Actor {
 		this.name = name;
 	}
 
-	public Date getDoB() {
+	public Calendar getDoB() {
 		return doB;
 	}
 
-	public void setDoB(Date doB) {
+	public void setDoB(Calendar doB) {
 		this.doB = doB;
 	}
 

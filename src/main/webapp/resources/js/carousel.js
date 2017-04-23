@@ -20,5 +20,8 @@ $(function() {
 							.appendTo($(this));
 				}
 			});
+	
+
+	console.log($('.carousel-inner').children().first().addClass("active"));
 
 });

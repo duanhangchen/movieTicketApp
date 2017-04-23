@@ -1,6 +1,7 @@
 package com.cedar.mta.entity;
 
 import java.sql.Date;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -50,9 +51,6 @@ public class Movie {
 	private Genre genre2;
 	@Enumerated(EnumType.STRING)
 	private Genre genre3;
-	
-	@ManyToMany(mappedBy="movies")
-	private List<User> accounts;
 	
 	@ManyToMany
 	@JoinTable(name="CastIn")

@@ -17,9 +17,6 @@ public class Theater {
 	
 	private String theaterName;
 	
-	@ManyToMany(mappedBy="theaters")
-	private List<User> accounts;
-
 	public Integer getId() {
 		return theaterId;
 	}

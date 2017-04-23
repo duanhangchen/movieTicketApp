@@ -9,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -32,11 +33,11 @@ public class User {
 	private String lastName;
 	private Date doB;
 	
-	@ManyToMany
+	@OneToMany
 	@JoinTable(name="MyMovies")
 	private List<Movie> movies;
 	
-	@ManyToMany
+	@OneToMany
 	@JoinTable(name="MyTheaters")
 	private List<Theater> theaters;
 	

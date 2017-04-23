@@ -14,7 +14,6 @@
 <script src="<c:url value="/resources/js/plugins.js" />"></script>
 <script src="<c:url value="/resources/js/app.js" />"></script>
 
-
 <div id="site-content">
 	<div class="site-header">
 		<div class="container">

@@ -10,15 +10,12 @@
 <head>
 <link href="<c:url value="/resources/css/footer.css" />"
 	rel="stylesheet">
-<%-- <link href="<c:url value="/resources/css/sign-up.css" />" rel="stylesheet"> --%>
-
-
 <link href="<c:url value="/resources/css/navbar.css" />"
 	rel="stylesheet">
 <script src="<c:url value="/resources/js/jquery-3.2.1.min.js" />"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<%--<link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css">--%>
-<%--<linl rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css"/>--%>
+<link href="<c:url value="/resources/semantic/dist/semantic.min.css" />"rel="stylesheet">
+<linl rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css"/>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
@@ -42,7 +39,7 @@
 <title><tiles:getAsString name="title" /></title>
 </head>
 
-<body>
+<body onload="loadMap()">
 
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">

@@ -1,57 +1,50 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+<!--footer start from here-->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 footerleft ">
+        <div class="logofooter"> Team Cedar</div>
+        <p>Movie Ticket Application</p>
 
-<div class="ui inverted vertical footer segment">
-    <div class="ui center aligned container">
-        <div class="ui stackable inverted divided grid">
-            <div class="three wide column">
-                <h4 class="ui inverted header">Experience + Explore</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Movies In Theaters</a>
-                    <a href="#" class="item">Movie Actors and Actresses</a>
-                    <a href="#" class="item">Mobile</a>
-                    <a href="#" class="item">New DVD Releases</a>
-                    <a href="#" class="item">Special Offers</a>
-                    <a href="#" class="item">Gift Cards</a>
-                </div>
-            </div>
-            <div class="three wide column">
-                <h4 class="ui inverted header">Editorial Features</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Family</a>
-                    <a href="#" class="item">Indie Movie Guide</a>
-                    <a href="#" class="item">Movie News</a>
-                    <a href="#" class="item">Awards Watch</a>
-                </div>
-            </div>
-            <div class="three wide column">
-                <h4 class="ui inverted header">Videos</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Movie Trailers</a>
-                    <a href="#" class="item">Frontrunners</a>
-                    <a href="#" class="item">Weekend Ticket</a>
-                    <a href="#" class="item">Mom's Movie Minute</a>
-                    <a href="#" class="item">Reel Kids</a>
-                </div>
-            </div>
-
-            <div class="three wide column">
-                <h4 class="ui inverted header">Photos</h4>
-                <div class="ui inverted link list">
-                    <a href="#" class="item">Red Carpet</a>
-                    <a href="#" class="item">Frontrunners</a>
-                </div>
-            </div>
-
+        <p><i class="fa fa-phone"></i> Phone: xxx-xxx-xxxx</p>
+        <p><i class="fa fa-envelope"></i> E-mail : duanhang.chen@stonybrooke.edu</p>
+        
+      </div>
+      <div class="col-md-2 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">GENERAL LINKS</h6>
+        <ul class="footer-ul">
+          <li><a href="#"> Career</a></li>
+          <li><a href="#"> Privacy Policy</a></li>
+          <li><a href="#"> Terms & Conditions</a></li>
+          <li><a href="#"> Client Gateway</a></li>
+          <li><a href="#"> Ranking</a></li>
+          <li><a href="#"> Case Studies</a></li>
+          <li><a href="#"> Frequently Ask Questions</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">Latest Movies</h6>
+        <div class="post">
         </div>
-        <div class="ui inverted section divider"></div>
-        <img src="http://www.indayscomix.com/file/2016/12/can_you_legally_watch_free_movies_online.jpg"
-             class="ui centered small image">
-        <div class="ui horizontal inverted small divided link list">
-            <a class="item" href="#">Site Map</a>
-            <a class="item" href="#">Contact Us</a>
-            <a class="item" href="#">Terms and Conditions</a>
-            <a class="item" href="#">Privacy Policy</a>
-        </div>
+      </div>
     </div>
+  </div>
+</footer>
+<!--footer start from here-->
+
+<div class="copyright">
+  <div class="container">
+    <div class="col-md-6">
+      <p>© 2017 - All Rights with Cedar</p>
+    </div>
+    <div class="col-md-6">
+      <ul class="bottom_ul">
+        <li><a href="#">Team Cedar</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Faq's</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
