@@ -15,7 +15,7 @@ import com.cedar.mta.entity.User;
 import com.cedar.mta.service.UserService;
 
 @Controller
-public class LoginController {
+public class AuthenticationController {
 
 	@Autowired
 	private UserService userService;
@@ -37,5 +37,10 @@ public class LoginController {
 			session.setAttribute("user", user);
 			return "index";
 		}
+	}
+	@RequestMapping(value="/logout")
+	public String handleUserLogout(HttpSession session, ModelMap model){
+		session.removeAttribute("user");
+		return "index";
 	}
 }

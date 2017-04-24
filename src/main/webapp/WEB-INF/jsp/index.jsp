@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <link href="<c:url value="/resources/css/carousel.css" />"
 	rel="stylesheet">
@@ -19,12 +19,11 @@
 					<c:forEach items="${movies}" var="movie">
 						<div class="item">
 							<div class="col-xs-4">
-								<a href="#1"><img
-									src="${movie.url} }"
+								<a href="#1"><img src="${movie.url} }"
 									class="img-responsive"></a>
 								<div class="movie-details">
 									<p class="movie-name">
-										<strong>${movie.name}</strong>
+										<a href="<spring:url value="/movies/${movie.id}"/>">${movie.name}</a>
 									</p>
 									<p class="text-muted release-date">
 										<em>${movie.releaseDate}</em>
@@ -98,101 +97,27 @@
 <br>
 <br>
 <br>
-<img
-	src="https://images.fandango.com/images/spotlight/fd_50SD_1680x350_homestrip_v3.jpg"
-	alt="Fandango 50 Shades Darker Movie Free Gift" class="offer-tout-img">
+<center>
+	<img
+		src="https://images.fandango.com/images/spotlight/fd_50SD_1680x350_homestrip_v3.jpg"
+		alt="Fandango 50 Shades Darker Movie Free Gift" class="offer-tout-img">
+</center>
+<br>
 <h1 class="ui block header">Coming Soon</h1>
+<br>
 <div class="ui six column grid stackable doubling container">
-
-	<div class="column">
-		<div class="ui segments">
+	<c:forEach items="${movies}" var="movie">
+		<div class="column">
 			<div class="ui segments">
-				<div class="blur">
-					<b><img
-						src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/196708/ROCKDOG_1Sht_Payoff_VF.jpg"
-						class="ui fluid bordered image"></b>
+				<div class="ui segments">
+					<div class="blur">
+						<a href="<spring:url value="/movies/${movie.id}"/>"><img src="${movie.url}" class="ui fluid bordered image"></a>
+					</div>
+				</div>
+				<div class="ui secondary segment center aligned">
+					<a href="<spring:url value="/movies/${movie.id}"/>">${movie.name}</a>
 				</div>
 			</div>
-			<div class="ui secondary segment center aligned">
-				<a>Rock Dog</a>
-			</div>
 		</div>
-	</div>
-
-	<div class="column">
-		<div class="ui segments">
-			<div class="ui segments">
-				<div class="blur">
-					<b><img
-						src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/183587/The%20Great%20Wall.jpg"
-						class="ui fluid bordered image"></b>
-				</div>
-			</div>
-			<div class="ui secondary segment center aligned">
-				<a>The Great Wall</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="column">
-		<div class="ui segments">
-			<div class="ui segments">
-				<div class="blur">
-					<b><img
-						src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/184016/COLLIDE_POSTER_2_24_17.jpg"
-						class="ui fluid bordered image"></b>
-				</div>
-			</div>
-			<div class="ui secondary segment center aligned">
-				<a>Collide</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="column">
-		<div class="ui segments">
-			<div class="ui segments">
-				<div class="blur">
-					<b><img
-						src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/196901/Logan_48x70ForFandango_sRGB.jpg"
-						class="ui fluid bordered image"></b>
-				</div>
-			</div>
-			<div class="ui secondary segment center aligned">
-				<a>Logan</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="column">
-		<div class="ui segments">
-			<div class="ui segments">
-				<div class="blur">
-					<b><img
-						src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/196665/Get%20Out.jpg"
-						class="ui fluid bordered image"></b>
-				</div>
-			</div>
-			<div class="ui secondary segment center aligned">
-				<a>Get Out</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="column">
-		<div class="ui segments">
-			<div class="ui segments">
-				<div class="blur">
-					<b><img
-						src="http://images.fandango.com/ImageRenderer/200/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/191368/legobatmanmovie-posterart.jpg"
-						class="ui fluid bordered image"></b>
-				</div>
-			</div>
-			<div class="ui secondary segment center aligned">
-				<a>The Lego Batman Movie</a>
-			</div>
-		</div>
-	</div>
-
-
+	</c:forEach>
 </div>
