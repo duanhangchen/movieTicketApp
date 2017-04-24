@@ -10,10 +10,8 @@ import com.cedar.mta.repository.ActorRepository;
 
 @Service
 public class ActorService {
-
 	@Autowired
-	private ActorRepository actorRepository;
-	
+	private ActorRepository actorRepository;	
 	public List<Actor> findAll(){
 		return actorRepository.findAll();
 	}

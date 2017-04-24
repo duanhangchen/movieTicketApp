@@ -17,11 +17,9 @@ public class UserService {
 	public List<User> findAll() {
 		return userRepository.findAll();
 	}
-
 	public User findUserByEmail(String email) {
 		return userRepository.findByEmail(email);
 	}
-
 	public Boolean validateUser(String email, String password) throws NoSuchAlgorithmException {
 		User user = findUserByEmail(email);
 		if (user != null){
@@ -30,7 +28,6 @@ public class UserService {
 		}
 		return false;
 	}
-
 	public User createNewUser(String firstName, String lastName, String email, String password)
 			throws NoSuchAlgorithmException {
 		User newUser = new User();
@@ -44,7 +41,6 @@ public class UserService {
 		userRepository.save(newUser);
 		return newUser;
 	}
-
 	public String hashPassword(String password) throws NoSuchAlgorithmException {
 		try {
 			MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -61,5 +57,4 @@ public class UserService {
 			throw new RuntimeException(ex);
 		}
 	}
-
 }

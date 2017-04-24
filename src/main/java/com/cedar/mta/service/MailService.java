@@ -7,7 +7,6 @@ import com.cedar.mta.entity.MailMail;
 
 @Service
 public class MailService {
-
 	@Autowired
 	private MailMail mail;
 

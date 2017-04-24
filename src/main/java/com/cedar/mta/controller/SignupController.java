@@ -20,10 +20,8 @@ public class SignupController {
 
 	@Autowired
 	private UserService userService;
-
 	@Autowired
 	private MailService mailService;
-	
 
 	@RequestMapping("/sign-up")
 	public String showSignUpPage() {

@@ -20,10 +20,8 @@ public class Screen {
 	public enum ScreenType {regular, threeD, imax};
 	@Id
 	@GeneratedValue
-	private Integer screenId;
-	
-	private Integer availableSeats;
-	
+	private Integer screenId;	
+	private Integer availableSeats;	
 	@ManyToOne
 	@JoinColumn(name = "theaterId")
 	@OnDelete(action = OnDeleteAction.CASCADE)
@@ -35,34 +33,25 @@ public class Screen {
 	public Integer getScreenId() {
 		return screenId;
 	}
-
 	public void setScreenId(Integer screenId) {
 		this.screenId = screenId;
 	}
-
 	public Integer getAvailableSeats() {
 		return availableSeats;
 	}
-
 	public void setAvailableSeats(Integer availableSeats) {
 		this.availableSeats = availableSeats;
 	}
-
 	public Theater getTheater() {
 		return theater;
 	}
-
 	public void setTheater(Theater theater) {
 		this.theater = theater;
 	}
-
 	public ScreenType getScreenType() {
 		return screenType;
 	}
-
 	public void setScreenType(ScreenType screenType) {
 		this.screenType = screenType;
-	}
-	
-	
+	}	
 }

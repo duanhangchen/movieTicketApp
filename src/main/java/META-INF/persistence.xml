@@ -3,7 +3,6 @@
 	<persistence-unit name="movieTicketApp">
 		<class>com.cedar.mta.entity.Movie</class>
 		<class>com.cedar.mta.entity.Theater</class>
-		<class>com.cedar.mta.entity.Trailer</class>
 		<class>com.cedar.mta.entity.Photo</class>
 		<class>com.cedar.mta.entity.Address</class>
 		<class>com.cedar.mta.entity.Screen</class>
