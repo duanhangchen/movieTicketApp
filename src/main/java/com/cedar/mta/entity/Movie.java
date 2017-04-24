@@ -17,8 +17,6 @@ import javax.persistence.GeneratedValue;
 
 @Entity
 public class Movie {
-	public enum Category {upcoming, nowPlaying};
-	public enum Genre {Action, Drama, Comedy, Kids, Horror, Romance, Scifi, Animated};
 	
 	@Id
 	@GeneratedValue
@@ -28,6 +26,8 @@ public class Movie {
 	@Column(name = "movieName")
 	private String name;
 	
+	private Integer category;
+	
 	private Date releaseDate;
 	
 	@Column(name = "moviePoster")
@@ -35,105 +35,151 @@ public class Movie {
 	
 	private String plot;
 	
-	private String fullPlot;
-	
 	private Double rating;
 	
 	private double boxOffice;
 	
 	private Integer numOfSales;
-
-	@Enumerated(EnumType.STRING)
-    private Category category;
-	@Enumerated(EnumType.STRING)
-	private Genre genre1;
-	@Enumerated(EnumType.STRING)
-	private Genre genre2;
-	@Enumerated(EnumType.STRING)
-	private Genre genre3;
 	
+	private String rated;
+	
+	private String runtime;
+	
+	private String trailer;
+	
+	private String actorsString;
+	
+	
+
+
 	@ManyToMany
 	@JoinTable(name="CastIn")
 	private List<Actor> actors;
 	
+	@ManyToMany
+	@JoinTable(name="MovieGenre")
+	private List<Genre> genres;
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public Integer getCategory() {
+		return category;
+	}
+
+	public void setCategory(Integer category) {
+		this.category = category;
+	}
+
 	public Date getReleaseDate() {
 		return releaseDate;
 	}
+
 	public void setReleaseDate(Date releaseDate) {
 		this.releaseDate = releaseDate;
 	}
+
 	public String getUrl() {
 		return url;
 	}
+
 	public void setUrl(String url) {
 		this.url = url;
 	}
+
 	public String getPlot() {
 		return plot;
 	}
+
 	public void setPlot(String plot) {
 		this.plot = plot;
 	}
-	public String getFullPlot() {
-		return fullPlot;
-	}
-	public void setFullPlot(String fullPlot) {
-		this.fullPlot = fullPlot;
-	}
+
 	public Double getRating() {
 		return rating;
 	}
+
 	public void setRating(Double rating) {
 		this.rating = rating;
 	}
+
 	public double getBoxOffice() {
 		return boxOffice;
 	}
+
 	public void setBoxOffice(double boxOffice) {
 		this.boxOffice = boxOffice;
 	}
+
 	public Integer getNumOfSales() {
 		return numOfSales;
 	}
+
 	public void setNumOfSales(Integer numOfSales) {
 		this.numOfSales = numOfSales;
 	}
-	public Category getCategory() {
-		return category;
+
+	public String getRated() {
+		return rated;
 	}
-	public void setCategory(Category category) {
-		this.category = category;
+
+	public void setRated(String rated) {
+		this.rated = rated;
 	}
-	public Genre getGenre1() {
-		return genre1;
+
+	public String getRuntime() {
+		return runtime;
 	}
-	public void setGenre1(Genre genre1) {
-		this.genre1 = genre1;
+
+	public void setRuntime(String runtime) {
+		this.runtime = runtime;
 	}
-	public Genre getGenre2() {
-		return genre2;
+
+	public String getTrailer() {
+		return trailer;
 	}
-	public void setGenre2(Genre genre2) {
-		this.genre2 = genre2;
+
+	public void setTrailer(String trailer) {
+		this.trailer = trailer;
 	}
-	public Genre getGenre3() {
-		return genre3;
+
+	public String getActorsString() {
+		return actorsString;
 	}
-	public void setGenre3(Genre genre3) {
-		this.genre3 = genre3;
+
+	public void setActorsString(String actorsString) {
+		this.actorsString = actorsString;
 	}
+
+	public List<Actor> getActors() {
+		return actors;
+	}
+
+	public void setActors(List<Actor> actors) {
+		this.actors = actors;
+	}
+
+	public List<Genre> getGenres() {
+		return genres;
+	}
+
+	public void setGenres(List<Genre> genres) {
+		this.genres = genres;
+	}
+	
 	
 	//Getters Setters
 	

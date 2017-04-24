@@ -36,7 +36,6 @@ public class User {
 	
 	@OneToMany
 	@JoinTable(name="MyTheaters")
-
 	private List<Theater> theaters;
 
 	public Integer getAccountId() {
