@@ -35,7 +35,7 @@ public class SignupController {
 			@RequestParam String lastName, @RequestParam String email, @RequestParam String password) throws NoSuchAlgorithmException {
 		User currentUser = userService.createNewUser(firstName, lastName, email, password);
 		session.setAttribute("user",currentUser);
-		mailService.sendMailForSignUp();
+		mailService.sendMailForSignUp(currentUser.getEmail());
 		return "redirect: ";
 	}
 
