@@ -22,11 +22,12 @@ public class Actor {
 	
 	private Calendar doB;
 	
+	@Column(name="actorImage")
+	private String url;
+	
 	@Lob
 	@Column
 	private String biography;
-	
-	private String awards;
 	
 	@ManyToMany(mappedBy="actors")
 	private List<Movie> movies;
@@ -38,7 +39,6 @@ public class Actor {
 	public void setActorId(Integer actorId) {
 		this.actorId = actorId;
 	}
-
 
 	public String getName() {
 		return name;
@@ -56,6 +56,14 @@ public class Actor {
 		this.doB = doB;
 	}
 
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
 	public String getBiography() {
 		return biography;
 	}
@@ -64,11 +72,13 @@ public class Actor {
 		this.biography = biography;
 	}
 
-	public String getAwards() {
-		return awards;
+	public List<Movie> getMovies() {
+		return movies;
 	}
 
-	public void setAwards(String awards) {
-		this.awards = awards;
+	public void setMovies(List<Movie> movies) {
+		this.movies = movies;
 	}
+
+	
 }
