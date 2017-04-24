@@ -9,7 +9,7 @@
 
 
 <div id="exTab1" class="container">
-	<h1 class="actor-name">${movie.name}Overview</h1>
+	<h1 class="actor-name">${movie.name} Overview</h1>
 	<ul class="nav nav-pills">
 		<li class="active"><a href="#1a" data-toggle="tab">Overview</a></li>
 		<li><a href="#2a" data-toggle="tab">Synopsis</a></li>
@@ -38,10 +38,7 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<iframe width="640" height="360"
-						src="http://v.traileraddict.com/23699" allowfullscreen="true"
-						webkitallowfullscreen="true" mozallowfullscreen="true"
-						scrolling="no" frameborder="0"></iframe>
+					${movie.trailer}
 					<p class="video-description">${movie.plot}</p>
 				</div>
 			</div>

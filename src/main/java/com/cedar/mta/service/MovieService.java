@@ -22,4 +22,8 @@ public class MovieService {
 		return movieRepository.findOne(id);
 	}
 	
+	public List<Movie> findFeaturedMovies(){
+		return movieRepository.findFeaturedMovies();
+	}
+	
 }

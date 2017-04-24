@@ -23,7 +23,7 @@ public class IndexController {
 		if(user !=null){
 			model.addAttribute("user",user);
 		}
-		model.addAttribute("movies",movieService.findAll());
+		model.addAttribute("featuredMovies",movieService.findFeaturedMovies());
 		return "index";
 	}
 }

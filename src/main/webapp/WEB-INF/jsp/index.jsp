@@ -16,7 +16,7 @@
 		<div class="col-md-12">
 			<div class="carousel slide multi-item-carousel" id="theCarousel">
 				<div class="carousel-inner">
-					<c:forEach items="${movies}" var="movie">
+					<c:forEach items="${featuredMovies}" var="movie">
 						<div class="item">
 							<div class="col-xs-4">
 								<a href="#1"><img src="${movie.url} }"
@@ -103,10 +103,10 @@
 		alt="Fandango 50 Shades Darker Movie Free Gift" class="offer-tout-img">
 </center>
 <br>
-<h1 class="ui block header">Coming Soon</h1>
+<h1 class="ui block header">Featuring</h1>
 <br>
 <div class="ui six column grid stackable doubling container">
-	<c:forEach items="${movies}" var="movie">
+	<c:forEach items="${featuredMovies}" var="movie">
 		<div class="column">
 			<div class="ui segments">
 				<div class="ui segments">

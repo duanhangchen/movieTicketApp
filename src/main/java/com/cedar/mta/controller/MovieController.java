@@ -16,7 +16,7 @@ public class MovieController {
 	
 	@RequestMapping("/movies")
 	public String movies(Model model){
-		model.addAttribute("movies",movieService.findAll());
+		model.addAttribute("featuredMovies",movieService.findFeaturedMovies());
 		return "movies";
 	}
 	

@@ -47,7 +47,7 @@
 
 
 				<div class="product-list">
-					<c:forEach items="${movies}" var="movie">
+					<c:forEach items="${featuredMovies}" var="movie">
 
 						<div class="product">
 							<div class="inner-product">
