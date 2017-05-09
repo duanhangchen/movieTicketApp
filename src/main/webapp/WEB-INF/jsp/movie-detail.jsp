@@ -28,7 +28,12 @@
 							<div class="dob">
 								Release Date: ${movie.releaseDate}
 								<div class="row lead">
-									<div id="stars" class="starrr" data-rating='${movie.rating}'></div>
+									<c:if test="${empty rating}">
+										<div id="stars" class="starrr"></div>
+									</c:if>
+									<c:if test="${not empty rating}">
+										<div id="stars" class="starrr" data-rating='${rating.score}'></div>
+									</c:if>
 								</div>
 							</div>
 						</div>

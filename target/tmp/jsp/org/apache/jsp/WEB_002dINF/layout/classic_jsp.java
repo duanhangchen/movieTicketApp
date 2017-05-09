@@ -84,29 +84,19 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<link href=\"");
       if (_jspx_meth_c_url_3(_jspx_page_context))
         return;
-      out.write("\"rel=\"stylesheet\">\r\n");
-      out.write("<linl rel=\"stylesheet\" href=\"http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css\"/>\r\n");
+      out.write("\"\r\n");
+      out.write("\trel=\"stylesheet\">\r\n");
+      out.write("<linl rel=\"stylesheet\"\r\n");
+      out.write("\thref=\"http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css\" />\r\n");
       out.write("<link rel=\"stylesheet\"\r\n");
       out.write("\thref=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\r\n");
       out.write("<script\r\n");
       out.write("\tsrc=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\r\n");
       out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("<script src=\"");
       if (_jspx_meth_c_url_4(_jspx_page_context))
         return;
       out.write("\"></script>\r\n");
-      out.write("<style>\r\n");
-      out.write(".container {\r\n");
-      out.write("\twidth: 90%;\r\n");
-      out.write("}\r\n");
-      out.write("\r\n");
-      out.write(".carousel-inner>.item>img, .carousel-inner>.item>a>img {\r\n");
-      out.write("\twidth: 100%;\r\n");
-      out.write("\tmargin: auto;\r\n");
-      out.write("}\r\n");
-      out.write("</style>\r\n");
       out.write("\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("<title>");
@@ -133,7 +123,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_spring_url_0(_jspx_page_context))
         return;
       out.write("'><img\r\n");
-      out.write("\t\t\t\t\tsrc=\"\" alt=\"Team Cedar\"></a>\r\n");
+      out.write("\t\t\t\t\tsrc=\"resources/img/movie.png\" alt=\"Team Cedar\"></a>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\r\n");
       out.write("\t\t\t<!-- Collect the nav links, forms, and other content for toggling -->\r\n");
@@ -622,7 +612,9 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("\t\t\t\t\t\t\t\t<a href=\"/\" class=\"btn btn-lg btn-primary\"><span\r\n");
         out.write("\t\t\t\t\t\t\t\t\tclass=\"glyphicon glyphicon-fire\"></span> MY ACCOUNT SETTINGS</a>\r\n");
         out.write("\t\t\t\t\t\t\t\t<br>\r\n");
-        out.write("\t\t\t\t\t\t\t\t<p> <a href=\"/logout\" class=\"text-primary\"><strong>LOGOUT</strong></a></p>\r\n");
+        out.write("\t\t\t\t\t\t\t\t<p>\r\n");
+        out.write("\t\t\t\t\t\t\t\t\t<a href=\"/logout\" class=\"text-primary\"><strong>LOGOUT</strong></a>\r\n");
+        out.write("\t\t\t\t\t\t\t\t</p>\r\n");
         out.write("\t\t\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_if_3.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)

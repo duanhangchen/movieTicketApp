@@ -127,3 +127,11 @@ h3 {
 .form-control.search-bar{
     min-width: 400px;
 }
+.container {
+	width: 90%;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+	width: 100%;
+	margin: auto;
+}

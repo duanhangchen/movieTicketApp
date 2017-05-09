@@ -35,7 +35,7 @@ public class AuthenticationController {
 		} else {
 			System.out.println("Hello" + user.getFirstName());
 			session.setAttribute("user", user);
-			return "index";
+			return "redirect: ";
 		}
 	}
 	@RequestMapping(value="/logout")
