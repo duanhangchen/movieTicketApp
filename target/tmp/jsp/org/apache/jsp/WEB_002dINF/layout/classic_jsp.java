@@ -105,7 +105,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</title>\r\n");
       out.write("</head>\r\n");
       out.write("\r\n");
-      out.write("<body onload=\"loadMap()\">\r\n");
+      out.write("<body>\r\n");
       out.write("\r\n");
       out.write("\t<nav class=\"navbar navbar-inverse\">\r\n");
       out.write("\t\t<div class=\"container-fluid\">\r\n");
@@ -123,7 +123,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_spring_url_0(_jspx_page_context))
         return;
       out.write("'><img\r\n");
-      out.write("\t\t\t\t\tsrc=\"resources/img/movie.png\" alt=\"Team Cedar\"></a>\r\n");
+      out.write("\t\t\t\t\tsrc=\"/resources/img/movie.png\" alt=\"Team Cedar\"></a>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\r\n");
       out.write("\t\t\t<!-- Collect the nav links, forms, and other content for toggling -->\r\n");

@@ -1,5 +1,8 @@
 package com.cedar.mta.controller;
 
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,23 +52,28 @@ public class MovieController {
 		return "movie-detail";
 	}
 	
-	@ResponseBody
+	
 	@RequestMapping(value="/movies/rating/{id}/{score}",method=RequestMethod.POST)
-	public void ratings(Model model,HttpSession session,@PathVariable int id,@PathVariable int score){
-		System.out.println(id);
-		System.out.println(score);
+	public @ResponseBody String ratings(Model model,HttpSession session,@PathVariable int id,@PathVariable int score){
 		User user=(User) session.getAttribute("user");
-		Rating test=ratingService.findRatingScore(id,user.getAccountId());
-		if(test==null){
-			Rating rating=new Rating();
-			Movie movie=movieService.findById(id);
-			rating.setUser(user);
-			rating.setMovie(movie);
-			rating.setScore(score);
-			ratingRepository.save(rating);
+		if(user!=null){
+			Rating test=ratingService.findRatingScore(id,user.getAccountId());
+			if(test==null){
+				Rating rating=new Rating();
+				Movie movie=movieService.findById(id);
+				rating.setUser(user);
+				rating.setMovie(movie);
+				rating.setScore(score);
+				ratingRepository.save(rating);
+				return "success";
+			}
+			else{
+				ratingService.updateRatingScore(id,user.getAccountId(),score);
+				return "success";
+			}
 		}
 		else{
-			ratingService.updateRatingScore(id,user.getAccountId(),score);
+			return "FAIL";
 		}
 	}
 }

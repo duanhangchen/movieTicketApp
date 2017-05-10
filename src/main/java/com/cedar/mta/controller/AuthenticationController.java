@@ -41,6 +41,6 @@ public class AuthenticationController {
 	@RequestMapping(value="/logout")
 	public String handleUserLogout(HttpSession session, ModelMap model){
 		session.removeAttribute("user");
-		return "index";
+		return "redirect: ";
 	}
 }

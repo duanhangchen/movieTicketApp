@@ -9,7 +9,7 @@
 
 
 <div id="exTab1" class="container">
-	<h1 class="actor-name">${movie.name} Overview</h1>
+	<h1 class="actor-name">${movie.name}Overview</h1>
 	<ul class="nav nav-pills">
 		<li class="active"><a href="#1a" data-toggle="tab">Overview</a></li>
 		<li><a href="#2a" data-toggle="tab">Synopsis</a></li>
@@ -97,7 +97,37 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<p class="video-description">Reviews</p>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Write Review</button>
+					<div class="modal fade" id="exampleModal" tabindex="-1"
+						role="dialog" aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form>
+										<div>
+											<h5 id="reviewfont">${movie.name}</h5>
+										</div>
+										<div class="form-group">
+											<label for="message-text" id="reviewfont" class="form-control-label">Review:</label>
+											<textarea class="form-control" id="message-text"></textarea>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+										data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-primary">Submit Review</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>

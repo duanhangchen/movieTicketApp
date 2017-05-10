@@ -116,19 +116,16 @@ $(document).ready(function() {
 
 	$('#stars').on('starrr:change', function(e, value) {
 		$('#count').html(value);
-		data={}
-		var status="complete"
 		var movieid = window.location.pathname.split('/')[2];
-		data["score"]=value;
 		$.ajax({
 			type:"POST",
 			url:"/movies/rating/"+movieid+"/"+value,
-			data:{'status':status},
-			dataType:'json',
 			success: function(data){
-				console.log("SUCCESS:",data);
+				if(data=="FAIL")
+					window.location.href="/login";
+				console.log(data);
 			},
-			error: function (errormessage){
+			error: function (){
 				
 			}
 		})

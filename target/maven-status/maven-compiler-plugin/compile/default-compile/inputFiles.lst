@@ -12,6 +12,7 @@ C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\UserService.jav
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Screen.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\repository\UserRepository.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\User.java
+C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Review.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\ActorService.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Ticket.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\MailService.java
