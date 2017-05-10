@@ -13,6 +13,7 @@
 <script src="<c:url value="/resources/js/jquery-1.11.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/plugins.js" />"></script>
 <script src="<c:url value="/resources/js/app.js" />"></script>
+<link href="<c:url value="/resources/css/blur.css" />" rel="stylesheet">
 
 <div id="site-content">
 	<div class="site-header">
@@ -52,13 +53,15 @@
 						<div class="product">
 							<div class="inner-product">
 								<div class="figure-image">
-									<a href="single.html"><img src="${movie.url}" alt="Game 1"></a>
+								<div class="blur">
+									<a href="<spring:url value="/movies/${movie.id}"/>"><img src="${movie.url}" alt="Game 1" style="max-height:250px"></a>
+								</div>
 								</div>
 								<h3 class="product-title">
 									<a href="<spring:url value="/movies/${movie.id}"/>">${movie.name}</a>
 								</h3>
-								<a href="cart.html" class="button">Add to cart</a> <a href="#"
-									class="button muted">Read Details</a>
+<!-- 								<a href="cart.html" class="button">Add to cart</a> <a href="#" -->
+<!-- 									class="button muted">Read Details</a> -->
 							</div>
 						</div>
 

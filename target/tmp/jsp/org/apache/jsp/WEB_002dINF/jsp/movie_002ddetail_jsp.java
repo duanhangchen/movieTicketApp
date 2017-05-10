@@ -96,14 +96,13 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\t\t\t<!-- <form action=\"/movies/{id}\"method=\"POST\"> -->\n");
       out.write("\t\t\t<button name=\"favouriteMovie\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${favouriteMovie}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" onClick=\"toggleValue()\" type=\"submit\" class=\"btn btn-lg\">\n");
+      out.write("\"\n");
+      out.write("\t\t\t\tonClick=\"toggleValue()\" type=\"submit\" class=\"btn btn-lg\">\n");
       out.write("\t\t\t\t<span class=\"glyphicon glyphicon-heart\"> </span>\n");
       out.write("\t\t\t</button>\n");
       out.write("\t\t\t<!-- </form> -->\n");
       out.write("\t\t</h1>\n");
       out.write("\t</span>\n");
-      out.write("\n");
-      out.write("\n");
       out.write("\n");
       out.write("\t<ul class=\"nav nav-pills\">\n");
       out.write("\t\t<li class=\"active\"><a href=\"#1a\" data-toggle=\"tab\">Overview</a></li>\n");
@@ -222,7 +221,54 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t</div>\n");
       out.write("\t\t\t\t<div class=\"col-sm-6\">\n");
-      out.write("\t\t\t\t\t<p class=\"video-description\">Reviews</p>\n");
+      out.write("\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\"\n");
+      out.write("\t\t\t\t\t\tdata-target=\"#reviewModal\">Write Review</button>\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t<br> <br>\n");
+      out.write("\t\t\t\t\t");
+      if (_jspx_meth_c_forEach_0(_jspx_page_context))
+        return;
+      out.write("\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t<div class=\"modal fade\" id=\"reviewModal\" tabindex=\"-1\"\n");
+      out.write("\t\t\t\t\t\trole=\"dialog\" aria-labelledby=\"exampleModalLabel\"\n");
+      out.write("\t\t\t\t\t\taria-hidden=\"true\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"modal-dialog\" role=\"document\">\n");
+      out.write("\t\t\t\t\t\t\t<div class=\"modal-content\">\n");
+      out.write("\t\t\t\t\t\t\t\t<div class=\"modal-header\">\n");
+      out.write("\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\"\n");
+      out.write("\t\t\t\t\t\t\t\t\t\taria-label=\"Close\">\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<span aria-hidden=\"true\">&times;</span>\n");
+      out.write("\t\t\t\t\t\t\t\t\t</button>\n");
+      out.write("\t\t\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t\t\t<div class=\"modal-body\">\n");
+      out.write("\t\t\t\t\t\t\t\t\t<form role=\"form\" method=\"POST\">\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<div>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t<h5 id=\"reviewfont\">");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</h5>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t<label for=\"message-text\" id=\"reviewfont\"\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control-label\">Review:</label>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t<textarea type=\"text\" class=\"form-control\" id=\"reviewText\" \n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t\tname=\"reviewText\">");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.review}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</textarea>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<div class=\"modal-footer\">\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\"\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t\tdata-dismiss=\"modal\">Close</button>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">Submit\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t\tReview</button>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t\t\t\t</form>\n");
+      out.write("\t\t\t\t\t\t\t\t</div>\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("\n");
       out.write("\t\t\t\t</div>\n");
       out.write("\t\t\t</div>\n");
       out.write("\t\t</div>\n");
@@ -233,7 +279,7 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\t\t\t<div class=\"carousel slide multi-item-carousel\" id=\"theCarousel\">\n");
       out.write("\t\t\t\t<div class=\"carousel-inner\">\n");
       out.write("\t\t\t\t\t");
-      if (_jspx_meth_c_forEach_0(_jspx_page_context))
+      if (_jspx_meth_c_forEach_1(_jspx_page_context))
         return;
       out.write("\n");
       out.write("\n");
@@ -417,35 +463,23 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${cast}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    _jspx_th_c_forEach_0.setVar("actor");
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${reviews}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setVar("reviews");
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
-          out.write("\t\t\t\t\t\t<div class=\"item\">\n");
-          out.write("\t\t\t\t\t\t\t<div class=\"col-xs-4\">\n");
-          out.write("\t\t\t\t\t\t\t\t<a href=\"#1\"><img src=\"");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\"\n");
-          out.write("\t\t\t\t\t\t\t\t\tclass=\"img-responsive\"></a>\n");
-          out.write("\t\t\t\t\t\t\t\t<div class=\"movie-details\">\n");
-          out.write("\t\t\t\t\t\t\t\t\t<p class=\"movie-name\">\n");
-          out.write("\t\t\t\t\t\t\t\t\t\t<a href=\"");
-          if (_jspx_meth_spring_url_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
-            return true;
-          out.write('"');
-          out.write('>');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\t\t\t\t\t\t<div class=\"well\">\n");
+          out.write("\t\t\t\t\t\t\t<div class=\"row-fluid\">\n");
+          out.write("\t\t\t\t\t\t\t\t<div id=\"reviewfont\"><strong>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${reviews.review}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</strong></div>\n");
+          out.write("\t\t\t\t\t\t\t\t<div class=\"span2 muted mycenter\" style=\"text-align: right;\">\n");
+          out.write("\t\t\t\t\t\t\t\t\t<a>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${reviews.user.firstName}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</a>\n");
-          out.write("\t\t\t\t\t\t\t\t\t</p>\n");
-          out.write("\t\t\t\t\t\t\t\t\t<p class=\"text-muted release-date\">\n");
-          out.write("\t\t\t\t\t\t\t\t\t\t<em>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.doB}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</em>\n");
-          out.write("\t\t\t\t\t\t\t\t\t</p>\n");
           out.write("\t\t\t\t\t\t\t\t</div>\n");
           out.write("\t\t\t\t\t\t\t</div>\n");
           out.write("\t\t\t\t\t\t</div>\n");
@@ -469,14 +503,74 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
     return false;
   }
 
-  private boolean _jspx_meth_spring_url_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
+  private boolean _jspx_meth_c_forEach_1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_1.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_1.setParent(null);
+    _jspx_th_c_forEach_1.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${cast}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_1.setVar("actor");
+    int[] _jspx_push_body_count_c_forEach_1 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_1 = _jspx_th_c_forEach_1.doStartTag();
+      if (_jspx_eval_c_forEach_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("\t\t\t\t\t\t<div class=\"item\">\n");
+          out.write("\t\t\t\t\t\t\t<div class=\"col-xs-4\">\n");
+          out.write("\t\t\t\t\t\t\t\t<a href=\"#1\"><img src=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\"\n");
+          out.write("\t\t\t\t\t\t\t\t\tclass=\"img-responsive\"></a>\n");
+          out.write("\t\t\t\t\t\t\t\t<div class=\"movie-details\">\n");
+          out.write("\t\t\t\t\t\t\t\t\t<p class=\"movie-name\">\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t<a href=\"");
+          if (_jspx_meth_spring_url_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
+            return true;
+          out.write('"');
+          out.write('>');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a>\n");
+          out.write("\t\t\t\t\t\t\t\t\t</p>\n");
+          out.write("\t\t\t\t\t\t\t\t\t<p class=\"text-muted release-date\">\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t<em>");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.doB}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</em>\n");
+          out.write("\t\t\t\t\t\t\t\t\t</p>\n");
+          out.write("\t\t\t\t\t\t\t\t</div>\n");
+          out.write("\t\t\t\t\t\t\t</div>\n");
+          out.write("\t\t\t\t\t\t</div>\n");
+          out.write("\t\t\t\t\t");
+          int evalDoAfterBody = _jspx_th_c_forEach_1.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_1[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_1.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_1.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_1);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_url_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_1, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_1)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  spring:url
     org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_0 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
     _jspx_th_spring_url_0.setPageContext(_jspx_page_context);
-    _jspx_th_spring_url_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
+    _jspx_th_spring_url_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_1);
     _jspx_th_spring_url_0.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/actor/${actor.actorId}", java.lang.String.class, (PageContext)_jspx_page_context, null));
     int[] _jspx_push_body_count_spring_url_0 = new int[] { 0 };
     try {

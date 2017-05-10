@@ -31,7 +31,7 @@
 <title><tiles:getAsString name="title" /></title>
 </head>
 
-<body onload="loadMap()">
+<body>
 
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
@@ -46,7 +46,7 @@
 				</button>
 
 				<a class="navbar-brand" href='<spring:url value="/" />'><img
-					src="resources/img/movie.png" alt="Team Cedar"></a>
+					src="/resources/img/movie.png" alt="Team Cedar"></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->

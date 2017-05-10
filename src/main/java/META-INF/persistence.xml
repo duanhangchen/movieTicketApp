@@ -15,5 +15,6 @@
 		<class>com.cedar.mta.entity.Actor</class>
 		<class>com.cedar.mta.entity.Genre</class>
 		<class>com.cedar.mta.entity.Rating</class>
+		<class>com.cedar.mta.entity.Review</class>
 	</persistence-unit>
 </persistence>

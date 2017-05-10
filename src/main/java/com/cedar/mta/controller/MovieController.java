@@ -3,6 +3,7 @@ package com.cedar.mta.controller;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +24,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cedar.mta.entity.Movie;
 import com.cedar.mta.entity.Rating;
+import com.cedar.mta.entity.Review;
 import com.cedar.mta.entity.User;
 import com.cedar.mta.repository.RatingRepository;
+
 import com.cedar.mta.service.ActorService;
+
+import com.cedar.mta.repository.ReviewRepository;
 import com.cedar.mta.service.MovieService;
 import com.cedar.mta.service.RatingService;
+import com.cedar.mta.service.ReviewService;
 
 @Controller
 public class MovieController {
@@ -41,7 +47,11 @@ public class MovieController {
 	@Autowired
 	private RatingService ratingService;
 	@Autowired
+	private ReviewService reviewService;
+	@Autowired
 	private RatingRepository ratingRepository;
+	@Autowired
+	private ReviewRepository reviewRepository;
 	
 	@RequestMapping("/movies")
 	public String movies(Model model){
@@ -54,37 +64,72 @@ public class MovieController {
 		User user=(User) session.getAttribute("user");
 		Movie movie=movieService.findById(id);
 		if(user!=null){
+			Review personalReview=reviewService.findReview(movie.getId(),user.getAccountId());
 			Rating test=ratingService.findRatingScore(movie.getId(),user.getAccountId());
 			if(test!=null){
-				System.out.println("test123"+test.getScore());
 				model.addAttribute("rating",test);
+			}
+			model.addAttribute("review",personalReview);
+		}
+		model.addAttribute("movie",movieService.findById(id));
+		model.addAttribute("reviews",reviewService.findReviews(id));
+		return "movie-detail";
+	}
+	
+	@RequestMapping(value="/movies/{id}", method=RequestMethod.POST)
+	public String handleReview(Model model,@PathVariable int id,HttpSession session,@RequestParam String reviewText){
+		User user=(User) session.getAttribute("user");
+		Movie movie=movieService.findById(id);	
+		if(user!=null){
+			Review personalReview=reviewService.findReview(movie.getId(),user.getAccountId());
+			Rating test=ratingService.findRatingScore(movie.getId(),user.getAccountId());
+			if(test!=null){
+				model.addAttribute("rating",test);
+			}
+			if(personalReview==null){
+				Review review=new Review();
+				review.setMovie(movie);
+				review.setUser(user);
+				review.setReview(reviewText);
+				reviewRepository.save(review);
+			}
+			else{
+				reviewService.changeReview(reviewText,movie.getId(),user.getAccountId());
+				Review newReview=reviewService.findReview(movie.getId(),user.getAccountId());
+				model.addAttribute("review",newReview);
 			}
 		}
 		model.addAttribute("movie",movieService.findById(id));
 		List<Actor> actors = actorService.findActor(id);
 		System.out.println("Actors"+ actors.toString());
 		session.setAttribute("cast",actorService.findActor(id));
+		model.addAttribute("reviews",reviewService.findReviews(id));
 		return "movie-detail";
 	}
 	
 	
-	@ResponseBody
+
 	@RequestMapping(value="/movies/rating/{id}/{score}",method=RequestMethod.POST)
-	public void ratings(Model model,HttpSession session,@PathVariable int id,@PathVariable int score){
-		System.out.println(id);
-		System.out.println(score);
+	public @ResponseBody String ratings(Model model,HttpSession session,@PathVariable int id,@PathVariable int score){
 		User user=(User) session.getAttribute("user");
-		Rating test=ratingService.findRatingScore(id,user.getAccountId());
-		if(test==null){
-			Rating rating=new Rating();
-			Movie movie=movieService.findById(id);
-			rating.setUser(user);
-			rating.setMovie(movie);
-			rating.setScore(score);
-			ratingRepository.save(rating);
+		if(user!=null){
+			Rating test=ratingService.findRatingScore(id,user.getAccountId());
+			if(test==null){
+				Rating rating=new Rating();
+				Movie movie=movieService.findById(id);
+				rating.setUser(user);
+				rating.setMovie(movie);
+				rating.setScore(score);
+				ratingRepository.save(rating);
+				return "success";
+			}
+			else{
+				ratingService.updateRatingScore(id,user.getAccountId(),score);
+				return "success";
+			}
 		}
 		else{
-			ratingService.updateRatingScore(id,user.getAccountId(),score);
+			return "FAIL";
 		}
 	}
 }
