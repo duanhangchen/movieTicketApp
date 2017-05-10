@@ -112,21 +112,33 @@ $(function() {
 	return $(".starrr").starrr();
 });
 
-function toggleValue() {
-	window.alert("HHIIII");
-   // document.getElementById("demo").innerHTML = "Hello World";
-}
 
 $(document).ready(function() {
 
 	$('#stars').on('starrr:change', function(e, value) {
 		$('#count').html(value);
+		data={}
+		var status="complete"
+		var movieid = window.location.pathname.split('/')[2];
+		data["score"]=value;
+		$.ajax({
+			type:"POST",
+			url:"/movies/rating/"+movieid+"/"+value,
+			data:{'status':status},
+			dataType:'json',
+			success: function(data){
+				console.log("SUCCESS:",data);
+			},
+			error: function (errormessage){
+				
+			}
+		})
 	});
 
 	$('#stars-existing').on('starrr:change', function(e, value) {
 		$('#count-existing').html(value);
 	});
-	
+
 	$( ".glyphicon.glyphicon-heart" ).click(function() {
 		$( this ).toggleClass('red');
 	});

@@ -84,8 +84,10 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<link href=\"");
       if (_jspx_meth_c_url_3(_jspx_page_context))
         return;
-      out.write("\"rel=\"stylesheet\">\n");
-      out.write("<linl rel=\"stylesheet\" href=\"http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css\"/>\n");
+      out.write("\"\n");
+      out.write("\trel=\"stylesheet\">\n");
+      out.write("<linl rel=\"stylesheet\"\n");
+      out.write("\thref=\"http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css\" />\n");
       out.write("<link rel=\"stylesheet\"\n");
       out.write("\thref=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n");
       out.write("<script\n");
@@ -98,6 +100,12 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_c_url_5(_jspx_page_context))
         return;
       out.write("\"></script>\n");
+      out.write("\n");
+      out.write("<script src=\"");
+      if (_jspx_meth_c_url_6(_jspx_page_context))
+        return;
+      out.write("\"></script>\n");
+      out.write("\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("<title>");
       if (_jspx_meth_tiles_getAsString_0(_jspx_page_context))
@@ -451,6 +459,24 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       return true;
     }
     _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_5);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_6(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_6 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_6.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_6.setParent(null);
+    _jspx_th_c_url_6.setValue("/resources/js/validator.min.js");
+    int _jspx_eval_c_url_6 = _jspx_th_c_url_6.doStartTag();
+    if (_jspx_th_c_url_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_6);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_6);
     return false;
   }
 
