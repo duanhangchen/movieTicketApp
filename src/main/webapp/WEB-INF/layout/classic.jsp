@@ -22,6 +22,8 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="<c:url value="/resources/js/validator.min.js" />"></script>
+<script src="<c:url value="/resources/js/logout.js" />"></script>
 
 <script src="<c:url value="/resources/js/validator.min.js" />"></script>
 
@@ -237,9 +239,7 @@
 								<a href="/" class="btn btn-lg btn-primary"><span
 									class="glyphicon glyphicon-fire"></span> MY ACCOUNT SETTINGS</a>
 								<br>
-								<p>
-									<a href="/logout" class="text-primary"><strong>LOGOUT</strong></a>
-								</p>
+								<p> <a  href="/logout" onclick='return logout()' class="text-primary"><strong>LOGOUT</strong></a></p>
 							</c:if>
 						</ul></li>
 				</ul>

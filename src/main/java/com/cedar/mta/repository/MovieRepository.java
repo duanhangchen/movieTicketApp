@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.cedar.mta.entity.Movie;
 
 public interface MovieRepository extends JpaRepository<Movie,Integer> {
-	@Query(value="SELECT * FROM movie ORDER BY releaseDate DESC LIMIT 12", nativeQuery = true)
+	@Query(value="SELECT * FROM movie ORDER BY releaseDate DESC LIMIT 5", nativeQuery = true)
 	List<Movie> findFeaturedMovies();
 
 }

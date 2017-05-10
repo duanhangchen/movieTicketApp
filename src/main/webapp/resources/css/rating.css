@@ -1,1 +1,24 @@
-@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
+.glyphicon.glyphicon-heart {
+	font-size: xx-large;
+	color: white;
+}
+
+.glyphicon.glyphicon-heart.red {
+	font-size: xx-large;
+	color: red;
+}
+
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+:active {
+    outline:none;
+}
+@import
+url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')

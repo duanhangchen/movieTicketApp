@@ -1,17 +1,29 @@
 package com.cedar.mta.controller;
 
+<<<<<<< HEAD
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletResponse;
+=======
+import java.security.NoSuchAlgorithmException;
+
+
+>>>>>>> 9301d2136551dd8df9a9fb1d4b920cc8d53bb968
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.cedar.mta.entity.Movie;
+import com.cedar.mta.entity.User;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cedar.mta.entity.Movie;
@@ -53,6 +65,10 @@ public class MovieController {
 	}
 	
 	
+<<<<<<< HEAD
+=======
+	@ResponseBody
+>>>>>>> 9301d2136551dd8df9a9fb1d4b920cc8d53bb968
 	@RequestMapping(value="/movies/rating/{id}/{score}",method=RequestMethod.POST)
 	public @ResponseBody String ratings(Model model,HttpSession session,@PathVariable int id,@PathVariable int score){
 		User user=(User) session.getAttribute("user");

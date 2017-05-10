@@ -112,6 +112,7 @@ $(function() {
 	return $(".starrr").starrr();
 });
 
+
 $(document).ready(function() {
 
 	$('#stars').on('starrr:change', function(e, value) {
@@ -133,5 +134,9 @@ $(document).ready(function() {
 
 	$('#stars-existing').on('starrr:change', function(e, value) {
 		$('#count-existing').html(value);
+	});
+
+	$( ".glyphicon.glyphicon-heart" ).click(function() {
+		$( this ).toggleClass('red');
 	});
 });
