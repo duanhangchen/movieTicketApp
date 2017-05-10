@@ -9,23 +9,18 @@
 
 
 <div id="exTab1" class="container">
-<<<<<<< HEAD
-	<h1 class="actor-name">${movie.name}Overview</h1>
-=======
 
 	<span>
 		<h1 class="actor-name">${movie.name}Overview
 			<!-- <form action="/movies/{id}"method="POST"> -->
-			<button name="favouriteMovie" value="${favouriteMovie}" onClick="toggleValue()" type="submit" class="btn btn-lg">
+			<button name="favouriteMovie" value="${favouriteMovie}"
+				onClick="toggleValue()" type="submit" class="btn btn-lg">
 				<span class="glyphicon glyphicon-heart"> </span>
 			</button>
 			<!-- </form> -->
 		</h1>
 	</span>
 
-
-
->>>>>>> 9301d2136551dd8df9a9fb1d4b920cc8d53bb968
 	<ul class="nav nav-pills">
 		<li class="active"><a href="#1a" data-toggle="tab">Overview</a></li>
 		<li><a href="#2a" data-toggle="tab">Synopsis</a></li>
@@ -113,33 +108,52 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Write Review</button>
-					<div class="modal fade" id="exampleModal" tabindex="-1"
+					<button type="button" class="btn btn-primary" data-toggle="modal"
+						data-target="#reviewModal">Write Review</button>
+
+					<br> <br>
+					<c:forEach items="${reviews}" var="reviews">
+						<div class="well">
+							<div class="row-fluid">
+								<div id="reviewfont"><strong>${reviews.review}</strong></div>
+								<div class="span2 muted mycenter" style="text-align: right;">
+									<a>${reviews.user.firstName}</a>
+								</div>
+							</div>
+						</div>
+					</c:forEach>
+
+					<div class="modal fade" id="reviewModal" tabindex="-1"
 						role="dialog" aria-labelledby="exampleModalLabel"
 						aria-hidden="true">
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<button type="button" class="close" data-dismiss="modal"
+										aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
 								</div>
 								<div class="modal-body">
-									<form>
+									<form role="form" method="POST">
 										<div>
 											<h5 id="reviewfont">${movie.name}</h5>
 										</div>
 										<div class="form-group">
-											<label for="message-text" id="reviewfont" class="form-control-label">Review:</label>
-											<textarea class="form-control" id="message-text"></textarea>
+											<label for="message-text" id="reviewfont"
+												class="form-control-label">Review:</label>
+											<textarea type="text" class="form-control" id="reviewText" 
+												name="reviewText">${review.review}</textarea>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary"
+												data-dismiss="modal">Close</button>
+											<button type="submit" class="btn btn-primary">Submit
+												Review</button>
 										</div>
 									</form>
 								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary"
-										data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-primary">Submit Review</button>
-								</div>
+
 							</div>
 						</div>
 					</div>

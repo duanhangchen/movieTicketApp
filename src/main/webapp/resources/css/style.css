@@ -1,12 +1,3 @@
-/*!
- * Project_Name: Themezy Ecommerce Video Game website template
- * Author: Themezy
- * Email: info@themezy.com
- * URL: http://themezy.com
- */
-/*=========================================== 
- * Importing CSS Libraries
- *===========================================*/
 article,
 aside,
 details,
@@ -19,6 +10,21 @@ nav,
 section,
 summary {
   display: block;
+}
+
+#site-content{
+	background:
+		url(//images.fandango.com/fandango-www/screenplay/assets/images/pop/pop-header-bg.aa292583a36.jpg)
+		#412522;
+	background-position-x: center;
+	background-position-y: center;
+	background-size: cover;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgb(65, 37, 34);
+	background-size: 100% 100%; 
+	color: whitesmoke;
 }
 
 audio,
@@ -2713,4 +2719,10 @@ table.cart .fa-times {
 .site-footer .social-links a:hover {
   background-color: white;
   color: #898e90;
+}
+.product-title {
+    -o-text-overflow: ellipsis;   /* Opera */
+    text-overflow:    ellipsis;   /* IE, Safari (WebKit) */
+    overflow:hidden;              /* don't show excess chars */
+    white-space:nowrap;           /* force single line */
 }
