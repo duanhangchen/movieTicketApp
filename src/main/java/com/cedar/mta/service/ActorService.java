@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cedar.mta.entity.Actor;
+import com.cedar.mta.entity.Movie;
 import com.cedar.mta.repository.ActorRepository;
 
 @Service
@@ -21,4 +22,9 @@ public class ActorService {
 	public Actor findById(int id) {
 		return actorRepository.findOne(id);
 	}
+	
+	public List<Actor> findActor(int movieid) {
+		return actorRepository.findActors(movieid);
+	}
+	
 }

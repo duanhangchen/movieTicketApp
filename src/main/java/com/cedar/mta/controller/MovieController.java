@@ -1,7 +1,7 @@
 package com.cedar.mta.controller;
 
 import java.security.NoSuchAlgorithmException;
-
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.cedar.mta.entity.Actor;
 import com.cedar.mta.entity.Movie;
 import com.cedar.mta.entity.User;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -24,6 +25,7 @@ import com.cedar.mta.entity.Movie;
 import com.cedar.mta.entity.Rating;
 import com.cedar.mta.entity.User;
 import com.cedar.mta.repository.RatingRepository;
+import com.cedar.mta.service.ActorService;
 import com.cedar.mta.service.MovieService;
 import com.cedar.mta.service.RatingService;
 
@@ -32,6 +34,10 @@ public class MovieController {
 
 	@Autowired
 	private MovieService movieService;
+	
+	@Autowired
+	private ActorService actorService;
+	
 	@Autowired
 	private RatingService ratingService;
 	@Autowired
@@ -55,6 +61,9 @@ public class MovieController {
 			}
 		}
 		model.addAttribute("movie",movieService.findById(id));
+		List<Actor> actors = actorService.findActor(id);
+		System.out.println("Actors"+ actors.toString());
+		session.setAttribute("cast",actorService.findActor(id));
 		return "movie-detail";
 	}
 	

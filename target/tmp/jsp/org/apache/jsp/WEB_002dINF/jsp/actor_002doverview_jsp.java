@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class actor_002doverview_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -12,7 +12,6 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
   private static java.util.List<String> _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_spring_url_value_nobody;
 
@@ -24,14 +23,12 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
 
   public void _jspInit() {
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_spring_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_forEach_var_items.release();
-    _jspx_tagPool_c_if_test.release();
     _jspx_tagPool_c_url_value_nobody.release();
     _jspx_tagPool_spring_url_value_nobody.release();
   }
@@ -91,15 +88,8 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\n");
       out.write("\t<span>\n");
       out.write("\t\t<h1 class=\"actor-name\">");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("Overview\n");
-      out.write("\t\t\t<!-- <form action=\"/movies/{id}\"method=\"POST\"> -->\n");
-      out.write("\t\t\t<button name=\"favouriteMovie\" value=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${favouriteMovie}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\" onClick=\"toggleValue()\" type=\"submit\" class=\"btn btn-lg\">\n");
-      out.write("\t\t\t\t<span class=\"glyphicon glyphicon-heart\"> </span>\n");
-      out.write("\t\t\t</button>\n");
-      out.write("\t\t\t<!-- </form> -->\n");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write(" Overview\n");
       out.write("\t\t</h1>\n");
       out.write("\t</span>\n");
       out.write("\n");
@@ -107,7 +97,7 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\n");
       out.write("\t<ul class=\"nav nav-pills\">\n");
       out.write("\t\t<li class=\"active\"><a href=\"#1a\" data-toggle=\"tab\">Overview</a></li>\n");
-      out.write("\t\t<li><a href=\"#2a\" data-toggle=\"tab\">Synopsis</a></li>\n");
+      out.write("\t\t<li><a href=\"#2a\" data-toggle=\"tab\">Biography</a></li>\n");
       out.write("\t\t<li><a href=\"#3a\" data-toggle=\"tab\">Reviews</a></li>\n");
       out.write("\t</ul>\n");
       out.write("\t<div class=\"tab-content clearfix\">\n");
@@ -117,27 +107,17 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\t\t\t\t\t<div class=\"row photo\">\n");
       out.write("\t\t\t\t\t\t<div class=\"col-sm-6 biographyAndPhoto\">\n");
       out.write("\t\t\t\t\t\t\t<a> <img class=\"pop-headshot--photo-img\" src=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"\n");
       out.write("\t\t\t\t\t\t\t\talt=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"></a>\n");
       out.write("\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t<div class=\"col-sm-6\">\n");
       out.write("\t\t\t\t\t\t\t<div class=\"dob\">\n");
-      out.write("\t\t\t\t\t\t\t\tRelease Date: ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.releaseDate}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\t\t\t\t\t\t\t\tDOB: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.doB}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\n");
-      out.write("\t\t\t\t\t\t\t\t<div class=\"row lead\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t");
-      if (_jspx_meth_c_if_0(_jspx_page_context))
-        return;
-      out.write("\n");
-      out.write("\t\t\t\t\t\t\t\t\t");
-      if (_jspx_meth_c_if_1(_jspx_page_context))
-        return;
-      out.write("\n");
-      out.write("\t\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t</div>\n");
@@ -147,11 +127,11 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\t\t\t\t</div>\n");
       out.write("\t\t\t\t<div class=\"col-sm-6\">\n");
       out.write("\t\t\t\t\t");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.trailer}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${moviesbyactor[0].trailer}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\n");
       out.write("\t\t\t\t\t<p class=\"video-description\">");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.plot}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</p>\n");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${moviesbyactor[0].plot}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("</p> \n");
       out.write("\t\t\t\t</div>\n");
       out.write("\t\t\t</div>\n");
       out.write("\t\t</div>\n");
@@ -162,22 +142,17 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\t\t\t\t\t<div class=\"row photo\">\n");
       out.write("\t\t\t\t\t\t<div class=\"col-sm-6 biographyAndPhoto\">\n");
       out.write("\t\t\t\t\t\t\t<a> <img class=\"pop-headshot--photo-img\" src=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"\n");
       out.write("\t\t\t\t\t\t\t\talt=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"></a>\n");
       out.write("\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t<div class=\"col-sm-6\">\n");
       out.write("\t\t\t\t\t\t\t<div class=\"dob\">\n");
-      out.write("\t\t\t\t\t\t\t\tRelease Date: ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.releaseDate}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\t\t\t\t\t\t\t\tDOB: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.doB}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\n");
-      out.write("\t\t\t\t\t\t\t\t<div class=\"row lead\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t<div id=\"stars\" class=\"starrr\" data-rating='");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.rating}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("'></div>\n");
-      out.write("\t\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t</div>\n");
@@ -187,7 +162,7 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\t\t\t\t</div>\n");
       out.write("\t\t\t\t<div class=\"col-sm-6\">\n");
       out.write("\t\t\t\t\t<p class=\"video-description\">");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.plot}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.biography}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</p>\n");
       out.write("\t\t\t\t</div>\n");
       out.write("\t\t\t</div>\n");
@@ -197,23 +172,14 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\t\t\t\t<div class=\"col-sm-3 biographyAndPhoto\">\n");
       out.write("\t\t\t\t\t<div class=\"row photo\">\n");
       out.write("\t\t\t\t\t\t<div class=\"col-sm-6 biographyAndPhoto\">\n");
-      out.write("\t\t\t\t\t\t\t<a> <img class=\"pop-headshot--photo-img\" src=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\"\n");
-      out.write("\t\t\t\t\t\t\t\talt=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\"></a>\n");
+      out.write("\t\t\t\t\t\t\t");
+      out.write("\n");
       out.write("\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t<div class=\"col-sm-6\">\n");
       out.write("\t\t\t\t\t\t\t<div class=\"dob\">\n");
-      out.write("\t\t\t\t\t\t\t\tRelease Date: ");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.releaseDate}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\t\t\t\t\t\t\t\tDOB: ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.doB}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\n");
-      out.write("\t\t\t\t\t\t\t\t<div class=\"row lead\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t<div id=\"stars\" class=\"starrr\" data-rating='");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.rating}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("'></div>\n");
-      out.write("\t\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t</div>\n");
@@ -351,64 +317,6 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
     return false;
   }
 
-  private boolean _jspx_meth_c_if_0(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:if
-    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
-    _jspx_th_c_if_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_if_0.setParent(null);
-    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${empty rating}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
-    int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
-    if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\n");
-        out.write("\t\t\t\t\t\t\t\t\t\t<div id=\"stars\" class=\"starrr\"></div>\n");
-        out.write("\t\t\t\t\t\t\t\t\t");
-        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
-      return true;
-    }
-    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_if_1(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:if
-    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
-    _jspx_th_c_if_1.setPageContext(_jspx_page_context);
-    _jspx_th_c_if_1.setParent(null);
-    _jspx_th_c_if_1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty rating}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
-    int _jspx_eval_c_if_1 = _jspx_th_c_if_1.doStartTag();
-    if (_jspx_eval_c_if_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\n");
-        out.write("\t\t\t\t\t\t\t\t\t\t<div id=\"stars\" class=\"starrr\" data-rating='");
-        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${rating.score}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("'></div>\n");
-        out.write("\t\t\t\t\t\t\t\t\t");
-        int evalDoAfterBody = _jspx_th_c_if_1.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_if_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
-      return true;
-    }
-    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_1);
-    return false;
-  }
-
   private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -417,8 +325,8 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${cast}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    _jspx_th_c_forEach_0.setVar("actor");
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${moviesbyactor}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setVar("movie");
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
@@ -428,7 +336,7 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
           out.write("\t\t\t\t\t\t<div class=\"item\">\n");
           out.write("\t\t\t\t\t\t\t<div class=\"col-xs-4\">\n");
           out.write("\t\t\t\t\t\t\t\t<a href=\"#1\"><img src=\"");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\"\n");
           out.write("\t\t\t\t\t\t\t\t\tclass=\"img-responsive\"></a>\n");
           out.write("\t\t\t\t\t\t\t\t<div class=\"movie-details\">\n");
@@ -438,12 +346,12 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
             return true;
           out.write('"');
           out.write('>');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</a>\n");
           out.write("\t\t\t\t\t\t\t\t\t</p>\n");
           out.write("\t\t\t\t\t\t\t\t\t<p class=\"text-muted release-date\">\n");
           out.write("\t\t\t\t\t\t\t\t\t\t<em>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${actor.doB}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.releaseDate}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</em>\n");
           out.write("\t\t\t\t\t\t\t\t\t</p>\n");
           out.write("\t\t\t\t\t\t\t\t</div>\n");
@@ -477,7 +385,7 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
     org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_0 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
     _jspx_th_spring_url_0.setPageContext(_jspx_page_context);
     _jspx_th_spring_url_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_spring_url_0.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/actor/${actor.actorId}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_spring_url_0.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/movies/${movie.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
     int[] _jspx_push_body_count_spring_url_0 = new int[] { 0 };
     try {
       int _jspx_eval_spring_url_0 = _jspx_th_spring_url_0.doStartTag();

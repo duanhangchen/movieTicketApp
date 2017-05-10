@@ -17,8 +17,14 @@ button {
     outline:none;
 }
 
+.row.actor{
+	min-height : 400px;
+}
+
 :active {
     outline:none;
 }
 @import
 url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
+
+

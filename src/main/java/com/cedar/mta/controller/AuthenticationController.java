@@ -39,7 +39,6 @@ public class AuthenticationController {
 			model.put("errorMessage", "Invalid Credentials");
 			return "login";
 		} else {
-			System.out.println("Hello" + user.getFirstName());
 			session.setAttribute("user", user);
 			return "redirect: ";
 		}

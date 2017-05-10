@@ -1,5 +1,6 @@
 package com.cedar.mta.entity;
 
+import java.sql.Date;
 import java.util.Calendar;
 import java.util.List;
 
@@ -20,7 +21,8 @@ public class Actor {
 	
 	private String name;
 	
-	private Calendar doB;
+	private Date doB;
+	
 	
 	@Column(name="actorImage")
 	private String url;
@@ -48,11 +50,11 @@ public class Actor {
 		this.name = name;
 	}
 
-	public Calendar getDoB() {
+	public Date getDoB() {
 		return doB;
 	}
 
-	public void setDoB(Calendar doB) {
+	public void setDoB(Date doB) {
 		this.doB = doB;
 	}
 

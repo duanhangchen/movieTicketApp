@@ -14,12 +14,7 @@
 <div id="exTab1" class="container">
 
 	<span>
-		<h1 class="actor-name">${movie.name}Overview
-			<!-- <form action="/movies/{id}"method="POST"> -->
-			<button name="favouriteMovie" value="${favouriteMovie}" onClick="toggleValue()" type="submit" class="btn btn-lg">
-				<span class="glyphicon glyphicon-heart"> </span>
-			</button>
-			<!-- </form> -->
+		<h1 class="actor-name">${actor.name} Overview
 		</h1>
 	</span>
 
@@ -27,7 +22,7 @@
 
 	<ul class="nav nav-pills">
 		<li class="active"><a href="#1a" data-toggle="tab">Overview</a></li>
-		<li><a href="#2a" data-toggle="tab">Synopsis</a></li>
+		<li><a href="#2a" data-toggle="tab">Biography</a></li>
 		<li><a href="#3a" data-toggle="tab">Reviews</a></li>
 	</ul>
 	<div class="tab-content clearfix">
@@ -36,20 +31,12 @@
 				<div class="col-sm-3 biographyAndPhoto">
 					<div class="row photo">
 						<div class="col-sm-6 biographyAndPhoto">
-							<a> <img class="pop-headshot--photo-img" src="${movie.url}"
-								alt="${movie.name}"></a>
+							<a> <img class="pop-headshot--photo-img" src="${actor.url}"
+								alt="${actor.name}"></a>
 						</div>
 						<div class="col-sm-6">
 							<div class="dob">
-								Release Date: ${movie.releaseDate}
-								<div class="row lead">
-									<c:if test="${empty rating}">
-										<div id="stars" class="starrr"></div>
-									</c:if>
-									<c:if test="${not empty rating}">
-										<div id="stars" class="starrr" data-rating='${rating.score}'></div>
-									</c:if>
-								</div>
+								DOB: ${actor.doB}
 							</div>
 						</div>
 					</div>
@@ -58,8 +45,8 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					${movie.trailer}
-					<p class="video-description">${movie.plot}</p>
+					${moviesbyactor[0].trailer}
+					<p class="video-description">${moviesbyactor[0].plot}</p> 
 				</div>
 			</div>
 		</div>
@@ -69,15 +56,12 @@
 				<div class="col-sm-3 biographyAndPhoto">
 					<div class="row photo">
 						<div class="col-sm-6 biographyAndPhoto">
-							<a> <img class="pop-headshot--photo-img" src="${movie.url}"
-								alt="${movie.name}"></a>
+							<a> <img class="pop-headshot--photo-img" src="${actor.url}"
+								alt="${actor.name}"></a>
 						</div>
 						<div class="col-sm-6">
 							<div class="dob">
-								Release Date: ${movie.releaseDate}
-								<div class="row lead">
-									<div id="stars" class="starrr" data-rating='${movie.rating}'></div>
-								</div>
+								DOB: ${actor.doB}
 							</div>
 						</div>
 					</div>
@@ -86,7 +70,7 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<p class="video-description">${movie.plot}</p>
+					<p class="video-description">${actor.biography}</p>
 				</div>
 			</div>
 		</div>
@@ -95,15 +79,12 @@
 				<div class="col-sm-3 biographyAndPhoto">
 					<div class="row photo">
 						<div class="col-sm-6 biographyAndPhoto">
-							<a> <img class="pop-headshot--photo-img" src="${movie.url}"
-								alt="${movie.name}"></a>
+							<%-- <a> <img class="pop-headshot--photo-img" src="${movie.url}"
+								alt="${movie.name}"></a> --%>
 						</div>
 						<div class="col-sm-6">
 							<div class="dob">
-								Release Date: ${movie.releaseDate}
-								<div class="row lead">
-									<div id="stars" class="starrr" data-rating='${movie.rating}'></div>
-								</div>
+								DOB: ${actor.doB}
 							</div>
 						</div>
 					</div>
@@ -122,17 +103,17 @@
 		<div class="col-md-12">
 			<div class="carousel slide multi-item-carousel" id="theCarousel">
 				<div class="carousel-inner">
-					<c:forEach items="${cast}" var="actor">
+					<c:forEach items="${moviesbyactor}" var="movie">
 						<div class="item">
 							<div class="col-xs-4">
-								<a href="#1"><img src="${actor.url}"
+								<a href="#1"><img src="${movie.url}"
 									class="img-responsive"></a>
 								<div class="movie-details">
 									<p class="movie-name">
-										<a href="<spring:url value="/actor/${actor.actorId}"/>">${actor.name}</a>
+										<a href="<spring:url value="/movies/${movie.id}"/>">${movie.name}</a>
 									</p>
 									<p class="text-muted release-date">
-										<em>${actor.doB}</em>
+										<em>${movie.releaseDate}</em>
 									</p>
 								</div>
 							</div>
