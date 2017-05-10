@@ -32,7 +32,7 @@ public class User {
 	
 	@OneToMany
 	@JoinTable(name="MyMovies")
-	private List<Movie> movies;
+	private List<Movie> myMovies;
 	
 	@OneToMany
 	@JoinTable(name="MyTheaters")
@@ -101,4 +101,13 @@ public class User {
 	public void setDoB(Date doB) {
 		this.doB = doB;
 	}
+	
+	public boolean isFavouriteMovie(Movie movie){
+		return true;
+	}
+	
+	public void addToMyMovie(Movie movie){
+		myMovies.add(movie);
+	}
+	
 }

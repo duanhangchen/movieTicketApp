@@ -1,3 +1,13 @@
+.container {
+	width: 90%;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+	width: 100%;
+	margin: auto;
+}
+
+
 .navbar{
     border-radius: 0px;
     margin-bottom: 0px;

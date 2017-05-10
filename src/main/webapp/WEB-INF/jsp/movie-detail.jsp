@@ -9,7 +9,19 @@
 
 
 <div id="exTab1" class="container">
-	<h1 class="actor-name">${movie.name} Overview</h1>
+
+	<span>
+		<h1 class="actor-name">${movie.name}Overview
+			<!-- <form action="/movies/{id}"method="POST"> -->
+			<button name="favouriteMovie" value="${favouriteMovie}" onClick="toggleValue()" type="submit" class="btn btn-lg">
+				<span class="glyphicon glyphicon-heart"> </span>
+			</button>
+			<!-- </form> -->
+		</h1>
+	</span>
+
+
+
 	<ul class="nav nav-pills">
 		<li class="active"><a href="#1a" data-toggle="tab">Overview</a></li>
 		<li><a href="#2a" data-toggle="tab">Synopsis</a></li>
