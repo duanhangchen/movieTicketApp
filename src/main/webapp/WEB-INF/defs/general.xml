@@ -22,10 +22,6 @@
 		<put-attribute name="title" value="Movie Detail Page" />
 		<put-attribute name="body" value="/WEB-INF/jsp/movie-detail.jsp" />
 	</definition>
-	<definition name="actor-overview" extends="common">
-		<put-attribute name="title" value="Actor Overview" />
-		<put-attribute name="body" value="/WEB-INF/jsp/actor-overview.jsp" />
-	</definition>
 	<definition name="login" extends="common">
 		<put-attribute name="title" value="Login" />
 		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
@@ -33,5 +29,13 @@
 	<definition name="sign-up" extends="common">
 		<put-attribute name="title" value="SIGN-UP" />
 		<put-attribute name="body" value="/WEB-INF/jsp/sign-up.jsp" />
+	</definition>
+	<definition name="theaters" extends="common">
+		<put-attribute name="title" value="Theaters" />
+		<put-attribute name="body" value="/WEB-INF/jsp/theater.jsp" />
+	</definition>
+	<definition name="theater-detail" extends="common">
+		<put-attribute name="title" value="Theater Detail Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/theater-detail.jsp" />
 	</definition>
 </tiles-definitions>
