@@ -6,6 +6,8 @@ import java.util.Calendar;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.cedar.mta.entity.Movie;
 import com.cedar.mta.entity.User;
 import com.cedar.mta.repository.UserRepository;
 

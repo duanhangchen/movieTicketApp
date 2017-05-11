@@ -10,11 +10,10 @@ public class MailService {
 	@Autowired
 	private MailMail mail;
 
-	public void sendMailForSignUp() {
-		String sender = "kaka.sanchay@gmail.com";// write here sender gmail id
-		String receiver = "duanhang.chen@stonybrook.edu";// write here receiver
+	public void sendMailForSignUp(String email) {
+		String sender = "teamcedar308@gmail.com";// write here sender gmail id
 		String subject="Welcome to Cedar Movie Ticket App";
 		String body="You have been registered for Cedar Movie Ticket App!";
-		mail.sendMail(sender, receiver, subject, body);
+		mail.sendMail(sender, email, subject, body);
 	}
 }

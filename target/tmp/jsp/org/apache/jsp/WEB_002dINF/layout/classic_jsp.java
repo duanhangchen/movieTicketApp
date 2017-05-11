@@ -84,29 +84,27 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<link href=\"");
       if (_jspx_meth_c_url_3(_jspx_page_context))
         return;
-      out.write("\"rel=\"stylesheet\">\r\n");
-      out.write("<linl rel=\"stylesheet\" href=\"http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css\"/>\r\n");
+      out.write("\"\r\n");
+      out.write("\trel=\"stylesheet\">\r\n");
+      out.write("<linl rel=\"stylesheet\"\r\n");
+      out.write("\thref=\"http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.min.css\" />\r\n");
       out.write("<link rel=\"stylesheet\"\r\n");
       out.write("\thref=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\r\n");
       out.write("<script\r\n");
       out.write("\tsrc=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("<script src=\"");
       if (_jspx_meth_c_url_4(_jspx_page_context))
         return;
       out.write("\"></script>\r\n");
-      out.write("<style>\r\n");
-      out.write(".container {\r\n");
-      out.write("\twidth: 90%;\r\n");
-      out.write("}\r\n");
+      out.write("<script src=\"");
+      if (_jspx_meth_c_url_5(_jspx_page_context))
+        return;
+      out.write("\"></script>\r\n");
       out.write("\r\n");
-      out.write(".carousel-inner>.item>img, .carousel-inner>.item>a>img {\r\n");
-      out.write("\twidth: 100%;\r\n");
-      out.write("\tmargin: auto;\r\n");
-      out.write("}\r\n");
-      out.write("</style>\r\n");
+      out.write("<script src=\"");
+      if (_jspx_meth_c_url_6(_jspx_page_context))
+        return;
+      out.write("\"></script>\r\n");
       out.write("\r\n");
       out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("<title>");
@@ -115,7 +113,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</title>\r\n");
       out.write("</head>\r\n");
       out.write("\r\n");
-      out.write("<body onload=\"loadMap()\">\r\n");
+      out.write("<body>\r\n");
       out.write("\r\n");
       out.write("\t<nav class=\"navbar navbar-inverse\">\r\n");
       out.write("\t\t<div class=\"container-fluid\">\r\n");
@@ -133,7 +131,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_spring_url_0(_jspx_page_context))
         return;
       out.write("'><img\r\n");
-      out.write("\t\t\t\t\tsrc=\"\" alt=\"Team Cedar\"></a>\r\n");
+      out.write("\t\t\t\t\tsrc=\"/resources/img/movie.png\" alt=\"Team Cedar\"></a>\r\n");
       out.write("\t\t\t</div>\r\n");
       out.write("\r\n");
       out.write("\t\t\t<!-- Collect the nav links, forms, and other content for toggling -->\r\n");
@@ -446,6 +444,42 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
+  private boolean _jspx_meth_c_url_5(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_5 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_5.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_5.setParent(null);
+    _jspx_th_c_url_5.setValue("/resources/js/logout.js");
+    int _jspx_eval_c_url_5 = _jspx_th_c_url_5.doStartTag();
+    if (_jspx_th_c_url_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_5);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_5);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_6(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_6 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_6.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_6.setParent(null);
+    _jspx_th_c_url_6.setValue("/resources/js/validator.min.js");
+    int _jspx_eval_c_url_6 = _jspx_th_c_url_6.doStartTag();
+    if (_jspx_th_c_url_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_6);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_6);
+    return false;
+  }
+
   private boolean _jspx_meth_tiles_getAsString_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -622,7 +656,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("\t\t\t\t\t\t\t\t<a href=\"/\" class=\"btn btn-lg btn-primary\"><span\r\n");
         out.write("\t\t\t\t\t\t\t\t\tclass=\"glyphicon glyphicon-fire\"></span> MY ACCOUNT SETTINGS</a>\r\n");
         out.write("\t\t\t\t\t\t\t\t<br>\r\n");
-        out.write("\t\t\t\t\t\t\t\t<p> <a href=\"/logout\" class=\"text-primary\"><strong>LOGOUT</strong></a></p>\r\n");
+        out.write("\t\t\t\t\t\t\t\t<p> <a  href=\"/logout\" onclick='return logout()' class=\"text-primary\"><strong>LOGOUT</strong></a></p>\r\n");
         out.write("\t\t\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_if_3.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)

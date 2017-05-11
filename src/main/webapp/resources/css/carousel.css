@@ -58,3 +58,12 @@ body {
     line-height: 18px;
     text-transform: uppercase;
 }
+.img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.container.actor{
+	padding-top: 30px;
+}
