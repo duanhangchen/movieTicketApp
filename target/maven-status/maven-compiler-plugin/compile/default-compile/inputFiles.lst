@@ -22,13 +22,12 @@
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Rating.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Theater.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/ActorController.java
-/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Trailer.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/PaymentMethod.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Ads.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/LoginService.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Photo.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/UserDashboard.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Ticket.java
-/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Screen.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/IndexController.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Movie.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/repository/MovieRepository.java

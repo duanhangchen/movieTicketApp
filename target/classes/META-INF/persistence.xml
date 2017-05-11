@@ -3,10 +3,8 @@
 	<persistence-unit name="movieTicketApp">
 		<class>com.cedar.mta.entity.Movie</class>
 		<class>com.cedar.mta.entity.Theater</class>
-		<class>com.cedar.mta.entity.Trailer</class>
 		<class>com.cedar.mta.entity.Photo</class>
 		<class>com.cedar.mta.entity.Address</class>
-		<class>com.cedar.mta.entity.Screen</class>
 		<class>com.cedar.mta.entity.Showing</class>
 		<class>com.cedar.mta.entity.User</class>
 		<class>com.cedar.mta.entity.Transactions</class>
@@ -16,5 +14,6 @@
 		<class>com.cedar.mta.entity.Genre</class>
 		<class>com.cedar.mta.entity.Rating</class>
 		<class>com.cedar.mta.entity.Review</class>
+		<class>com.cedar.mta.entity.Ads</class>
 	</persistence-unit>
 </persistence>

@@ -16,24 +16,19 @@ import javax.persistence.GeneratedValue;
 
 @Entity
 public class Ticket {
-
 	@Id
 	@GeneratedValue
-	private Integer ticketId;
-	
+	private Integer ticketId;	
 	private Double ticketPrice;
 	private String seating;
-	
 	@ManyToOne
 	@JoinColumn(name = "showingId")
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Showing showing;
-
 	@ManyToOne
 	@JoinColumn(name = "transactionId")
 	@OnDelete(action = OnDeleteAction.CASCADE)
-	private Transactions transaction;
-	
+	private Transactions transaction;	
 	@ManyToOne
 	@JoinColumn(name = "accountId")
 	@OnDelete(action = OnDeleteAction.CASCADE)
@@ -42,49 +37,37 @@ public class Ticket {
 	public Integer getTicketId() {
 		return ticketId;
 	}
-
 	public void setTicketId(Integer ticketId) {
 		this.ticketId = ticketId;
 	}
-
 	public Double getTicketPrice() {
 		return ticketPrice;
 	}
-
 	public void setTicketPrice(Double ticketPrice) {
 		this.ticketPrice = ticketPrice;
 	}
-
 	public String getSeating() {
 		return seating;
 	}
-
 	public void setSeating(String seating) {
 		this.seating = seating;
 	}
-
 	public Showing getShowing() {
 		return showing;
 	}
-
 	public void setShowing(Showing showing) {
 		this.showing = showing;
 	}
-
 	public Transactions getTransaction() {
 		return transaction;
 	}
-
 	public void setTransaction(Transactions transaction) {
 		this.transaction = transaction;
 	}
-
 	public User getAccount() {
 		return account;
 	}
-
 	public void setAccount(User account) {
 		this.account = account;
 	}
-	
 }

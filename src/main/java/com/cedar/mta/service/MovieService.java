@@ -10,22 +10,18 @@ import com.cedar.mta.repository.MovieRepository;
 
 @Service
 public class MovieService {
-
 	@Autowired
 	private MovieRepository movieRepository;
 	
 	public List<Movie> findAll(){
 		return movieRepository.findAll();
 	}
-
 	public Movie findById(int id) {
 		return movieRepository.findOne(id);
 	}
-	
 	public List<Movie> findFeaturedMovies(){
 		return movieRepository.findFeaturedMovies();
 	}
-	
 	public List<Movie> getMoviesByActorId(int id){
 		return movieRepository.findMoviesByActorId(id);
 	}
