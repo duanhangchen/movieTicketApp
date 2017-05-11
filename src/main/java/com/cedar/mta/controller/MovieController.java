@@ -73,6 +73,8 @@ public class MovieController {
 		}
 		model.addAttribute("movie",movieService.findById(id));
 		model.addAttribute("reviews",reviewService.findReviews(id));
+		List<Actor> actors=actorService.findActor(id);
+		model.addAttribute("cast",actors);
 		return "movie-detail";
 	}
 	
