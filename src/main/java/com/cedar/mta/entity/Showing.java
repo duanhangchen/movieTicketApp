@@ -28,11 +28,18 @@ public class Showing {
 	@JoinColumn(name = "movieId")
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Movie movie;	
+	
 	@ManyToOne
-	@JoinColumn(name = "screenId")
+	@JoinColumn(name = "theaterId")
 	@OnDelete(action = OnDeleteAction.CASCADE)
-	private Screen screenId;
+	private Theater theater;
 
+	public Theater getTheater() {
+		return theater;
+	}
+	public void setTheater(Theater theater) {
+		this.theater = theater;
+	}
 	public Integer getShowingId() {
 		return showingId;
 	}
@@ -57,10 +64,4 @@ public class Showing {
 	public void setMovie(Movie movie) {
 		this.movie = movie;
 	}
-	public Screen getScreenId() {
-		return screenId;
-	}
-	public void setScreenId(Screen screenId) {
-		this.screenId = screenId;
-	}	
 }

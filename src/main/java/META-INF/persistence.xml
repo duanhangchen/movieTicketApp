@@ -5,7 +5,6 @@
 		<class>com.cedar.mta.entity.Theater</class>
 		<class>com.cedar.mta.entity.Photo</class>
 		<class>com.cedar.mta.entity.Address</class>
-		<class>com.cedar.mta.entity.Screen</class>
 		<class>com.cedar.mta.entity.Showing</class>
 		<class>com.cedar.mta.entity.User</class>
 		<class>com.cedar.mta.entity.Transactions</class>
