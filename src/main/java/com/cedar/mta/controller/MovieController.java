@@ -92,12 +92,16 @@ public class MovieController {
 				review.setUser(user);
 				review.setReview(reviewText);
 				reviewRepository.save(review);
+				model.addAttribute("review",review);
 			}
 			else{
 				reviewService.changeReview(reviewText,movie.getId(),user.getAccountId());
 				Review newReview=reviewService.findReview(movie.getId(),user.getAccountId());
 				model.addAttribute("review",newReview);
 			}
+		}
+		else{
+			return "redirect:/login";
 		}
 		model.addAttribute("movie",movieService.findById(id));
 		List<Actor> actors = actorService.findActor(id);
