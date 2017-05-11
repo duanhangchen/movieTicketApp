@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Actor.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\LoginService.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Address.java
@@ -33,3 +34,39 @@ C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\MailMail.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Transactions.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Photo.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\controller\SignupController.java
+=======
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/MovieController.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Address.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Actor.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/RatingService.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Genre.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Showing.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/repository/ReviewRepository.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/UserService.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/AuthenticationController.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/User.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/MovieService.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/MailService.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/SignupController.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/ReviewService.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/ActorService.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/MailMail.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/repository/ActorRepository.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/repository/UserRepository.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/repository/RatingRepository.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Review.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Transactions.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Rating.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Theater.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/ActorController.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Trailer.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/PaymentMethod.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/LoginService.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Photo.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/UserDashboard.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Ticket.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Screen.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/IndexController.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Movie.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/repository/MovieRepository.java
+>>>>>>> 1b0a0b1397fe71813ccfaa7c8daad2c82ccfa459
