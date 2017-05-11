@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Actor.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\LoginService.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Address.java
@@ -70,3 +71,37 @@ C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\controller\SignupContro
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Movie.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/repository/MovieRepository.java
 >>>>>>> 1b0a0b1397fe71813ccfaa7c8daad2c82ccfa459
+=======
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Photo.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Transactions.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\service\ActorService.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\service\ReviewService.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Rating.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Review.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\repository\ReviewRepository.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\service\MailService.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\repository\RatingRepository.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Genre.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\controller\AuthenticationController.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Address.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Theater.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\service\MovieService.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\service\RatingService.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Movie.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\repository\ActorRepository.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\repository\MovieRepository.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Actor.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\service\UserService.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Ticket.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\controller\SignupController.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\PaymentMethod.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\controller\IndexController.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Showing.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\controller\ActorController.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\MailMail.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\service\LoginService.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\repository\UserRepository.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\controller\MovieController.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\User.java
+C:\Users\Tvedt\Documents\movieTicketApp\src\main\java\com\cedar\mta\entity\Ads.java
+>>>>>>> David
