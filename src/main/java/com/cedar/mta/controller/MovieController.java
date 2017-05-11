@@ -46,10 +46,13 @@ public class MovieController {
 	
 	@Autowired
 	private RatingService ratingService;
+	
 	@Autowired
 	private ReviewService reviewService;
+	
 	@Autowired
 	private RatingRepository ratingRepository;
+	
 	@Autowired
 	private ReviewRepository reviewRepository;
 	

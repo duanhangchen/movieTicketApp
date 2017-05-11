@@ -34,4 +34,8 @@
 		<put-attribute name="title" value="SIGN-UP" />
 		<put-attribute name="body" value="/WEB-INF/jsp/sign-up.jsp" />
 	</definition>
+	<definition name="user-dashboard" extends="common">
+		<put-attribute name="title" value="SIGN-UP" />
+		<put-attribute name="body" value="/WEB-INF/jsp/user-dashboard.jsp" />
+	</definition>
 </tiles-definitions>
