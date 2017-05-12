@@ -1,6 +1,7 @@
 package com.cedar.mta.entity;
 
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -28,12 +29,11 @@ public class User {
 	private String lastName;
 	private Date doB;
 	
-	@OneToMany
+	@ManyToMany
 	@JoinTable(name="MyMovies")
-
 	private List<Movie> myMovies;
 	
-	@OneToMany
+	@ManyToMany
 	@JoinTable(name="MyTheaters")
 	private List<Theater> theaters;
 	public Integer getAccountId() {

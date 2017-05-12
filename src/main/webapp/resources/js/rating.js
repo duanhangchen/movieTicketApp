@@ -136,7 +136,33 @@ $(document).ready(function() {
 		$('#count-existing').html(value);
 	});
 
-	$( ".glyphicon.glyphicon-heart" ).click(function() {
-		$( this ).toggleClass('red');
+	$(".glyphicon.glyphicon-heart").click(function(value) {
+		var value = document.getElementById("favourite").value;
+		if (value == "red") {
+			document.getElementById("favourite").value = "white";
+		}
+		if (value == "white") {
+			document.getElementById("favourite").value = "red";
+		}
+		$(this).toggleClass('red');
+
+		var toggleFavourite = {
+			value : document.getElementById("favourite").value
+		}
+		var movieid = window.location.pathname.split('/')[2];
+		$.ajax({
+			type : "POST",
+			url : "/movies/"+movieid+"/toggleFavourite" ,
+			data : toggleFavourite,
+			success : function(result) {
+				console.log("SUCCESS");
+			},
+			error : function(result) {
+				console.log('ERROR');
+			}
+		});
 	});
+	
+	
+	
 });
