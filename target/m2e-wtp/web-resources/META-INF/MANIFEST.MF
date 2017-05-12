@@ -1,9 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: Duan Hang Chen
-=======
-Built-By: Tvedt
->>>>>>> David
 Build-Jdk: 1.8.0_121
 Created-By: Maven Integration for Eclipse
 

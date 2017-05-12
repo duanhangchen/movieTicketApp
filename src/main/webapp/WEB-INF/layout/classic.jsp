@@ -74,48 +74,33 @@
 							<div class="row">
 								<div class="col-sm-3">
 									<ul class="multi-column-dropdown">
-										<li class="coloumn-heading"><a href="#">NOW PLAYING</a></li>
-										<li><a href="#">The Lego Batman Movie</a></li>
-										<li><a href="#">Fifty Shades Darker</a></li>
-										<li><a href="#">The Great Wall (2017)</a></li>
-										<li><a href="#">John Wick: Chapter 2</a></li>
-										<li><a href="#">Fist Fight</a></li>
-										<li><a href="#">Hidden Figures</a></li>
-										<li><a href="#">Split (2017)</a></li>
+										<li class="coloumn-heading" id="reviewfont"><a href="#">NOW PLAYING</a></li>
+										<c:forEach items="${now_playing}" var="now_playing">
+											<li><a href="<spring:url value="/movies/${now_playing.id}"/>">${now_playing.name}</a></li>
+										</c:forEach>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="multi-column-dropdown">
-										<li class="coloumn-heading"><a href="#">OPENING THIS
-												WEEK</a></li>
-										<li><a href="#">Collide</a></li>
-										<li><a href="#">Get Out</a></li>
-										<li><a href="#">Rock Dog</a></li>
-										<li><a href="#">Bitter Harvest (2017)</a></li>
-										<li><a href="#">Dying Laughing</a></li>
-										<li><a href="#">Fabricated City</a></li>
-										<li><a href="#">My Life as a Zucchini</a></li>
+										<li class="coloumn-heading"><a href="#"></a></li>
+										<c:forEach items="${now_playing2}" var="now_playing">
+											<li><a href="<spring:url value="/movies/${now_playing.id}"/>">${now_playing.name}</a></li>
+										</c:forEach>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="multi-column-dropdown">
-										<li class="coloumn-heading"><a href="#">PRE SALES
-												TICKETS</a></li>
-										<li><a href="#">Beauty and the Beast (2017)</a></li>
-										<li><a href="#">Kong: Skull Island</a></li>
-										<li><a href="#">Before I Fall</a></li>
-										<li><a href="#">Logan (2017)</a></li>
-										<li><a href="#">The Shack</a></li>
-										<li><a href="#">Kong: Skull Island</a></li>
-										<li><a href="#">The Belko Experiment</a></li>
+										<li class="coloumn-heading" id="reviewfont"><a href="#">COMING SOON</a></li>
+										<c:forEach items="${coming_soon}" var="coming_soon">
+											<li><a href="<spring:url value="/movies/${coming_soon.id}"/>">${coming_soon.name}</a></li>
+										</c:forEach>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="multi-column-dropdown">
-										<li class="coloumn-heading"><a href="#">EXPLORE MORE</a></li>
-										<li><a href="#">Watch Trailers on Movieclips</a></li>
-										<li><a href="#">Top Box Office</a></li>
-										<li><a href="#">New DVDs</a></li>
+										<c:forEach items="${coming_soon2}" var="coming_soon">
+											<li><a href="<spring:url value="/movies/${coming_soon.id}"/>">${coming_soon.name}</a></li>
+										</c:forEach>
 									</ul>
 								</div>
 							</div>
@@ -239,7 +224,10 @@
 								<a href="/" class="btn btn-lg btn-primary"><span
 									class="glyphicon glyphicon-fire"></span> MY ACCOUNT SETTINGS</a>
 								<br>
-								<p> <a  href="/logout" onclick='return logout()' class="text-primary"><strong>LOGOUT</strong></a></p>
+								<p>
+									<a href="/logout" onclick='return logout()'
+										class="text-primary"><strong>LOGOUT</strong></a>
+								</p>
 							</c:if>
 						</ul></li>
 				</ul>

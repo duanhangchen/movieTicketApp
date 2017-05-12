@@ -5,6 +5,7 @@ import java.util.List;
 
 
 import javax.servlet.http.HttpSession;
+import java.sql.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -66,12 +67,30 @@ public class MovieController {
 	}
 	
 	@RequestMapping(value="/movies", method=RequestMethod.POST)
-	public String filter(Model model,@RequestParam String genre){
-		System.out.println("test "+genre);
-		if(genre=="default")
+	public String filter(Model model,@RequestParam String category,@RequestParam String genre){
+		System.out.println("test "+genre+category);
+		java.util.Date date = new java.util.Date();
+		java.sql.Date todayDate = new java.sql.Date(date.getTime());
+		if(genre.equals("default")&&category.equals("default")){
 			model.addAttribute("featuredMovies",movieService.findFeaturedMovies());
-		else
+			model.addAttribute("currentGenre",null);
+		}
+		else if(category.equals("coming_soon")&&genre.equals("default")){
+			model.addAttribute("featuredMovies",movieService.findComingSoon(todayDate));
+		}
+		else if(category.equals("now_playing")&&genre.equals("default")){
+			model.addAttribute("featuredMovies",movieService.findNowPlaying(todayDate));
+		}
+		else if(category.equals("coming_soon")){
+			model.addAttribute("featuredMovies",movieService.findComingSoonAndGenre(todayDate, genre));
+		}
+		else if(category.equals("now_playing")){
+			model.addAttribute("featuredMovies", movieService.findNowPlayingAndGenre(todayDate, genre));
+		}
+		else{
 			model.addAttribute("featuredMovies",movieService.findMoviesByGenre(genre));
+			model.addAttribute("currentGenre",genre);
+		}
 		model.addAttribute("genres", genreService.findGenres());
 		return "movies";
 	}

@@ -29,5 +29,21 @@ public class MovieService {
 	public List<Movie> findMoviesByGenre(String genre){
 		return movieRepository.findMoviesByGenre(genre);
 	}
+	
+	public List<Movie> findComingSoon(java.sql.Date date){
+		return movieRepository.findComingSoon(date);
+	}
+	
+	public List<Movie> findNowPlaying(java.sql.Date date){
+		return movieRepository.findNowPlaying(date);
+	}
+	
+	public List<Movie> findComingSoonAndGenre(java.sql.Date date,String genre){
+		return movieRepository.findComingSoonAndGenre(date, genre);
+	}
+	
+	public List<Movie> findNowPlayingAndGenre(java.sql.Date date,String genre){
+		return movieRepository.findNowPlayingAndGenre(date, genre);
+	}
 
 }

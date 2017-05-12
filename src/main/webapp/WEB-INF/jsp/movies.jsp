@@ -25,9 +25,23 @@
 				<ul class="menu">
 					<form role="form" method="POST">
 						<div class="form-group">
+							<label id="reviewfont" for="exampleSelect">Categories</label>
+							<select name= "category" class="form-control" id="exampleSelect">
+							 	<option value="default">All Categories</option>
+							 	<option value="coming_soon">Coming Soon</option>
+							 	<option value="now_playing">Now Playing</option>
+							</select>
+						
 							<label id="reviewfont" for="exampleSelect1">Genres</label>
 							 <select name= "genre" class="form-control" id="exampleSelect1">
-							 	<option value="default">Choose here</option>
+							 	<c:if test="${empty currentGenre}">
+							 	<option value="default" selected="selected">Select a Genre</option>
+							 	<option value="default">All Genres</option>
+							 	</c:if>
+							 	<c:if test="${not empty currentGenre}">
+							 	<option value="default" selected="selected">${currentGenre}</option>
+							 	<option value="default">All Genres</option>
+							 	</c:if>
 								<c:forEach items="${genres}" var="genres">
 									<option value="${genres.type}">${genres.type}</option>
 								</c:forEach>
@@ -44,9 +58,14 @@
 	<div class="container">
 		<div class="page">
 			<section>
+			<c:if test="${not empty currentGenre}">
+                           <header>
+                           <h2 class="section-title">Movies >> ${currentGenre}</h2>
+                           </header>
+                        </c:if>
+				
 				<header>
-					<h2 class="section-title">New Products</h2>
-					<a href="#" class="all">Show All</a>
+					<h2 class="section-title">Newest Movies</h2>
 				</header>
 
 

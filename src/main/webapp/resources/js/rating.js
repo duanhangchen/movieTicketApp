@@ -127,7 +127,6 @@ $(document).ready(function() {
 				console.log(data);
 			},
 			error: function (){
-				
 			}
 		})
 	});
