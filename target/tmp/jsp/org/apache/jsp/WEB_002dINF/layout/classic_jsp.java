@@ -303,15 +303,19 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t</ul></li>\n");
-      out.write("\t\t\t\t\t<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\"\n");
+      out.write("\t\t\t\t\t<li class=\"dropdown\">\n");
+      out.write("\t\t\t\t\t<a href=\"#\" class=\"dropdown-toggle\"\n");
       out.write("\t\t\t\t\t\tdata-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"\n");
-      out.write("\t\t\t\t\t\taria-expanded=\"false\"> ");
+      out.write("\t\t\t\t\t\taria-expanded=\"false\">\n");
+      out.write("\t\t\t\t\t\t ");
       if (_jspx_meth_c_if_0(_jspx_page_context))
         return;
-      out.write(' ');
+      out.write("\n");
+      out.write("                         ");
       if (_jspx_meth_c_if_1(_jspx_page_context))
         return;
-      out.write(" <span class=\"caret\"></span></a>\n");
+      out.write("\n");
+      out.write("                         <span class=\"caret\"></span></a>\n");
       out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu login\">\n");
       out.write("\t\t\t\t\t\t\t");
       if (_jspx_meth_c_if_2(_jspx_page_context))
@@ -657,6 +661,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("\t\t\t\t\t\t\t\t\tclass=\"glyphicon glyphicon-fire\"></span> MY ACCOUNT SETTINGS</a>\n");
         out.write("\t\t\t\t\t\t\t\t<br>\n");
         out.write("\t\t\t\t\t\t\t\t<p> <a  href=\"/logout\" onclick='return logout()' class=\"text-primary\"><strong>LOGOUT</strong></a></p>\n");
+        out.write("\t\t\t\t\t\t\t\t<p> <a  href=\"/user-dashboard\"  class=\"text-primary\"><strong>MY ACCOUNT</strong></a></p>\n");
         out.write("\t\t\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_if_3.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)

@@ -215,13 +215,17 @@
 								</div>
 							</div>
 						</ul></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
+					<li class="dropdown">
+					<a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false"> <c:if test="${not empty user}">
+						aria-expanded="false">
+						 <c:if test="${not empty user}">
                             ${user.firstName}
-                        </c:if> <c:if test="${empty user}">
+                        </c:if>
+                         <c:if test="${empty user}">
                             LOGIN
-                        </c:if> <span class="caret"></span></a>
+                        </c:if>
+                         <span class="caret"></span></a>
 						<ul class="dropdown-menu login">
 							<c:if test="${empty user}">
 								<a href="/sign-up" class="btn btn-lg btn-primary"><span
@@ -240,6 +244,7 @@
 									class="glyphicon glyphicon-fire"></span> MY ACCOUNT SETTINGS</a>
 								<br>
 								<p> <a  href="/logout" onclick='return logout()' class="text-primary"><strong>LOGOUT</strong></a></p>
+								<p> <a  href="/user-dashboard"  class="text-primary"><strong>MY ACCOUNT</strong></a></p>
 							</c:if>
 						</ul></li>
 				</ul>

@@ -295,7 +295,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("\t\t\t\t\t\t\t<div class=\"col-xs-4\">\n");
           out.write("\t\t\t\t\t\t\t\t<a href=\"#1\"><img src=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write(" }\"\n");
+          out.write("\"\n");
           out.write("\t\t\t\t\t\t\t\t\tclass=\"img-responsive\"></a>\n");
           out.write("\t\t\t\t\t\t\t\t<div class=\"movie-details\">\n");
           out.write("\t\t\t\t\t\t\t\t\t<p class=\"movie-name\">\n");

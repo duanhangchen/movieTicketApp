@@ -59,4 +59,8 @@ public class UserService {
 			throw new RuntimeException(ex);
 		}
 	}
+	
+	public void updateUserInfo(String firstName, String lastName, Integer accountId) {
+		 userRepository.changeUserInfo(firstName, lastName, accountId);
+	}
 }

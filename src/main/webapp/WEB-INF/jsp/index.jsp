@@ -19,7 +19,7 @@
 					<c:forEach items="${featuredMovies}" var="movie">
 						<div class="item">
 							<div class="col-xs-4">
-								<a href="#1"><img src="${movie.url} }"
+								<a href="#1"><img src="${movie.url}"
 									class="img-responsive"></a>
 								<div class="movie-details">
 									<p class="movie-name">

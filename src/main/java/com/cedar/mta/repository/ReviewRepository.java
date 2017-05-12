@@ -18,6 +18,9 @@ public interface ReviewRepository extends JpaRepository<Review, Integer>{
 
 	@Query(value="SELECT * FROM review where movie_id = :movie_id and user_id = :user_id", nativeQuery = true)
 	Review findReview(@Param("movie_id") Integer movieid,@Param("user_id") Integer userid);
+	
+	@Query(value="SELECT * FROM review where user_id = :user_id", nativeQuery = true)
+	List<Review> findPersonalReview(@Param("user_id") Integer userid);
 
 	@Transactional
 	@Modifying
