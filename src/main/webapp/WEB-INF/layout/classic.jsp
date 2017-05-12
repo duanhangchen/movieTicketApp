@@ -55,7 +55,7 @@
 
 				<form class="navbar-form navbar-left" role="search">
 					<div class="form-group">
-						<a class="team-name" href="#"> TEAM CEDAR</a> <input type="text"
+						<a class="team-name" href="/"> TEAM CEDAR</a> <input type="text"
 							class="form-control search-bar" placeholder="Search">
 						<button type="submit" class="btn btn-primary">
 							<span class="glyphicon glyphicon-search"></span>
@@ -120,8 +120,8 @@
 								</div>
 							</div>
 						</ul></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown">MOVIES TIME + TICKETS<b class="caret"></b></a>
+					<li class="dropdown"><a href='<spring:url value="/theaters" />'
+						class="dropdown">THEATERS<b class="caret"></b></a>
 						<ul class="dropdown-menu multi-column columns-3">
 							<div class="row">
 								<div class="col-sm-4">

@@ -29,7 +29,7 @@ import com.cedar.mta.entity.User;
 import com.cedar.mta.repository.RatingRepository;
 
 import com.cedar.mta.service.ActorService;
-
+import com.cedar.mta.service.GenreService;
 import com.cedar.mta.repository.ReviewRepository;
 import com.cedar.mta.service.MovieService;
 import com.cedar.mta.service.RatingService;
@@ -46,18 +46,36 @@ public class MovieController {
 	
 	@Autowired
 	private RatingService ratingService;
+	
 	@Autowired
 	private ReviewService reviewService;
+	
+	@Autowired
+	private GenreService genreService;
 	@Autowired
 	private RatingRepository ratingRepository;
+	
 	@Autowired
 	private ReviewRepository reviewRepository;
 	
 	@RequestMapping("/movies")
 	public String movies(Model model){
 		model.addAttribute("featuredMovies",movieService.findFeaturedMovies());
+		model.addAttribute("genres", genreService.findGenres());
 		return "movies";
 	}
+	
+	@RequestMapping(value="/movies", method=RequestMethod.POST)
+	public String filter(Model model,@RequestParam String genre){
+		System.out.println("test "+genre);
+		if(genre=="default")
+			model.addAttribute("featuredMovies",movieService.findFeaturedMovies());
+		else
+			model.addAttribute("featuredMovies",movieService.findMoviesByGenre(genre));
+		model.addAttribute("genres", genreService.findGenres());
+		return "movies";
+	}
+	
 	
 	@RequestMapping("/movies/{id}")
 	public String detail(Model model,@PathVariable int id,HttpSession session){

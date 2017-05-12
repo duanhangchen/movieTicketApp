@@ -16,26 +16,28 @@ import com.cedar.mta.service.MailService;
 import com.cedar.mta.service.UserService;
 
 @Controller
-public class SignupController {
+public class UserDashboard {
 
 	@Autowired
 	private UserService userService;
+
 	@Autowired
 	private MailService mailService;
+	
 
-	@RequestMapping("/sign-up")
+	@RequestMapping("/user-dashboard")
 	public String showSignUpPage() {
-		return "sign-up";
+		return "user-dashboard";
 	}
 
-	@RequestMapping(value = "/sign-up", method = RequestMethod.POST)
-	public String handleSignUp(HttpSession session, ModelMap model, @RequestParam String firstName,
-			@RequestParam String lastName, @RequestParam String email, @RequestParam String password) throws NoSuchAlgorithmException {
-		User currentUser = userService.createNewUser(firstName, lastName, email, password);
-		session.setAttribute("user",currentUser);
-		mailService.sendMailForSignUp(currentUser.getEmail());
-		return "redirect: ";
-	}
+//	@RequestMapping(value = "/user-dashboard", method = RequestMethod.POST)
+//	public String handleSignUp(HttpSession session, ModelMap model, @RequestParam String firstName,
+//			@RequestParam String lastName, @RequestParam String email, @RequestParam String password) throws NoSuchAlgorithmException {
+//		User currentUser = userService.createNewUser(firstName, lastName, email, password);
+//		session.setAttribute("user",currentUser);
+//		mailService.sendMailForSignUp(currentUser.getEmail());
+//		return "redirect: ";
+//	}
 
 	
 }

@@ -140,7 +140,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\t\t\t\t<form class=\"navbar-form navbar-left\" role=\"search\">\r\n");
       out.write("\t\t\t\t\t<div class=\"form-group\">\r\n");
-      out.write("\t\t\t\t\t\t<a class=\"team-name\" href=\"#\"> TEAM CEDAR</a> <input type=\"text\"\r\n");
+      out.write("\t\t\t\t\t\t<a class=\"team-name\" href=\"/\"> TEAM CEDAR</a> <input type=\"text\"\r\n");
       out.write("\t\t\t\t\t\t\tclass=\"form-control search-bar\" placeholder=\"Search\">\r\n");
       out.write("\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">\r\n");
       out.write("\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-search\"></span>\r\n");
@@ -208,8 +208,11 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t</ul></li>\r\n");
-      out.write("\t\t\t\t\t<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\"\r\n");
-      out.write("\t\t\t\t\t\tdata-toggle=\"dropdown\">MOVIES TIME + TICKETS<b class=\"caret\"></b></a>\r\n");
+      out.write("\t\t\t\t\t<li class=\"dropdown\"><a href='");
+      if (_jspx_meth_spring_url_2(_jspx_page_context))
+        return;
+      out.write("'\r\n");
+      out.write("\t\t\t\t\t\tclass=\"dropdown\">THEATERS<b class=\"caret\"></b></a>\r\n");
       out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu multi-column columns-3\">\r\n");
       out.write("\t\t\t\t\t\t\t<div class=\"row\">\r\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-4\">\r\n");
@@ -541,6 +544,32 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspx_th_spring_url_1.doFinally();
       _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_1);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_url_2(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_2 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_2.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_2.setParent(null);
+    _jspx_th_spring_url_2.setValue("/theaters");
+    int[] _jspx_push_body_count_spring_url_2 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_url_2 = _jspx_th_spring_url_2.doStartTag();
+      if (_jspx_th_spring_url_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_url_2[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_url_2.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_url_2.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_2);
     }
     return false;
   }

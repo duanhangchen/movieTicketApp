@@ -21,49 +21,28 @@ public class Genre {
 	@Id
 	@GeneratedValue
 	@Column(name = "genreId")
-	private Integer id;
-	
+	private Integer id;	
 	@Column(name = "genreType")
-	private String type;
-	
-	
+	private String type;		
 	@ManyToMany(mappedBy="genres")
 	private List<Movie> movies;
-	
-	
-
 
 	public Integer getId() {
 		return id;
 	}
-
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-
 	public String getType() {
 		return type;
 	}
-
-
 	public void setType(String type) {
 		this.type = type;
 	}
-
-
 	public List<Movie> getMovies() {
 		return movies;
 	}
-
-
 	public void setMovies(List<Movie> movies) {
 		this.movies = movies;
 	}
-	
-	
-	
-	//Getters Setters
-	
 }
