@@ -1,5 +1,7 @@
 package com.cedar.mta.repository;
 
+import java.math.BigDecimal;
+
 import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -33,4 +35,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	
 	@Query(value="SELECT * FROM mymovies where myMovies_movieId = :movieId and User_accountId = :userId", nativeQuery = true)
 	Integer findUserFavourite(@Param("movieId") Integer movieId,@Param("userId") Integer userId);
+	
+	@Query(value="select balance from user where accountId = :account_id", nativeQuery= true)
+	BigDecimal getBalanceById(@Param("account_id") Integer accountId);
 }

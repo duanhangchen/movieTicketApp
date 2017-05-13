@@ -1,5 +1,6 @@
 package com.cedar.mta.service;
 
+import java.math.BigDecimal;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
@@ -62,5 +63,9 @@ public class UserService {
 	
 	public void updateUserInfo(String firstName, String lastName, Integer accountId) {
 		 userRepository.changeUserInfo(firstName, lastName, accountId);
+	}
+	
+	public BigDecimal getBalanceById(Integer accountId){
+		return userRepository.getBalanceById(accountId);
 	}
 }

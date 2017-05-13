@@ -17,11 +17,22 @@ public interface GiftRepository extends JpaRepository<GiftCard,Integer> {
 	List<GiftCard> findAllGiftCardByAccountId(@Param("account_id") Integer accountId);
 	
 	@Query(value="select * from giftcard where giftCode = :gift_code", nativeQuery = true)
-	List<GiftCard> findGiftCardByCode(@Param("gift_code") String giftCode);
+	GiftCard findGiftCardByCode(@Param("gift_code") String giftCode);
 
 	@Transactional
 	@Modifying
 	@Query(value="insert into giftcard(giftAmount, giftCode, accountId) values(:gift_amount, :gift_code, :account_id)", nativeQuery = true)
 	void insertGiftCard(@Param("gift_amount") BigDecimal giftAmount,@Param("gift_code") String giftCode,@Param("account_id") Integer accountId);
+	
+	
+	@Transactional
+	@Modifying
+	@Query(value="update giftcard set giftAmount = giftAmount - :gift_amount where giftCode = :gift_code", nativeQuery = true)
+	void updateGiftBalance(@Param("gift_amount") BigDecimal giftAmount,@Param("gift_code") String giftCode);
+	
+	@Transactional
+	@Modifying
+	@Query(value="update user set balance = balance + :gift_balance where accountId = :id", nativeQuery = true)
+	void updateUserBalance(@Param("gift_balance") BigDecimal giftBalance,@Param("id") Integer accountId);
 }
  
