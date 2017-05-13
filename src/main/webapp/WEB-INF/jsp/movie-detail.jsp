@@ -18,7 +18,7 @@
 			<c:if test="${not empty user}">
 			<button id = "favourite" name="favouriteMovie" value="${favouriteMovie}"
 				onClick="toggleValue()" type="submit" class="btn btn-lg ">
-				<span class="glyphicon glyphicon-heart ${favouriteMovie}"> </span>
+				<span id= "movie-like" class="glyphicon glyphicon-heart ${favouriteMovie}"> </span>
 			</button>
 			</c:if>
 		</h1>

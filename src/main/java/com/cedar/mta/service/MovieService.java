@@ -16,7 +16,7 @@ public class MovieService {
 	public List<Movie> findAll(){
 		return movieRepository.findAll();
 	}
-	public Movie findById(int id) {
+	public Movie findById(Integer id) {
 		return movieRepository.findOne(id);
 	}
 	public List<Movie> findFeaturedMovies(){
@@ -24,6 +24,30 @@ public class MovieService {
 	}
 	public List<Movie> getMoviesByActorId(int id){
 		return movieRepository.findMoviesByActorId(id);
+	}
+	
+	public List<Movie> findMoviesByGenre(String genre){
+		return movieRepository.findMoviesByGenre(genre);
+	}
+	
+	public List<Movie> findComingSoon(java.sql.Date date){
+		return movieRepository.findComingSoon(date);
+	}
+	
+	public List<Movie> findNowPlaying(java.sql.Date date){
+		return movieRepository.findNowPlaying(date);
+	}
+	
+	public List<Movie> findComingSoonAndGenre(java.sql.Date date,String genre){
+		return movieRepository.findComingSoonAndGenre(date, genre);
+	}
+	
+	public List<Movie> findNowPlayingAndGenre(java.sql.Date date,String genre){
+		return movieRepository.findNowPlayingAndGenre(date, genre);
+	}
+	
+	public List<Movie> findMovieByTheater(Integer theater_id){
+		return movieRepository.findMovieByTheater(theater_id);
 	}
 
 }

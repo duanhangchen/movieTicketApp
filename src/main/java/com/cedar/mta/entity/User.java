@@ -38,6 +38,8 @@ public class User {
 	@ManyToMany
 	@JoinTable(name="MyTheaters")
 	private List<Theater> theaters;
+	
+	
 	public Integer getAccountId() {
 		return accountId;
 	}

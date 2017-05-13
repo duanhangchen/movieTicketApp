@@ -29,8 +29,21 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	@Query(value="delete from mymovies where User_accountId = :userId and myMovies_movieId = :movieId", nativeQuery = true)
 	void deleteMovieFromUser(@Param ("userId") Integer userId, @Param ("movieId") Integer movieId);
 	
+	@Transactional
+	@Modifying
+	@Query(value="insert into mytheaters VALUES (:userId, :theatreId)", nativeQuery = true)
+	void addTheatreToUser(@Param ("userId") Integer userId, @Param ("theatreId") Integer theatreId);
+	
+	
+	@Transactional
+	@Modifying
+	@Query(value="delete from mytheaters where User_accountId = :userId and theaters_theaterId = :theatreId", nativeQuery = true)
+	void deleteTheatreFromUser(@Param ("userId") Integer userId, @Param ("theatreId") Integer theatreId);
 	
 	
 	@Query(value="SELECT * FROM mymovies where myMovies_movieId = :movieId and User_accountId = :userId", nativeQuery = true)
 	Integer findUserFavourite(@Param("movieId") Integer movieId,@Param("userId") Integer userId);
+	
+	@Query(value="SELECT * FROM mytheaters where theaters_theaterId = :theaterId and User_accountId = :userId", nativeQuery = true)
+	Integer findUserFavouriteTheater(@Param("theaterId") Integer movieId,@Param("userId") Integer userId);
 }

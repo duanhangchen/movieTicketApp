@@ -13,7 +13,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 public interface ReviewRepository extends JpaRepository<Review, Integer>{
-	@Query(value="SELECT * FROM review WHERE movie_id= :movie_id",nativeQuery = true)
+	@Query(value="SELECT * FROM review WHERE movie_id= :movie_id order by id desc",nativeQuery = true)
 	List<Review> findReviews(@Param("movie_id")Integer movieid);
 
 	@Query(value="SELECT * FROM review where movie_id = :movie_id and user_id = :user_id", nativeQuery = true)

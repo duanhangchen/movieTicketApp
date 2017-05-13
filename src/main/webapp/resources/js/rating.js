@@ -127,7 +127,6 @@ $(document).ready(function() {
 				console.log(data);
 			},
 			error: function (){
-				
 			}
 		})
 	});
@@ -136,7 +135,7 @@ $(document).ready(function() {
 		$('#count-existing').html(value);
 	});
 
-	$(".glyphicon.glyphicon-heart").click(function(value) {
+	$("#movie-like").click(function(value) {
 		var value = document.getElementById("favourite").value;
 		if (value == "red") {
 			document.getElementById("favourite").value = "white";

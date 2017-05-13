@@ -11,6 +11,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_spring_url_value_nobody;
@@ -22,12 +23,14 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
+    _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_spring_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
+    _jspx_tagPool_c_forEach_var_items.release();
     _jspx_tagPool_c_if_test.release();
     _jspx_tagPool_c_url_value_nobody.release();
     _jspx_tagPool_spring_url_value_nobody.release();
@@ -76,10 +79,11 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       out.write("\"\n");
       out.write("\trel=\"stylesheet\">\n");
+      out.write("\n");
       out.write("<script src=\"");
       if (_jspx_meth_c_url_2(_jspx_page_context))
         return;
-      out.write("\"></script>\n");
+      out.write("\"></script> \n");
       out.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
       out.write("<link href=\"");
       if (_jspx_meth_c_url_3(_jspx_page_context))
@@ -140,7 +144,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\t\t\t\t<form class=\"navbar-form navbar-left\" role=\"search\">\n");
       out.write("\t\t\t\t\t<div class=\"form-group\">\n");
-      out.write("\t\t\t\t\t\t<a class=\"team-name\" href=\"#\"> TEAM CEDAR</a> <input type=\"text\"\n");
+      out.write("\t\t\t\t\t\t<a class=\"team-name\" href=\"/\"> TEAM CEDAR</a> <input type=\"text\"\n");
       out.write("\t\t\t\t\t\t\tclass=\"form-control search-bar\" placeholder=\"Search\">\n");
       out.write("\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">\n");
       out.write("\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-search\"></span>\n");
@@ -163,54 +167,46 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t<div class=\"row\">\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\">NOW PLAYING</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">The Lego Batman Movie</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Fifty Shades Darker</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">The Great Wall (2017)</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">John Wick: Chapter 2</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Fist Fight</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Hidden Figures</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Split (2017)</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\" id=\"reviewfont\"><a href=\"#\">NOW PLAYING</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t");
+      if (_jspx_meth_c_forEach_0(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t</ul>\n");
       out.write("\t\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\">OPENING THIS\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t\tWEEK</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Collide</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Get Out</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Rock Dog</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Bitter Harvest (2017)</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Dying Laughing</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Fabricated City</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">My Life as a Zucchini</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\"></a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t");
+      if (_jspx_meth_c_forEach_1(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t</ul>\n");
       out.write("\t\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\">PRE SALES\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t\tTICKETS</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Beauty and the Beast (2017)</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Kong: Skull Island</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Before I Fall</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Logan (2017)</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">The Shack</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Kong: Skull Island</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">The Belko Experiment</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\" id=\"reviewfont\"><a href=\"#\">COMING SOON</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t");
+      if (_jspx_meth_c_forEach_2(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t</ul>\n");
       out.write("\t\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\">EXPLORE MORE</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Watch Trailers on Movieclips</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Top Box Office</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">New DVDs</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t");
+      if (_jspx_meth_c_forEach_3(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t</ul>\n");
       out.write("\t\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t</ul></li>\n");
-      out.write("\t\t\t\t\t<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\"\n");
-      out.write("\t\t\t\t\t\tdata-toggle=\"dropdown\">MOVIES TIME + TICKETS<b class=\"caret\"></b></a>\n");
+      out.write("\t\t\t\t\t<li class=\"dropdown\"><a href='");
+      if (_jspx_meth_spring_url_6(_jspx_page_context))
+        return;
+      out.write("'\n");
+      out.write("\t\t\t\t\t\tclass=\"dropdown\">THEATERS<b class=\"caret\"></b></a>\n");
       out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu multi-column columns-3\">\n");
       out.write("\t\t\t\t\t\t\t<div class=\"row\">\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-4\">\n");
@@ -546,6 +542,308 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspx_th_spring_url_1.doFinally();
       _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_1);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_0.setParent(null);
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${now_playing}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setVar("now_playing");
+    int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
+      if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"");
+          if (_jspx_meth_spring_url_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+            return true;
+          out.write('"');
+          out.write('>');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${now_playing.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a></li>\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t");
+          int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_0.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_url_2(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_2 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_2.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
+    _jspx_th_spring_url_2.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/movies/${now_playing.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    int[] _jspx_push_body_count_spring_url_2 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_url_2 = _jspx_th_spring_url_2.doStartTag();
+      if (_jspx_th_spring_url_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_url_2[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_url_2.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_url_2.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_2);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_1.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_1.setParent(null);
+    _jspx_th_c_forEach_1.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${now_playing2}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_1.setVar("now_playing");
+    int[] _jspx_push_body_count_c_forEach_1 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_1 = _jspx_th_c_forEach_1.doStartTag();
+      if (_jspx_eval_c_forEach_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"");
+          if (_jspx_meth_spring_url_3((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
+            return true;
+          out.write('"');
+          out.write('>');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${now_playing.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a></li>\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t");
+          int evalDoAfterBody = _jspx_th_c_forEach_1.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_1[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_1.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_1.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_1);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_url_3(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_1, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_1)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_3 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_3.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_1);
+    _jspx_th_spring_url_3.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/movies/${now_playing.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    int[] _jspx_push_body_count_spring_url_3 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_url_3 = _jspx_th_spring_url_3.doStartTag();
+      if (_jspx_th_spring_url_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_url_3[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_url_3.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_url_3.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_3);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_2(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_2 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_2.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_2.setParent(null);
+    _jspx_th_c_forEach_2.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${coming_soon}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_2.setVar("coming_soon");
+    int[] _jspx_push_body_count_c_forEach_2 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_2 = _jspx_th_c_forEach_2.doStartTag();
+      if (_jspx_eval_c_forEach_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"");
+          if (_jspx_meth_spring_url_4((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_2, _jspx_page_context, _jspx_push_body_count_c_forEach_2))
+            return true;
+          out.write('"');
+          out.write('>');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${coming_soon.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a></li>\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t");
+          int evalDoAfterBody = _jspx_th_c_forEach_2.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_2[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_2.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_2.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_2);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_url_4(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_2, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_2)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_4 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_4.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_2);
+    _jspx_th_spring_url_4.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/movies/${coming_soon.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    int[] _jspx_push_body_count_spring_url_4 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_url_4 = _jspx_th_spring_url_4.doStartTag();
+      if (_jspx_th_spring_url_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_url_4[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_url_4.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_url_4.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_4);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_3(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_3 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_3.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_3.setParent(null);
+    _jspx_th_c_forEach_3.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${coming_soon2}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_3.setVar("coming_soon");
+    int[] _jspx_push_body_count_c_forEach_3 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_3 = _jspx_th_c_forEach_3.doStartTag();
+      if (_jspx_eval_c_forEach_3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"");
+          if (_jspx_meth_spring_url_5((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_3, _jspx_page_context, _jspx_push_body_count_c_forEach_3))
+            return true;
+          out.write('"');
+          out.write('>');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${coming_soon.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a></li>\n");
+          out.write("\t\t\t\t\t\t\t\t\t\t");
+          int evalDoAfterBody = _jspx_th_c_forEach_3.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_3[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_3.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_3.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_3);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_url_5(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_3, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_3)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_5 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_5.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_3);
+    _jspx_th_spring_url_5.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/movies/${coming_soon.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    int[] _jspx_push_body_count_spring_url_5 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_url_5 = _jspx_th_spring_url_5.doStartTag();
+      if (_jspx_th_spring_url_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_url_5[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_url_5.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_url_5.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_5);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_url_6(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_6 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_6.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_6.setParent(null);
+    _jspx_th_spring_url_6.setValue("/theaters");
+    int[] _jspx_push_body_count_spring_url_6 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_url_6 = _jspx_th_spring_url_6.doStartTag();
+      if (_jspx_th_spring_url_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_url_6[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_url_6.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_url_6.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_6);
     }
     return false;
   }
