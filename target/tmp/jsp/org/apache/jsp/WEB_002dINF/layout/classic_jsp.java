@@ -145,8 +145,9 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">\n");
       out.write("\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-search\"></span>\n");
       out.write("\t\t\t\t\t\t</button>\n");
+      out.write("\t\t\t\t\t\t\n");
       out.write("\t\t\t\t\t</div>\n");
-      out.write("\n");
+      out.write("\t\t\t\t\t<li><a href=\"/giftcard\"> Buy Gift Card</a></li>\n");
       out.write("\t\t\t\t</form>\n");
       out.write("\t\t\t\t<ul class=\"nav navbar-nav\">\n");
       out.write("\n");

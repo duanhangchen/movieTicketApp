@@ -60,8 +60,9 @@
 						<button type="submit" class="btn btn-primary">
 							<span class="glyphicon glyphicon-search"></span>
 						</button>
+						
 					</div>
-
+					<li><a href="/giftcard"> Buy Gift Card</a></li>
 				</form>
 				<ul class="nav navbar-nav">
 
