@@ -163,6 +163,28 @@ $(document).ready(function() {
 		});
 	});
 	
+	$(function() {
+		
+		
+	    $('#toggle-event').change(function() {
+	    	var toggleNewsLetter= {
+	    			value : $(this).prop('checked')
+	    	}
+	      $('#console-event').html('Toggle: ' + $(this).prop('checked'))
+	      $.ajax({
+				type : "POST",
+				url : "/newsletter" ,
+				data : toggleNewsLetter,
+				success : function(result) {
+					console.log("SUCCESSFULL NEWSLETTER ");
+				},
+				error : function(result) {
+					console.log('ERROR');
+				}
+			});
+	    })
+	  })
+	
 	
 	
 });

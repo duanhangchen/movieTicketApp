@@ -7,6 +7,7 @@
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/repository/ReviewRepository.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/UserService.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/AuthenticationController.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/NewsLetterService.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/User.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/MovieService.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/MailService.java
@@ -24,7 +25,9 @@
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/ActorController.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/PaymentMethod.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Ads.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/repository/NewsLetterRepository.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/LoginService.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/NewsLetter.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Photo.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/UserDashboard.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Ticket.java

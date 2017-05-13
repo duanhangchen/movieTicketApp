@@ -11,9 +11,13 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.cedar.mta.entity.NewsLetter;
 import com.cedar.mta.entity.User;
+import com.cedar.mta.repository.NewsLetterRepository;
 import com.cedar.mta.service.MailService;
+import com.cedar.mta.service.NewsLetterService;
 import com.cedar.mta.service.ReviewService;
 import com.cedar.mta.service.UserService;
 
@@ -29,6 +33,12 @@ public class UserDashboard {
 	@Autowired
 	private MailService mailService;
 	
+	@Autowired
+	private NewsLetterService newsService;
+	
+	@Autowired
+	private NewsLetterRepository newsRepository;
+	
 
 	@RequestMapping("/user-dashboard")
 	public String showUserDashboardPage(Model model,HttpSession session) {
@@ -36,6 +46,15 @@ public class UserDashboard {
 		User user = (User) session.getAttribute("user");
 		
 		model.addAttribute("userreviews",reviewService.findPersonalReview(user.getAccountId()));
+		
+		NewsLetter news = newsRepository.findOne(user.getAccountId());
+		if(news!= null){
+			model.addAttribute("subscribed",true);
+		}
+		else{
+			System.out.println("Hello Im in newletter");
+			model.addAttribute("subscribed",false);
+		}
 		
 		return "user-dashboard";
 	}
@@ -50,6 +69,27 @@ public class UserDashboard {
 		model.addAttribute("userreviews",reviewService.findPersonalReview(user.getAccountId()));
 		userService.updateUserInfo(firstName, lastName, user.getAccountId());
 		return "user-dashboard";
+	}
+	
+	@RequestMapping(value = "/newsletter", method = RequestMethod.POST)
+	public @ResponseBody String toggleNewsLetter(Model model,HttpSession session,@RequestParam Boolean value) {
+		
+		
+		User user = (User) session.getAttribute("user");
+		//model.addAttribute("userreviews",reviewService.findPersonalReview(user.getAccountId()));
+		
+		if(value){
+			NewsLetter news = new NewsLetter();
+			
+			news.setUserId(user.getAccountId());
+			news.setEmail(user.getEmail());
+			newsRepository.save(news);
+		}
+		else{
+			newsRepository.deleteUserFromNewsLetter(user.getAccountId());
+		}
+		//userService.updateUserInfo(firstName, lastName, user.getAccountId());
+		return "Success";
 	}
 
 //	@RequestMapping(value = "/user-dashboard", method = RequestMethod.POST)
