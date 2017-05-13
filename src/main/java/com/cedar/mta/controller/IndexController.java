@@ -26,6 +26,7 @@ import com.cedar.mta.repository.GiftRepository;
 import com.cedar.mta.service.GiftService;
 import com.cedar.mta.service.MailService;
 import com.cedar.mta.service.MovieService;
+import com.cedar.mta.service.SupportFormService;
 
 @Controller
 public class IndexController {
@@ -42,6 +43,9 @@ public class IndexController {
 
 	@Autowired
 	private MovieService movieService;
+	
+	@Autowired
+	private SupportFormService supportFormService;
 
 	@Autowired
 	private GiftService giftService;
@@ -83,6 +87,13 @@ public class IndexController {
 		session.setAttribute("coming_soon2", comingSoon2);
 
 		return "index";
+	}
+	
+	@RequestMapping(value="/",method=RequestMethod.POST)
+	public String submitSupport(Model model,HttpSession session,@RequestParam String title,@RequestParam String body){
+		User user = (User) session.getAttribute("user");
+		supportFormService.addSupport(body, title, user.getEmail());
+		return "redirect: ";
 	}
 
 	@RequestMapping("/giftcard")
