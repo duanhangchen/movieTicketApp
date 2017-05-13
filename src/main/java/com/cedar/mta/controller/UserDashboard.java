@@ -64,10 +64,20 @@ public class UserDashboard {
 		
 		
 		User user = (User) session.getAttribute("user");
+		
+		System.out.println("HELLLO"+user.getFirstName());
 		user.setFirstName(firstName);
 		user.setLastName(lastName);
 		model.addAttribute("userreviews",reviewService.findPersonalReview(user.getAccountId()));
 		userService.updateUserInfo(firstName, lastName, user.getAccountId());
+		NewsLetter news = newsRepository.findOne(user.getAccountId());
+		if(news!= null){
+			model.addAttribute("subscribed",true);
+		}
+		else{
+			System.out.println("Hello Im in newletter");
+			model.addAttribute("subscribed",false);
+		}
 		return "user-dashboard";
 	}
 	

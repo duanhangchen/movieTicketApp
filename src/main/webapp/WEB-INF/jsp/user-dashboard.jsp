@@ -244,8 +244,8 @@
 				<div class="container">
 				<form action="/newsletter" method="POST" class="form-signin">
 					<h2>News Letter Subscription</h2>
-					<input  id="toggle-event" type="checkbox"  name= "subscribed" <c:if test="${subscribed}">checked</c:if> data-toggle="toggle" data-on="Subscribed" data-off="Unsubscribed" data-width= "10%">
-				</form>
+<%-- 					<input  id="toggle-event" type="checkbox"  name= "subscribed" <c:if test="${subscribed}">checked</c:if> data-toggle="toggle" data-on="Subscribed" data-off="Unsubscribed" data-width= "10%">
+ --%>				</form>
 				</div>
 			</div>
 		</div>
