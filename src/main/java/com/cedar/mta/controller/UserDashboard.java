@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.cedar.mta.entity.NewsLetter;
 import com.cedar.mta.entity.User;
 import com.cedar.mta.repository.NewsLetterRepository;
+import com.cedar.mta.repository.TheaterRepository;
 import com.cedar.mta.service.MailService;
 import com.cedar.mta.service.NewsLetterService;
 import com.cedar.mta.service.ReviewService;
@@ -26,6 +27,9 @@ public class UserDashboard {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private TheaterRepository theaterRepository;
 
 	@Autowired
 	private ReviewService reviewService;
@@ -45,6 +49,8 @@ public class UserDashboard {
 		User user = (User) session.getAttribute("user");
 
 		model.addAttribute("userreviews", reviewService.findPersonalReview(user.getAccountId()));
+		
+		model.addAttribute("userTheaters", theaterRepository.findPersonalTheater(user.getAccountId()));
 
 		NewsLetter news = newsRepository.findOne(user.getAccountId());
 		if (news != null) {

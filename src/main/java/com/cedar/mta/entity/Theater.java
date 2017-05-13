@@ -13,6 +13,7 @@ public class Theater {
 	@Id
 	@GeneratedValue
 	private Integer theaterId;	
+	
 	private String theaterName;	
 	
 	public Integer getId() {
@@ -27,4 +28,5 @@ public class Theater {
 	public void setName(String theaterName) {
 		this.theaterName = theaterName;
 	}
+	
 }

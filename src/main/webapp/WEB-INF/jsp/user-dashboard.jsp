@@ -56,32 +56,21 @@
 						<div class="container">
 							<h1>MY THEATRE</h1>
 							<div class="row pricing">
-								<div class="col-md-3">
-									<div class="well card">
-										<h3>
-											<b>Theatre Name</b>
-										</h3>
-										<hr>
-										<p>Theatre Address Line 1</p>
-										<hr>
-										<p>NY</p>
-										<hr>
-										<p>ZIP: 11790</p>
+								<c:forEach items="${userTheaters}" var="theater">
+									<div class="col-md-3">
+										<div class="well card">
+											<h3>
+												<b>${theater.name}</b>
+											</h3>
+											<hr>
+											<p>Theatre Address Line 1</p>
+											<hr>
+											<p>NY</p>
+											<hr>
+											<p>ZIP: 11790</p>
+										</div>
 									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="well card">
-										<h3>
-											<b>Theatre Name</b>
-										</h3>
-										<hr>
-										<p>Theatre Address Line 1</p>
-										<hr>
-										<p>NY</p>
-										<hr>
-										<p>ZIP: 11790</p>
-									</div>
-								</div>
+								</c:forEach>
 							</div>
 						</div>
 						<div class="container">
