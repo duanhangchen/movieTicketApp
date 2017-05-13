@@ -28,7 +28,7 @@ public class GiftService {
 		return giftRepository.findAllGiftCardByAccountId(id);
 	}
 	
-	List<GiftCard> findGiftCardByCode(String code){
+	GiftCard findGiftCardByCode(String code){
 		return giftRepository.findGiftCardByCode(code);
 	}
 	

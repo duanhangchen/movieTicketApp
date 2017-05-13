@@ -1,5 +1,6 @@
 package com.cedar.mta.controller;
 
+import java.math.BigDecimal;
 import java.security.NoSuchAlgorithmException;
 
 import javax.servlet.http.HttpSession;
@@ -13,10 +14,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.cedar.mta.entity.GiftCard;
 import com.cedar.mta.entity.NewsLetter;
 import com.cedar.mta.entity.User;
+import com.cedar.mta.repository.GiftRepository;
 import com.cedar.mta.repository.NewsLetterRepository;
+
 import com.cedar.mta.repository.TheaterRepository;
+import com.cedar.mta.service.GiftService;
 import com.cedar.mta.service.MailService;
 import com.cedar.mta.service.NewsLetterService;
 import com.cedar.mta.service.ReviewService;
@@ -43,6 +48,14 @@ public class UserDashboard {
 	@Autowired
 	private NewsLetterRepository newsRepository;
 
+	
+	@Autowired
+	private GiftService giftService;
+	
+	@Autowired
+	private GiftRepository giftRepository;
+	
+
 	@RequestMapping("/user-dashboard")
 	public String showUserDashboardPage(Model model, HttpSession session) {
 
@@ -50,8 +63,14 @@ public class UserDashboard {
 
 		model.addAttribute("userreviews", reviewService.findPersonalReview(user.getAccountId()));
 		
+
 		model.addAttribute("userTheaters", theaterRepository.findPersonalTheater(user.getAccountId()));
 
+		BigDecimal balance = userService.getBalanceById(user.getAccountId());
+		model.addAttribute("balance", balance);
+		
+		model.addAttribute("userreviews",reviewService.findPersonalReview(user.getAccountId()));
+		
 		NewsLetter news = newsRepository.findOne(user.getAccountId());
 		if (news != null) {
 			model.addAttribute("subscribed", true);
@@ -68,8 +87,6 @@ public class UserDashboard {
 			@RequestParam String lastName) {
 
 		User user = (User) session.getAttribute("user");
-		
-		System.out.println("HELLLO"+user.getFirstName());
 		user.setFirstName(firstName);
 		user.setLastName(lastName);
 		model.addAttribute("userreviews", reviewService.findPersonalReview(user.getAccountId()));
@@ -103,6 +120,33 @@ public class UserDashboard {
 		}
 		return "Success";
 	}
+	
+	@RequestMapping(value = "/redeemCard", method = RequestMethod.POST)
+	public String toggleRedeemCard(Model model,HttpSession session,@RequestParam String giftCode) {	
+		User user = (User) session.getAttribute("user");
+		GiftCard gc = giftRepository.findGiftCardByCode(giftCode);
+		giftRepository.updateUserBalance(gc.getGiftAmount(), user.getAccountId());
+		giftRepository.updateGiftBalance(gc.getGiftAmount(), giftCode);
+		
+		
+		BigDecimal balance = userService.getBalanceById(user.getAccountId());
+		model.addAttribute("balance", balance);
+		
+		model.addAttribute("userreviews",reviewService.findPersonalReview(user.getAccountId()));
+		
+		NewsLetter news = newsRepository.findOne(user.getAccountId());
+		if(news!= null){
+			model.addAttribute("subscribed",true);
+		}
+		else{
+			System.out.println("Hello Im in newletter");
+			model.addAttribute("subscribed",false);
+		}
+		return "user-dashboard";
+	}
+	
+	
+	
 
 	// @RequestMapping(value = "/user-dashboard", method = RequestMethod.POST)
 	// public String handleSignUp(HttpSession session, ModelMap model,
