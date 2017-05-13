@@ -15,5 +15,6 @@
 		<class>com.cedar.mta.entity.Rating</class>
 		<class>com.cedar.mta.entity.Review</class>
 		<class>com.cedar.mta.entity.Ads</class>
+		<class>com.cedar.mta.entity.GiftCard</class>
 	</persistence-unit>
 </persistence>
