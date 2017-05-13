@@ -6,8 +6,6 @@
 	rel="stylesheet">
 <link href="<c:url value="/resources/css/rating.css"/>" rel="stylesheet">
 <script src="<c:url value="/resources/js/rating.js" />"></script>
-<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 
 <div id="exTab1" class="container">
@@ -21,7 +19,7 @@
 		<li><a href="#2a" data-toggle="tab">PURCHASE HISTORY</a></li>
 		<li><a href="#3a" data-toggle="tab">ACCOUNT SETTINGS</a></li>
 		<li><a href="#4a" data-toggle="tab">SUBSCRIPTIONS</a></li>
-		<li><a href="#5a" data-toggle="tab">GIFT CARD</a></li>
+		<li><a href="#4a" data-toggle="tab">GIFT CARD</a></li>
 	</ul>
 	<div class="tab-content clearfix">
 		<div class="tab-pane active" id="1a">
@@ -237,16 +235,6 @@
 					</div>
 				</div>
 
-			</div>
-		</div>
-		<div class="tab-pane" id="4a">
-			<div class="row actor">
-				<div class="container">
-				<form action="/newsletter" method="POST" class="form-signin">
-					<h2>News Letter Subscription</h2>
-					<input  id="toggle-event" type="checkbox"  name= "subscribed" <c:if test="${subscribed}">checked</c:if> data-toggle="toggle" data-on="Subscribed" data-off="Unsubscribed" data-width= "10%">
-				</form>
-				</div>
 			</div>
 		</div>
 	</div>

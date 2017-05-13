@@ -32,6 +32,7 @@ import com.cedar.mta.repository.RatingRepository;
 import com.cedar.mta.service.ActorService;
 import com.cedar.mta.service.GenreService;
 import com.cedar.mta.repository.ReviewRepository;
+import com.cedar.mta.repository.UserRepository;
 import com.cedar.mta.service.MovieService;
 import com.cedar.mta.service.RatingService;
 import com.cedar.mta.service.ReviewService;
@@ -58,6 +59,9 @@ public class MovieController {
 	
 	@Autowired
 	private ReviewRepository reviewRepository;
+	
+	@Autowired
+	private UserRepository userRepository;
 	
 	@RequestMapping("/movies")
 	public String movies(Model model){
@@ -107,6 +111,17 @@ public class MovieController {
 				model.addAttribute("rating",test);
 			}
 			model.addAttribute("review",personalReview);
+			
+			userRepository.findUserFavourite(id,user.getAccountId());
+			
+			Integer isFavourite = userRepository.findUserFavourite(id,user.getAccountId());
+			if(isFavourite == null){
+				model.addAttribute("favouriteMovie", "white");
+			}
+			else {
+				model.addAttribute("favouriteMovie", "red");
+			}
+			
 		}
 		model.addAttribute("movie",movieService.findById(id));
 		model.addAttribute("reviews",reviewService.findReviews(id));
@@ -174,5 +189,19 @@ public class MovieController {
 		else{
 			return "FAIL";
 		}
+	}
+	
+	@RequestMapping(value="/movies/{id}/toggleFavourite",method=RequestMethod.POST)
+	public @ResponseBody String toggleFavourite(Model model,HttpSession session,@PathVariable int id,@RequestParam String value){
+		User user=(User) session.getAttribute("user");
+		if(user!=null){
+			if(value.equals("red")){
+				userRepository.addMovieToUser(user.getAccountId(), id);
+			}
+			else if(value.equals("white")){
+				userRepository.deleteMovieFromUser(user.getAccountId(), id);
+			}
+		}
+		return "success";
 	}
 }

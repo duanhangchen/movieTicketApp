@@ -1,6 +1,8 @@
 package com.cedar.mta.entity;
 
+import java.math.BigDecimal;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -27,10 +29,10 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private Date doB;
+	private BigDecimal balance = BigDecimal.ZERO;
 	
 	@ManyToMany
 	@JoinTable(name="MyMovies")
-
 	private List<Movie> myMovies;
 	
 	@ManyToMany
@@ -93,4 +95,11 @@ public class User {
 		myMovies.add(movie);
 	}
 	
+	public BigDecimal getBalance() {
+		return balance;
+	}
+	public void setBalance(BigDecimal balance) {
+		this.balance = balance;
+	}
+
 }

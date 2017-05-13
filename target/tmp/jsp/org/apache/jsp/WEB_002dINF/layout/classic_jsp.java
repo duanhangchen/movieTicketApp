@@ -149,8 +149,9 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">\r\n");
       out.write("\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-search\"></span>\r\n");
       out.write("\t\t\t\t\t\t</button>\r\n");
+      out.write("\t\t\t\t\t\t\r\n");
       out.write("\t\t\t\t\t</div>\r\n");
-      out.write("\r\n");
+      out.write("\t\t\t\t\t<li><a href=\"/giftcard\"> Buy Gift Card</a></li>\r\n");
       out.write("\t\t\t\t</form>\r\n");
       out.write("\t\t\t\t<ul class=\"nav navbar-nav\">\r\n");
       out.write("\r\n");
@@ -299,15 +300,19 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t</ul></li>\r\n");
-      out.write("\t\t\t\t\t<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\"\r\n");
+      out.write("\t\t\t\t\t<li class=\"dropdown\">\r\n");
+      out.write("\t\t\t\t\t<a href=\"#\" class=\"dropdown-toggle\"\r\n");
       out.write("\t\t\t\t\t\tdata-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"\r\n");
-      out.write("\t\t\t\t\t\taria-expanded=\"false\"> ");
+      out.write("\t\t\t\t\t\taria-expanded=\"false\">\r\n");
+      out.write("\t\t\t\t\t\t ");
       if (_jspx_meth_c_if_0(_jspx_page_context))
         return;
-      out.write(' ');
+      out.write("\r\n");
+      out.write("                         ");
       if (_jspx_meth_c_if_1(_jspx_page_context))
         return;
-      out.write(" <span class=\"caret\"></span></a>\r\n");
+      out.write("\r\n");
+      out.write("                         <span class=\"caret\"></span></a>\r\n");
       out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu login\">\r\n");
       out.write("\t\t\t\t\t\t\t");
       if (_jspx_meth_c_if_2(_jspx_page_context))
@@ -954,10 +959,8 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("\t\t\t\t\t\t\t\t<a href=\"/\" class=\"btn btn-lg btn-primary\"><span\r\n");
         out.write("\t\t\t\t\t\t\t\t\tclass=\"glyphicon glyphicon-fire\"></span> MY ACCOUNT SETTINGS</a>\r\n");
         out.write("\t\t\t\t\t\t\t\t<br>\r\n");
-        out.write("\t\t\t\t\t\t\t\t<p>\r\n");
-        out.write("\t\t\t\t\t\t\t\t\t<a href=\"/logout\" onclick='return logout()'\r\n");
-        out.write("\t\t\t\t\t\t\t\t\t\tclass=\"text-primary\"><strong>LOGOUT</strong></a>\r\n");
-        out.write("\t\t\t\t\t\t\t\t</p>\r\n");
+        out.write("\t\t\t\t\t\t\t\t<p> <a  href=\"/logout\" onclick='return logout()' class=\"text-primary\"><strong>LOGOUT</strong></a></p>\r\n");
+        out.write("\t\t\t\t\t\t\t\t<p> <a  href=\"/user-dashboard\"  class=\"text-primary\"><strong>MY ACCOUNT</strong></a></p>\r\n");
         out.write("\t\t\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_if_3.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)

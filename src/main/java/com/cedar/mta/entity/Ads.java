@@ -41,5 +41,4 @@ public class Ads {
 	public void setAdsUrl(String adsUrl) {
 		this.adsUrl = adsUrl;
 	}
-	
 }

@@ -14,13 +14,13 @@
 <div id="exTab1" class="container">
 
 	<span>
-		<h1 class="actor-name">${movie.name}Overview
-			<!-- <form action="/movies/{id}"method="POST"> -->
-			<button name="favouriteMovie" value="${favouriteMovie}"
-				onClick="toggleValue()" type="submit" class="btn btn-lg">
-				<span class="glyphicon glyphicon-heart"> </span>
+		<h1 class="actor-name">${movie.name} Overview
+			<c:if test="${not empty user}">
+			<button id = "favourite" name="favouriteMovie" value="${favouriteMovie}"
+				onClick="toggleValue()" type="submit" class="btn btn-lg ">
+				<span class="glyphicon glyphicon-heart ${favouriteMovie}"> </span>
 			</button>
-			<!-- </form> -->
+			</c:if>
 		</h1>
 	</span>
 

@@ -135,7 +135,55 @@ $(document).ready(function() {
 		$('#count-existing').html(value);
 	});
 
-	$( ".glyphicon.glyphicon-heart" ).click(function() {
-		$( this ).toggleClass('red');
+	$(".glyphicon.glyphicon-heart").click(function(value) {
+		var value = document.getElementById("favourite").value;
+		if (value == "red") {
+			document.getElementById("favourite").value = "white";
+		}
+		if (value == "white") {
+			document.getElementById("favourite").value = "red";
+		}
+		$(this).toggleClass('red');
+
+		var toggleFavourite = {
+			value : document.getElementById("favourite").value
+		}
+		var movieid = window.location.pathname.split('/')[2];
+		$.ajax({
+			type : "POST",
+			url : "/movies/"+movieid+"/toggleFavourite" ,
+			data : toggleFavourite,
+			success : function(result) {
+				console.log("SUCCESS");
+			},
+			error : function(result) {
+				console.log('ERROR');
+			}
+		});
 	});
+	
+	$(function() {
+		
+		
+	    $('#toggle-event').change(function() {
+	    	var toggleNewsLetter= {
+	    			value : $(this).prop('checked')
+	    	}
+	      $('#console-event').html('Toggle: ' + $(this).prop('checked'))
+	      $.ajax({
+				type : "POST",
+				url : "/newsletter" ,
+				data : toggleNewsLetter,
+				success : function(result) {
+					console.log("SUCCESSFULL NEWSLETTER ");
+				},
+				error : function(result) {
+					console.log('ERROR');
+				}
+			});
+	    })
+	  })
+	
+	
+	
 });

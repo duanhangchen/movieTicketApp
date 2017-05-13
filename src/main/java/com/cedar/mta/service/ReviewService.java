@@ -27,5 +27,10 @@ public class ReviewService {
 	public void changeReview(String review,Integer movie_id,Integer user_id){
 		reviewRepository.changeReview(review,movie_id,user_id);
 	}
+	
+	
+	public List<Review> findPersonalReview(Integer user_id){
+		return reviewRepository.findPersonalReview(user_id);
+	}
 
 }
