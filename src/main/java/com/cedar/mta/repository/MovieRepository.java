@@ -29,5 +29,9 @@ public interface MovieRepository extends JpaRepository<Movie,Integer> {
 	
 	@Query(value="SELECT * FROM movie  where movieId in(select movies_movieId from moviegenre where genres_genreId in(SELECT genreId from genre where genreType= :genre)) and releaseDate < :date order by releaseDate desc limit 50",nativeQuery=true)
 	List<Movie> findNowPlayingAndGenre(@Param("date")java.sql.Date date,@Param("genre")String genre);
+	
+	@Query(value="select * from movie where movieId in(select movieId from showing where theaterid= :theater_id)",nativeQuery=true)
+	List<Movie> findMovieByTheater(@Param("theater_id")Integer theater_id);
+
 }
  

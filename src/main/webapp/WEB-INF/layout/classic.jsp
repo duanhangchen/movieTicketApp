@@ -12,7 +12,8 @@
 	rel="stylesheet">
 <link href="<c:url value="/resources/css/navbar.css" />"
 	rel="stylesheet">
-<script src="<c:url value="/resources/js/jquery-3.2.1.min.js" />"></script>
+<%-- <script src="<c:url value="/resources/js/jquery-3.2.1.min.js" />"></script> --%>
+<script src="<c:url value="/resources/js/jquery-3.2.1.min.js" />"></script> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="<c:url value="/resources/semantic/dist/semantic.min.css" />"
 	rel="stylesheet">

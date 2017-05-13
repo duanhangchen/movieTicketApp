@@ -1,6 +1,7 @@
 package com.cedar.mta.entity;
 
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -11,6 +12,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.Transient;
 import javax.persistence.GeneratedValue;
 
 
@@ -43,7 +45,19 @@ public class Movie {
 	@ManyToMany
 	@JoinTable(name="MovieGenre")
 	private List<Genre> genres;
+	
+	@Transient
+	private List<Showing> showings=new ArrayList<Showing>();
 
+	public List<Showing> getShowings() {
+		return showings;
+	}
+	public void setShowings(List<Showing> showings) {
+		this.showings = showings;
+	}
+	public void addShowing(Showing showing){
+		showings.add(showing);
+	}
 	public Integer getId() {
 		return id;
 	}
