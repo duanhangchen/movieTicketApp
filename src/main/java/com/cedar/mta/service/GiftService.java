@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import com.cedar.mta.entity.GiftCard;
@@ -28,7 +29,7 @@ public class GiftService {
 		return giftRepository.findAllGiftCardByAccountId(id);
 	}
 	
-	List<GiftCard> findGiftCardByCode(String code){
+	public GiftCard findGiftCardByCode(String code){
 		return giftRepository.findGiftCardByCode(code);
 	}
 	
@@ -36,4 +37,11 @@ public class GiftService {
 		giftRepository.insertGiftCard(amount, code, id);
 	}
 
+	public void updateGiftBalance(BigDecimal giftAmount,String giftCode){
+		giftRepository.updateGiftBalance(giftAmount, giftCode);
+	}
+	
+	public void updateUserBalance(BigDecimal giftBalance, Integer accountId){
+		giftRepository.updateUserBalance(giftBalance, accountId);
+	}
 }

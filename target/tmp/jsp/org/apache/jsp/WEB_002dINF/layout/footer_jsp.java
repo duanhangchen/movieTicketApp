@@ -11,14 +11,18 @@ public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+<<<<<<< HEAD
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
 
+=======
+>>>>>>> David
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
   }
 
+<<<<<<< HEAD
   public void _jspInit() {
     _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
@@ -27,6 +31,8 @@ public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_tagPool_c_if_test.release();
   }
 
+=======
+>>>>>>> David
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
         throws java.io.IOException, ServletException {
 
@@ -51,6 +57,7 @@ public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+<<<<<<< HEAD
       out.write("<link\r\n");
       out.write("\thref=\"https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css\"\r\n");
       out.write("\trel=\"stylesheet\">\r\n");
@@ -90,10 +97,45 @@ public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
+=======
+      out.write("<link href=\"https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css\" rel=\"stylesheet\">\r\n");
+      out.write("<!--footer start from here-->\r\n");
+      out.write("<footer>\r\n");
+      out.write("  <div class=\"container\">\r\n");
+      out.write("    <div class=\"row\">\r\n");
+      out.write("      <div class=\"col-md-4 col-sm-6 footerleft \">\r\n");
+      out.write("        <div class=\"logofooter\"> Team Cedar</div>\r\n");
+      out.write("        <p>Movie Ticket Application</p>\r\n");
+      out.write("\r\n");
+      out.write("        <p><i class=\"fa fa-phone\"></i> Phone: xxx-xxx-xxxx</p>\r\n");
+      out.write("        <p><i class=\"fa fa-envelope\"></i> E-mail : duanhang.chen@stonybrooke.edu</p>\r\n");
+      out.write("        \r\n");
+      out.write("      </div>\r\n");
+      out.write("      <div class=\"col-md-2 col-sm-6 paddingtop-bottom\">\r\n");
+      out.write("        <h6 class=\"heading7\">GENERAL LINKS</h6>\r\n");
+      out.write("        <ul class=\"footer-ul\">\r\n");
+      out.write("          <li><a href=\"#\"> Career</a></li>\r\n");
+      out.write("          <li><a href=\"#\"> Privacy Policy</a></li>\r\n");
+      out.write("          <li><a href=\"#\"> Terms & Conditions</a></li>\r\n");
+      out.write("          <li><a href=\"#\"> Client Gateway</a></li>\r\n");
+      out.write("          <li><a href=\"#\"> Ranking</a></li>\r\n");
+      out.write("          <li><a href=\"#\"> Case Studies</a></li>\r\n");
+      out.write("          <li><a href=\"#\"> Frequently Ask Questions</a></li>\r\n");
+      out.write("        </ul>\r\n");
+      out.write("      </div>\r\n");
+      out.write("      <div class=\"col-md-3 col-sm-6 paddingtop-bottom\">\r\n");
+      out.write("        <h6 class=\"heading7\">Latest Movies</h6>\r\n");
+      out.write("        <div class=\"post\">\r\n");
+      out.write("        </div>\r\n");
+      out.write("      </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("  </div>\r\n");
+>>>>>>> David
       out.write("</footer>\r\n");
       out.write("<!--footer start from here-->\r\n");
       out.write("\r\n");
       out.write("<div class=\"copyright\">\r\n");
+<<<<<<< HEAD
       out.write("\t<div class=\"container\">\r\n");
       out.write("\t\t<div class=\"col-md-6\">\r\n");
       out.write("\t\t\t<p>© 2017 - All Rights with Cedar</p>\r\n");
@@ -148,6 +190,21 @@ public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
+=======
+      out.write("  <div class=\"container\">\r\n");
+      out.write("    <div class=\"col-md-6\">\r\n");
+      out.write("      <p>© 2017 - All Rights with Cedar</p>\r\n");
+      out.write("    </div>\r\n");
+      out.write("    <div class=\"col-md-6\">\r\n");
+      out.write("      <ul class=\"bottom_ul\">\r\n");
+      out.write("        <li><a href=\"#\">Team Cedar</a></li>\r\n");
+      out.write("        <li><a href=\"#\">About us</a></li>\r\n");
+      out.write("        <li><a href=\"#\">Faq's</a></li>\r\n");
+      out.write("        <li><a href=\"#\">Contact us</a></li>\r\n");
+      out.write("      </ul>\r\n");
+      out.write("    </div>\r\n");
+      out.write("  </div>\r\n");
+>>>>>>> David
       out.write("</div>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
@@ -161,6 +218,7 @@ public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
   }
+<<<<<<< HEAD
 
   private boolean _jspx_meth_c_if_0(PageContext _jspx_page_context)
           throws Throwable {
@@ -190,4 +248,6 @@ public final class footer_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
     return false;
   }
+=======
+>>>>>>> David
 }

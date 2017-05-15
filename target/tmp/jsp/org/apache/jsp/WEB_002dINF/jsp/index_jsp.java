@@ -103,10 +103,62 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t</div>\r\n");
       out.write("\t\t</div>\r\n");
       out.write("\t</div>\r\n");
+<<<<<<< HEAD
       out.write("</div>\r\n");
       out.write("\r\n");
       out.write("<br>\r\n");
       out.write("<br>\r\n");
+=======
+      out.write("\t<br>\r\n");
+      out.write("\t<br>\r\n");
+      out.write("\t<br>\r\n");
+      out.write("</div>\r\n");
+      out.write("\r\n");
+      out.write("<div class=\"container\">\r\n");
+      out.write("\t<br>\r\n");
+      out.write("\t<div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n");
+      out.write("\t\t<!-- Indicators -->\r\n");
+      out.write("\t\t<ol class=\"carousel-indicators\">\r\n");
+      out.write("\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\r\n");
+      out.write("\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\r\n");
+      out.write("\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\r\n");
+      out.write("\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"3\"></li>\r\n");
+      out.write("\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"4\"></li>\r\n");
+      out.write("\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"5\"></li>\r\n");
+      out.write("\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"6\"></li>\r\n");
+      out.write("\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"7\"></li>\r\n");
+      out.write("\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"8\"></li>\r\n");
+      out.write("\t\t\t<li data-target=\"#myCarousel\" data-slide-to=\"9\"></li>\r\n");
+      out.write("\t\t</ol>\r\n");
+      out.write("\r\n");
+      out.write("\t\t<!-- Wrapper for slides -->\r\n");
+      out.write("\t\t<div class=\"carousel-inner\" role=\"listbox\">\r\n");
+      out.write("\t\t\t<div class=\"item active\">\r\n");
+      out.write("\t\t\t\t<a href=\"https://play.google.com/store/apps?hl=en\">\r\n");
+      out.write("\t\t\t\t\t<img src=\"http://i.imgur.com/SCt6khH.png\" alt=\"Chania\" width=\"600\" height=\"259\"></a>\r\n");
+      out.write("\t\t\t</div>\r\n");
+      out.write("\t\t\t\r\n");
+      out.write("\t\t\t");
+      if (_jspx_meth_c_forEach_1(_jspx_page_context))
+        return;
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\t\t\t\r\n");
+      out.write("\t\t\t\r\n");
+      out.write("\t\t</div>\r\n");
+      out.write("\r\n");
+      out.write("\t\t<!-- Left and right controls -->\r\n");
+      out.write("\t\t<a class=\"left carousel-control\" href=\"#myCarousel\" role=\"button\"\r\n");
+      out.write("\t\t\tdata-slide=\"prev\"> <span class=\"glyphicon glyphicon-chevron-left\"\r\n");
+      out.write("\t\t\taria-hidden=\"true\"></span> <span class=\"sr-only\">Previous</span>\r\n");
+      out.write("\t\t</a> <a class=\"right carousel-control\" href=\"#myCarousel\" role=\"button\"\r\n");
+      out.write("\t\t\tdata-slide=\"next\"> <span\r\n");
+      out.write("\t\t\tclass=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\r\n");
+      out.write("\t\t\t<span class=\"sr-only\">Next</span>\r\n");
+      out.write("\t\t</a>\r\n");
+      out.write("\t</div>\r\n");
+      out.write("</div>\r\n");
+>>>>>>> David
       out.write("\r\n");
       out.write("<div class=\"container\">\r\n");
       out.write("\t<br>\r\n");
@@ -168,7 +220,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<br>\r\n");
       out.write("<div class=\"ui six column grid stackable doubling container\">\r\n");
       out.write("\t");
+<<<<<<< HEAD
       if (_jspx_meth_c_forEach_1(_jspx_page_context))
+=======
+      if (_jspx_meth_c_forEach_2(_jspx_page_context))
+>>>>>>> David
         return;
       out.write("\r\n");
       out.write("</div>\r\n");
@@ -369,38 +425,30 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_1.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_1.setParent(null);
+<<<<<<< HEAD
     _jspx_th_c_forEach_1.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${featuredMovies}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     _jspx_th_c_forEach_1.setVar("movie");
+=======
+    _jspx_th_c_forEach_1.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${advertisement}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_1.setVar("ads");
+>>>>>>> David
     int[] _jspx_push_body_count_c_forEach_1 = new int[] { 0 };
     try {
       int _jspx_eval_c_forEach_1 = _jspx_th_c_forEach_1.doStartTag();
       if (_jspx_eval_c_forEach_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("\t\t<div class=\"column\">\r\n");
-          out.write("\t\t\t<div class=\"ui segments\">\r\n");
-          out.write("\t\t\t\t<div class=\"ui segments\">\r\n");
-          out.write("\t\t\t\t\t<div class=\"blur\">\r\n");
-          out.write("\t\t\t\t\t\t<a href=\"");
-          if (_jspx_meth_spring_url_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
-            return true;
-          out.write("\"><img src=\"");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" class=\"ui fluid bordered image\"></a>\r\n");
-          out.write("\t\t\t\t\t</div>\r\n");
-          out.write("\t\t\t\t</div>\r\n");
-          out.write("\t\t\t\t<div class=\"ui secondary segment center aligned\">\r\n");
-          out.write("\t\t\t\t\t<a href=\"");
-          if (_jspx_meth_spring_url_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
-            return true;
-          out.write('"');
-          out.write('>');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</a>\r\n");
-          out.write("\t\t\t\t</div>\r\n");
-          out.write("\t\t\t</div>\r\n");
-          out.write("\t\t</div>\r\n");
-          out.write("\t");
+<<<<<<< HEAD
+=======
+          out.write("\t\t\t\t\t\t<div class=\"item\">\r\n");
+          out.write("\t\t\t\t\t\t\t<a href=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ads.adsUrl}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\">\r\n");
+          out.write("\t\t\t\t\t\t\t\t<img src=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ads.adsImageUrl}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\" alt=\"Chania\" width=\"600\" height=\"259\"></a>\r\n");
+          out.write("\t\t\t\t\t\t</div>\r\n");
+          out.write("\t\t\t\t\t");
           int evalDoAfterBody = _jspx_th_c_forEach_1.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -420,14 +468,107 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
+  private boolean _jspx_meth_c_forEach_2(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_2 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_2.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_2.setParent(null);
+    _jspx_th_c_forEach_2.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${featuredMovies}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_2.setVar("movie");
+    int[] _jspx_push_body_count_c_forEach_2 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_2 = _jspx_th_c_forEach_2.doStartTag();
+      if (_jspx_eval_c_forEach_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+>>>>>>> David
+          out.write("\t\t<div class=\"column\">\r\n");
+          out.write("\t\t\t<div class=\"ui segments\">\r\n");
+          out.write("\t\t\t\t<div class=\"ui segments\">\r\n");
+          out.write("\t\t\t\t\t<div class=\"blur\">\r\n");
+          out.write("\t\t\t\t\t\t<a href=\"");
+<<<<<<< HEAD
+          if (_jspx_meth_spring_url_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
+=======
+          if (_jspx_meth_spring_url_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_2, _jspx_page_context, _jspx_push_body_count_c_forEach_2))
+>>>>>>> David
+            return true;
+          out.write("\"><img src=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.url}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\" class=\"ui fluid bordered image\"></a>\r\n");
+          out.write("\t\t\t\t\t</div>\r\n");
+          out.write("\t\t\t\t</div>\r\n");
+          out.write("\t\t\t\t<div class=\"ui secondary segment center aligned\">\r\n");
+          out.write("\t\t\t\t\t<a href=\"");
+<<<<<<< HEAD
+          if (_jspx_meth_spring_url_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
+=======
+          if (_jspx_meth_spring_url_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_2, _jspx_page_context, _jspx_push_body_count_c_forEach_2))
+>>>>>>> David
+            return true;
+          out.write('"');
+          out.write('>');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a>\r\n");
+          out.write("\t\t\t\t</div>\r\n");
+          out.write("\t\t\t</div>\r\n");
+          out.write("\t\t</div>\r\n");
+          out.write("\t");
+<<<<<<< HEAD
+          int evalDoAfterBody = _jspx_th_c_forEach_1.doAfterBody();
+=======
+          int evalDoAfterBody = _jspx_th_c_forEach_2.doAfterBody();
+>>>>>>> David
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+<<<<<<< HEAD
+      if (_jspx_th_c_forEach_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_1[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_1.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_1.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_1);
+=======
+      if (_jspx_th_c_forEach_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_2[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_2.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_2.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_2);
+>>>>>>> David
+    }
+    return false;
+  }
+
+<<<<<<< HEAD
   private boolean _jspx_meth_spring_url_1(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_1, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_1)
+=======
+  private boolean _jspx_meth_spring_url_1(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_2, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_2)
+>>>>>>> David
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  spring:url
     org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_1 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
     _jspx_th_spring_url_1.setPageContext(_jspx_page_context);
+<<<<<<< HEAD
     _jspx_th_spring_url_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_1);
+=======
+    _jspx_th_spring_url_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_2);
+>>>>>>> David
     _jspx_th_spring_url_1.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/movies/${movie.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
     int[] _jspx_push_body_count_spring_url_1 = new int[] { 0 };
     try {
@@ -446,14 +587,22 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
+<<<<<<< HEAD
   private boolean _jspx_meth_spring_url_2(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_1, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_1)
+=======
+  private boolean _jspx_meth_spring_url_2(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_2, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_2)
+>>>>>>> David
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  spring:url
     org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_2 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
     _jspx_th_spring_url_2.setPageContext(_jspx_page_context);
+<<<<<<< HEAD
     _jspx_th_spring_url_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_1);
+=======
+    _jspx_th_spring_url_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_2);
+>>>>>>> David
     _jspx_th_spring_url_2.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/movies/${movie.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
     int[] _jspx_push_body_count_spring_url_2 = new int[] { 0 };
     try {

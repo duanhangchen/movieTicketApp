@@ -1,7 +1,8 @@
 package com.cedar.mta.controller;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -12,7 +13,9 @@ import java.net.URL;
 import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -25,9 +28,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.portlet.ModelAndView;
 
+
+import com.cedar.mta.entity.Ads;
+
 import com.cedar.mta.entity.Movie;
+
 import com.cedar.mta.entity.User;
 import com.cedar.mta.repository.GiftRepository;
+import com.cedar.mta.service.AdService;
 import com.cedar.mta.service.GiftService;
 import com.cedar.mta.service.MailService;
 import com.cedar.mta.service.MovieService;
@@ -49,6 +57,12 @@ public class IndexController {
 		}
 		return builder.toString();
 	}
+
+	
+	
+	@Autowired
+	private AdService adService;
+
 
 	@Autowired
 	private MovieService movieService;
@@ -88,6 +102,17 @@ public class IndexController {
 		for (int i = 5; i < 12; i++) {
 			nowPlaying2.add(nowPlaying.get(i));
 		}
+
+		model.addAttribute("advertisement", adService.findAllAds());
+		model.addAttribute("featuredMovies",movieService.findFeaturedMovies());
+		
+		List<Ads> adList = adService.findAllAds();
+		for(int i=0;i<adList.size(); i++){
+			System.out.println(adList.get(i).getAdsImageUrl());
+			System.out.println(adList.get(i).getAdsUrl());
+		}
+		
+
 		List<Movie> comingSoon = movieService.findComingSoon(todayDate);
 		List<Movie> comingSoon1 = new ArrayList<Movie>();
 		List<Movie> comingSoon2 = new ArrayList<Movie>();
@@ -116,7 +141,11 @@ public class IndexController {
 
 
 
+
 		return "index";
+		
+		
+		
 	}
 	
 	@RequestMapping(value="/",method=RequestMethod.POST)

@@ -5,9 +5,11 @@
 <link href="<c:url value="/resources/css/actor-overview.css"/>"
 	rel="stylesheet">
 <link href="<c:url value="/resources/css/rating.css"/>" rel="stylesheet">
+<link href="<c:url value="/resources/css/gift.css"/>" rel="stylesheet">
 <script src="<c:url value="/resources/js/rating.js" />"></script>
 <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
 
 
 <div id="exTab1" class="container">
@@ -22,6 +24,7 @@
 		<li><a href="#3a" data-toggle="tab">ACCOUNT SETTINGS</a></li>
 		<li><a href="#4a" data-toggle="tab">SUBSCRIPTIONS</a></li>
 		<li><a href="#5a" data-toggle="tab">GIFT CARD</a></li>
+		<li><a href="#6a" data-toggle="tab">REDEEM GIFT CARD</a></li>
 	</ul>
 	<div class="tab-content clearfix">
 		<div class="tab-pane active" id="1a">
@@ -249,5 +252,24 @@
 				</div>
 			</div>
 		</div>
+		<div class="tab-pane" id="6a">
+			
+
+			<div class="container">
+			    <div class="row">
+			        <div class="col-md-offset-5 col-md-3">
+			            <form action="/redeemCard" role=form method=POST>
+				            <h4>Current Balance: $${balance}</h4>				            
+				            <h4>Redeem Gift Code</h4>
+				            <input type="text" name="giftCode" class="form-control input-sm chat-input" placeholder="code" />      
+					        <input type="submit" value="Redeem Code" name="submit" class="btn btn-success btn-lg btn-block">
+			            </form>
+			            </div>
+			        
+			        </div>
+			    </div>
+			</div>
+		</div>
+		
+		
 	</div>
-</div>
