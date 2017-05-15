@@ -9,7 +9,7 @@
 	rel="stylesheet">
 <link href="<c:url value="/resources/css/rating.css"/>" rel="stylesheet">
 <script src="<c:url value="/resources/js/rating.js" />"></script>
-
+<a href="http://www.jqueryscript.net/tags.php?/jQuery UI/">jQuery UI</a>
 
 <div id="exTab1" class="container">
 
