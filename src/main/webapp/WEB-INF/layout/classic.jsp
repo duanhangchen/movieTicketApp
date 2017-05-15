@@ -54,10 +54,11 @@
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 
-				<form class="navbar-form navbar-left" role="search">
+				<form class="navbar-form navbar-left" role="search" method="POST" action="/searchResult">
 					<div class="form-group">
-						<a class="team-name" href="/"> TEAM CEDAR</a> <input type="text"
-							class="form-control search-bar" placeholder="Search">
+						<a class="team-name" href="/"> TEAM CEDAR</a> 
+						<input type="text"
+							class="form-control search-bar" placeholder="Search" name="search">
 						<button type="submit" class="btn btn-primary">
 							<span class="glyphicon glyphicon-search"></span>
 						</button>

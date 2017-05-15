@@ -64,6 +64,10 @@ public class IndexController {
 	
 	@Autowired
 	private TheaterService theaterService;
+	
+	public boolean isNumeric(String s) {  
+	    return s != null && s.matches("[-+]?\\d*\\.?\\d+");  
+	}  
 
 	@RequestMapping("/")
 	public String index(Model model, HttpSession session) throws IOException {
@@ -120,6 +124,21 @@ public class IndexController {
 		User user = (User) session.getAttribute("user");
 		supportFormService.addSupport(body, title, user.getEmail());
 		return "redirect: ";
+	}
+	
+	
+	@RequestMapping(value = "/searchResult", method = RequestMethod.POST)
+	public String searchResult(Model model,HttpSession session,@RequestParam String search){
+		User user = (User) session.getAttribute("user");
+		System.out.println(search);
+		model.addAttribute("keyword", search);
+		model.addAttribute("searchMovie",movieService.searchMovie(search));
+		if(isNumeric(search)){
+			int zip=Integer.parseInt(search);
+			System.out.println("zip:"+zip);
+			model.addAttribute("searchZip",theaterService.findNearbyTheaters(zip));
+		}
+		return "search-result";
 	}
 
 	@RequestMapping("/giftcard")

@@ -49,5 +49,9 @@ public class MovieService {
 	public List<Movie> findMovieByTheater(Integer theater_id){
 		return movieRepository.findMovieByTheater(theater_id);
 	}
+	
+	public List<Movie> searchMovie(String keyword){
+		return movieRepository.searchMovie(keyword);
+	}
 
 }
