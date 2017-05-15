@@ -2,8 +2,13 @@ package com.cedar.mta.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.math.BigDecimal;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -27,6 +32,10 @@ import com.cedar.mta.service.GiftService;
 import com.cedar.mta.service.MailService;
 import com.cedar.mta.service.MovieService;
 import com.cedar.mta.service.SupportFormService;
+import com.cedar.mta.service.TheaterService;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 @Controller
 public class IndexController {
@@ -52,9 +61,12 @@ public class IndexController {
 
 	@Autowired
 	private MailService mailService;
+	
+	@Autowired
+	private TheaterService theaterService;
 
 	@RequestMapping("/")
-	public String index(Model model, HttpSession session) {
+	public String index(Model model, HttpSession session) throws IOException {
 		java.util.Date date = new java.util.Date();
 		java.sql.Date todayDate = new java.sql.Date(date.getTime());
 		User user = (User) session.getAttribute("user");
@@ -85,6 +97,20 @@ public class IndexController {
 		session.setAttribute("now_playing2", nowPlaying2);
 		session.setAttribute("coming_soon", comingSoon1);
 		session.setAttribute("coming_soon2", comingSoon2);
+		
+		String surl = "https://ipinfo.io/json";
+		URL url = new URL(surl);
+		HttpURLConnection request = (HttpURLConnection) url.openConnection();
+	    request.connect();
+	    JsonParser jp = new JsonParser(); 
+	    JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())); 
+	    JsonObject rootobj = root.getAsJsonObject();
+	    String city =rootobj.get("city").getAsString()+", "+rootobj.get("region").getAsString();
+	    int postal = rootobj.get("postal").getAsInt();
+	    session.setAttribute("nearbyTheaters", theaterService.findNearbyTheaters(postal));
+	    session.setAttribute("location", city);
+
+
 
 		return "index";
 	}
