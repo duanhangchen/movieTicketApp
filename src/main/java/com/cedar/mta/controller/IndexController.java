@@ -105,8 +105,8 @@ public class IndexController {
 	    JsonParser jp = new JsonParser(); 
 	    JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())); 
 	    JsonObject rootobj = root.getAsJsonObject();
-	    String city =rootobj.get("city").getAsString()+", "+rootobj.get("region").getAsString();
 	    int postal = rootobj.get("postal").getAsInt();
+	    String city =rootobj.get("city").getAsString()+", "+rootobj.get("region").getAsString()+", "+postal;
 	    session.setAttribute("nearbyTheaters", theaterService.findNearbyTheaters(postal));
 	    session.setAttribute("location", city);
 
