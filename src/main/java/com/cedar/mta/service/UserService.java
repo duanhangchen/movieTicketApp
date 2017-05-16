@@ -37,6 +37,7 @@ public class UserService {
 		newUser.setFirstName(firstName);
 		newUser.setLastName(lastName);
 		newUser.setEmail(email);
+		newUser.setRole("user");
 		java.sql.Date date = new java.sql.Date(Calendar.getInstance().getTime().getTime());
 		newUser.setCreationDate(date);
 		String hashedPassword = hashPassword(password);

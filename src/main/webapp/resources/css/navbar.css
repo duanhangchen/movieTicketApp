@@ -152,3 +152,7 @@ h3 {
 	width: 100%;
 	margin: auto;
 }
+
+#username{
+	text-transform: uppercase;
+}

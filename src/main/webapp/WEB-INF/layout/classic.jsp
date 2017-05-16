@@ -64,7 +64,6 @@
 						</button>
 
 					</div>
-					<li><a href="/giftcard"> Buy Gift Card</a></li>
 				</form>
 				<ul class="nav navbar-nav">
 
@@ -195,7 +194,7 @@
 								</div>
 							</div>
 						</ul></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
+					<li class="dropdown"><a id="username" href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">
 						 <c:if test="${not empty user}">
@@ -224,10 +223,16 @@
 										class="text-primary"><strong>LOGOUT</strong></a>
 								</p>
 								<p>
-								<c:if test="${user.role!= 'admin'}  ">
+								<c:if test="${user.role=='user'}">
 									<a href="/user-dashboard" class="text-primary"><strong>MY
 											ACCOUNT</strong></a>
 								</c:if>
+								<p>
+								<c:if test="${user.role=='user'}">
+									<a href="/giftcard" class="text-primary"> <strong>BUY GIFT CARD</strong></a>
+								</c:if>
+								</p>
+								
 								<c:if test="${user.role=='admin'}">
 								
 								<a href="/admin-dashboard" class="text-primary"><strong>ADMIN DASHBOARD</strong></a>
