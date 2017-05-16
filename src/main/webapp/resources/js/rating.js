@@ -189,7 +189,7 @@ $(document).ready(function() {
 			
 			var reviewId = $(this).attr('id');
 			var value = $(this).parent()[0].value
-			console.log($(this).parent().children()[1].text());
+			//console.log($(this).parent().children()[1].text());
 			console.log("review Id "+reviewId)
 			
 		

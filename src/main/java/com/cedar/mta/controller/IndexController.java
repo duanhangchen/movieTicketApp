@@ -40,7 +40,6 @@ import com.cedar.mta.entity.Ads;
 
 import com.cedar.mta.entity.Movie;
 
->>>>>>> duan
 import com.cedar.mta.entity.User;
 import com.cedar.mta.repository.GiftRepository;
 import com.cedar.mta.service.AdService;
