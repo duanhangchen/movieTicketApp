@@ -76,7 +76,7 @@
 							<div class="row">
 								<div class="col-sm-3">
 									<ul class="multi-column-dropdown">
-										<li class="coloumn-heading" id="reviewfont"><a href="#">NOW
+										<li id="nearby" class="coloumn-heading" id="reviewfont"><a href="#">NOW
 												PLAYING</a></li>
 										<c:forEach items="${now_playing}" var="now_playing">
 											<li><a
@@ -120,7 +120,7 @@
 							<div class="row">
 								<div class="col-sm-8">
 									<ul class="multi-column-dropdown">
-										<li id="nearby"> Nearby Theaters</li>
+										<li id="nearby"> NEARBY THEATERS</li>
 										<c:forEach items="${nearbyTheaters}" var="theaters">
 										<li id="theatername"><a href="<spring:url value="/theaters/${theaters.id}"/>">${theaters.name}</a></li>
 										</c:forEach>
@@ -147,7 +147,7 @@
 								<div class="col-sm-3">
 
 									<ul class="multi-column-dropdown">
-										<li class="coloumn-heading"><a href="#">FEATURED
+										<li id="nearby" class="coloumn-heading"><a href="#">FEATURED
 												MOVIE NEWS</a></li>
 										<li><a href="#"><img class="nav-movie-news-img"
 												alt=""

@@ -167,7 +167,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t<div class=\"row\">\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\" id=\"reviewfont\"><a href=\"#\">NOW\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<li id=\"nearby\" class=\"coloumn-heading\" id=\"reviewfont\"><a href=\"#\">NOW\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\tPLAYING</a></li>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
@@ -214,7 +214,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t<div class=\"row\">\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-8\">\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li id=\"nearby\"> Nearby Theaters</li>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<li id=\"nearby\"> NEARBY THEATERS</li>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t");
       if (_jspx_meth_c_forEach_4(_jspx_page_context))
         return;
@@ -247,7 +247,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">\n");
       out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\">FEATURED\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<li id=\"nearby\" class=\"coloumn-heading\"><a href=\"#\">FEATURED\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\tMOVIE NEWS</a></li>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\"><img class=\"nav-movie-news-img\"\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\talt=\"\"\n");

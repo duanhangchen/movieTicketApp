@@ -11,3 +11,8 @@
     -webkit-transform: scale(1.3);
     transform: scale(1.15);
 }
+
+
+.ui.block.header{
+	padding-left : 20px;
+}

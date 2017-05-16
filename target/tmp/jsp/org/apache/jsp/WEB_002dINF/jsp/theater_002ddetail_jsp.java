@@ -563,7 +563,7 @@ public final class theater_002ddetail_jsp extends org.apache.jasper.runtime.Http
       if (_jspx_eval_c_forEach_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
-          out.write("\t\t\t\t\t\t\t<button class=\"ui orange button\"><a href=\"");
+          out.write("\t\t\t\t\t\t\t<button class=\"ui orange button\"><a id = \"showing-button\" href=\"");
           if (_jspx_meth_spring_url_3((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_1, _jspx_page_context, _jspx_push_body_count_c_forEach_1))
             return true;
           out.write('"');

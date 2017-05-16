@@ -164,7 +164,7 @@
 								<a href="<spring:url value="/movies/${movies.id}"/>">${movies.name}</a>
 							</h1>
 							<c:forEach items="${movies.showings}" var="movie">
-							<button class="ui orange button"><a href="<spring:url value="/theaters/${theater.id}/${movie.showingId}"/>">${movie.startTime}<a></button>
+							<button class="ui orange button"><a id = "showing-button" href="<spring:url value="/theaters/${theater.id}/${movie.showingId}"/>">${movie.startTime}<a></button>
 							</c:forEach>
 						</div>
 					</div>
