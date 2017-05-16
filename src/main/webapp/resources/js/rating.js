@@ -184,17 +184,36 @@ $(document).ready(function() {
 	    })
 	  })
 	  
+	  $(function() {
+		
+		
+	    $('#moviealert').change(function() {
+	    	
+	    	var toggleMovieAlert= {
+	    			value : $(this).prop('checked')
+	    	}
+	    	var movieid = window.location.pathname.split('/')[2];
+	      $('#console-event').html('Toggle: ' + $(this).prop('checked'))
+	      $.ajax({
+				type : "POST",
+				url : "/movieAlert/"+movieid ,
+				data : toggleMovieAlert,
+				success : function(result) {
+					console.log("SUCCESSFULL Movie Alert");
+				},
+				error : function(result) {
+					console.log('ERROR');
+				}
+			});
+	    })
+	  })
+	  
 	  $(".review").click(function(value) {
 			//var value = document.getElementById("favouriteReview").value;
 			
 			var reviewId = $(this).attr('id');
 			var value = $(this).parent()[0].value
-			console.log($(this).parent().children()[1].innerHTML);
 			var reviewCount = parseInt($(this).parent().children()[1].innerHTML);
-			console.log(reviewCount);
-			console.log("review Id "+reviewId)
-			
-		
 			if (value == "red") {
 				$(this).parent().children()[1].innerHTML =parseInt($(this).parent().children()[1].innerHTML) - 1; 
 				$(this).parent()[0].value = "white";

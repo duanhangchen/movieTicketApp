@@ -17,5 +17,6 @@
 <class>com.cedar.mta.entity.NewsLetter</class>
 <class>com.cedar.mta.entity.GiftCard</class>
 <class>com.cedar.mta.entity.SupportForm</class>
+<class>com.cedar.mta.entity.MovieAlert</class>
 	</persistence-unit>
 </persistence>

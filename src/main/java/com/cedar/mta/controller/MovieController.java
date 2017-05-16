@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.cedar.mta.entity.Actor;
 import com.cedar.mta.entity.Movie;
+import com.cedar.mta.entity.MovieAlert;
+import com.cedar.mta.entity.NewsLetter;
 import com.cedar.mta.entity.User;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -27,6 +29,7 @@ import com.cedar.mta.entity.Movie;
 import com.cedar.mta.entity.Rating;
 import com.cedar.mta.entity.Review;
 import com.cedar.mta.entity.User;
+import com.cedar.mta.repository.MovieAlertRepository;
 import com.cedar.mta.repository.RatingRepository;
 
 import com.cedar.mta.service.ActorService;
@@ -54,8 +57,12 @@ public class MovieController {
 	
 	@Autowired
 	private GenreService genreService;
+	
 	@Autowired
 	private RatingRepository ratingRepository;
+	
+	@Autowired
+	private MovieAlertRepository movieAlertRepository;
 	
 	@Autowired
 	private ReviewRepository reviewRepository;
@@ -133,6 +140,14 @@ public class MovieController {
 			}
 			
 			model.addAttribute("reviews", dam);
+			
+			MovieAlert alert = movieAlertRepository.findMoviesAlert(id,user.getAccountId());
+			if (alert != null) {
+				model.addAttribute("subscribed", true);
+			} else {
+				System.out.println("Hello Im in newletter");
+				model.addAttribute("subscribed", false);
+			}
 		}
 		model.addAttribute("movie",movieService.findById(id));
 		if(user==null){
@@ -221,21 +236,39 @@ public class MovieController {
 	@RequestMapping(value="/review/{id}/toggleFavourite",method=RequestMethod.POST)
 	public @ResponseBody String toggleFavouriteReview(Model model,HttpSession session,@PathVariable int id,@RequestParam String value,@RequestParam int reviewId){
 		
-		
 		User user=(User) session.getAttribute("user");
-		System.out.println("I am in Review Controller"+ reviewId);
 		if(user!=null){
 			if(value.equals("red")){
-				System.out.println("I am red");
 				userRepository.addReviewLike(user.getAccountId(), reviewId);
 				reviewRepository.incReviewCount(reviewId);
 			}
 			else if(value.equals("white")){
-				System.out.println("In Decrement");
 				userRepository.deleteReviewLike(user.getAccountId(), reviewId);
 				reviewRepository.decReviewCount(reviewId);
 			}
 		}
 		return "success";
+	}
+	
+	
+	@RequestMapping(value = "/movieAlert/{movieId}", method = RequestMethod.POST)
+	public @ResponseBody String toggleNewsLetter(Model model, HttpSession session, @RequestParam Boolean value,@PathVariable int movieId) {
+
+		User user = (User) session.getAttribute("user");
+		// model.addAttribute("userreviews",reviewService.findPersonalReview(user.getAccountId()));
+
+		if (value) {
+			
+			System.out.println("Movie ALert");
+			MovieAlert alert = new MovieAlert();
+
+			alert.setUserId(user.getAccountId());
+			alert.setEmail(user.getEmail());
+			alert.setMovieId(movieId);
+			movieAlertRepository.save(alert);
+		} else {
+			movieAlertRepository.deleteUserFromMovieAlert(user.getAccountId(),movieId);
+		}
+		return "Success";
 	}
 }

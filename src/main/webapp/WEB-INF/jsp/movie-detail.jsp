@@ -9,6 +9,8 @@
 	rel="stylesheet">
 <link href="<c:url value="/resources/css/rating.css"/>" rel="stylesheet">
 <script src="<c:url value="/resources/js/rating.js" />"></script>
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 
 <div id="exTab1" class="container">
@@ -20,6 +22,9 @@
 				onClick="toggleValue()" type="submit" class="btn btn-lg ">
 				<span id= "movie-like" class="glyphicon glyphicon-heart ${favouriteMovie}"> </span>
 			</button>
+			<form action="/movieAlert/${movie.id}" method="POST" class="form-signin">
+					<input  id="moviealert" type="checkbox"  name= "subscribed" <c:if test="${subscribed}">checked</c:if> data-toggle="toggle" data-on="Movie Alert On" data-off="Movie Alert Off" data-width= "13%">
+ 			</form>
 			</c:if>
 		</h1>
 	</span>

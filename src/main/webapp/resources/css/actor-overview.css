@@ -86,3 +86,7 @@ body {
 	color: black;
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+#alert{
+	font-size : 20px;
+}
