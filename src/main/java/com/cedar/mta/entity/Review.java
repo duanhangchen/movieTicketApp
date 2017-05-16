@@ -6,6 +6,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 @Entity
 public class Review {
 	@Id
@@ -14,10 +17,12 @@ public class Review {
 	
 	@ManyToOne
 	@JoinColumn(name="movie_id")
+	@OnDelete(action= OnDeleteAction.CASCADE)
 	private Movie movie;
 	
 	@ManyToOne
 	@JoinColumn(name="user_id")
+	@OnDelete(action= OnDeleteAction.CASCADE)
 	private User user;
 	
 	private String review;
