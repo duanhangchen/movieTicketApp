@@ -27,4 +27,8 @@ public class TheaterService {
 		int zipcode2=zipcode+100;
 		return theaterRepository.findNearbyTheaters(zipcode1, zipcode2);
 	}
+	
+	public List<Theater> findCityState(String key){
+		return theaterRepository.findCityState(key);
+	}
 }

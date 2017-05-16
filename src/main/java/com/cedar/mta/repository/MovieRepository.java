@@ -33,7 +33,7 @@ public interface MovieRepository extends JpaRepository<Movie,Integer> {
 	@Query(value="select * from movie where movieId in(select movieId from showing where theaterid= :theater_id)",nativeQuery=true)
 	List<Movie> findMovieByTheater(@Param("theater_id")Integer theater_id);
 	
-	@Query(value="select * from movie where movieName like %:keyword% ",nativeQuery=true)
+	@Query(value="select * from movie where movieName like %:keyword% order by releaseDate Desc limit 15",nativeQuery=true)
 	List<Movie> searchMovie(@Param("keyword")String keyword);
 }
  

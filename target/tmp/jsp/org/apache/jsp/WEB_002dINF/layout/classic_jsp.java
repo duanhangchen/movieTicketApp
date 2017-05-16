@@ -11,10 +11,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
-<<<<<<< HEAD
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
-=======
->>>>>>> David
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_spring_url_value_nobody;
@@ -26,20 +23,14 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
-<<<<<<< HEAD
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-=======
->>>>>>> David
     _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_spring_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
-<<<<<<< HEAD
     _jspx_tagPool_c_forEach_var_items.release();
-=======
->>>>>>> David
     _jspx_tagPool_c_if_test.release();
     _jspx_tagPool_c_url_value_nobody.release();
     _jspx_tagPool_spring_url_value_nobody.release();
@@ -88,10 +79,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       out.write("\"\r\n");
       out.write("\trel=\"stylesheet\">\r\n");
-<<<<<<< HEAD
       out.write("\r\n");
-=======
->>>>>>> David
       out.write("<script src=\"");
       if (_jspx_meth_c_url_2(_jspx_page_context))
         return;
@@ -154,7 +142,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<div class=\"collapse navbar-collapse\"\r\n");
       out.write("\t\t\t\tid=\"bs-example-navbar-collapse-1\">\r\n");
       out.write("\r\n");
-<<<<<<< HEAD
       out.write("\t\t\t\t<form class=\"navbar-form navbar-left\" role=\"search\" method=\"POST\" action=\"/searchResult\">\r\n");
       out.write("\t\t\t\t\t<div class=\"form-group\">\r\n");
       out.write("\t\t\t\t\t\t<a class=\"team-name\" href=\"/\"> TEAM CEDAR</a> \r\n");
@@ -164,16 +151,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-search\"></span>\r\n");
       out.write("\t\t\t\t\t\t</button>\r\n");
       out.write("\r\n");
-=======
-      out.write("\t\t\t\t<form class=\"navbar-form navbar-left\" role=\"search\">\r\n");
-      out.write("\t\t\t\t\t<div class=\"form-group\">\r\n");
-      out.write("\t\t\t\t\t\t<a class=\"team-name\" href=\"#\"> TEAM CEDAR</a> <input type=\"text\"\r\n");
-      out.write("\t\t\t\t\t\t\tclass=\"form-control search-bar\" placeholder=\"Search\">\r\n");
-      out.write("\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">\r\n");
-      out.write("\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-search\"></span>\r\n");
-      out.write("\t\t\t\t\t\t</button>\r\n");
-      out.write("\t\t\t\t\t\t\r\n");
->>>>>>> David
       out.write("\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t<li><a href=\"/giftcard\"> Buy Gift Card</a></li>\r\n");
       out.write("\t\t\t\t</form>\r\n");
@@ -191,86 +168,43 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t<div class=\"row\">\r\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">\r\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\r\n");
-<<<<<<< HEAD
       out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\" id=\"reviewfont\"><a href=\"#\">NOW\r\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\tPLAYING</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t\t");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\r\n");
-=======
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\">NOW PLAYING</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">The Lego Batman Movie</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Fifty Shades Darker</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">The Great Wall (2017)</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">John Wick: Chapter 2</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Fist Fight</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Hidden Figures</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Split (2017)</a></li>\r\n");
->>>>>>> David
       out.write("\t\t\t\t\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">\r\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\r\n");
-<<<<<<< HEAD
       out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\"></a></li>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t\t");
       if (_jspx_meth_c_forEach_1(_jspx_page_context))
         return;
       out.write("\r\n");
-=======
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\">OPENING THIS\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t\tWEEK</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Collide</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Get Out</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Rock Dog</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Bitter Harvest (2017)</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Dying Laughing</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Fabricated City</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">My Life as a Zucchini</a></li>\r\n");
->>>>>>> David
       out.write("\t\t\t\t\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">\r\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\r\n");
-<<<<<<< HEAD
       out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\" id=\"reviewfont\"><a href=\"#\">COMING\r\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\tSOON</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t\t");
       if (_jspx_meth_c_forEach_2(_jspx_page_context))
         return;
       out.write("\r\n");
-=======
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\">PRE SALES\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t\tTICKETS</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Beauty and the Beast (2017)</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Kong: Skull Island</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Before I Fall</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Logan (2017)</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">The Shack</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Kong: Skull Island</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">The Belko Experiment</a></li>\r\n");
->>>>>>> David
       out.write("\t\t\t\t\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">\r\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\r\n");
-<<<<<<< HEAD
       out.write("\t\t\t\t\t\t\t\t\t\t");
       if (_jspx_meth_c_forEach_3(_jspx_page_context))
         return;
       out.write("\r\n");
-=======
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\">EXPLORE MORE</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Watch Trailers on Movieclips</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Top Box Office</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">New DVDs</a></li>\r\n");
->>>>>>> David
       out.write("\t\t\t\t\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t</ul></li>\r\n");
-<<<<<<< HEAD
       out.write("\t\t\t\t\t<li class=\"dropdown\"><a\r\n");
       out.write("\t\t\t\t\t\thref='");
       if (_jspx_meth_spring_url_6(_jspx_page_context))
@@ -286,37 +220,10 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_c_forEach_4(_jspx_page_context))
         return;
       out.write("\r\n");
-=======
-      out.write("\t\t\t\t\t<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\"\r\n");
-      out.write("\t\t\t\t\t\tdata-toggle=\"dropdown\">MOVIES TIME + TICKETS<b class=\"caret\"></b></a>\r\n");
-      out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu multi-column columns-3\">\r\n");
-      out.write("\t\t\t\t\t\t\t<div class=\"row\">\r\n");
-      out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-4\">\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Action</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Another action</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Something else here</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Separated link</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">One more separated link</a></li>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-4\">\r\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Action</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Another action</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Something else here</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Separated link</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">One more separated link</a></li>\r\n");
->>>>>>> David
-      out.write("\t\t\t\t\t\t\t\t\t</ul>\r\n");
-      out.write("\t\t\t\t\t\t\t\t</div>\r\n");
-      out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-4\">\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\r\n");
-<<<<<<< HEAD
       out.write("\t\t\t\t\t\t\t\t\t\t<br>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t\t<br>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t\t<br>\r\n");
@@ -328,15 +235,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<i class=\"glyphicon glyphicon-map-marker\"></i>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t\t</cite></big>\r\n");
       out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"divider\"></li>\r\n");
-=======
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Action</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Another action</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Something else here</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Separated link</a></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"divider\"></li>\r\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">One more separated link</a></li>\r\n");
->>>>>>> David
       out.write("\t\t\t\t\t\t\t\t\t</ul>\r\n");
       out.write("\t\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t\t</div>\r\n");
@@ -397,7 +295,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t\t</div>\r\n");
       out.write("\t\t\t\t\t\t</ul></li>\r\n");
-<<<<<<< HEAD
       out.write("\t\t\t\t\t<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\"\r\n");
       out.write("\t\t\t\t\t\tdata-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"\r\n");
       out.write("\t\t\t\t\t\taria-expanded=\"false\"> ");
@@ -407,21 +304,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_c_if_1(_jspx_page_context))
         return;
       out.write(" <span class=\"caret\"></span></a>\r\n");
-=======
-      out.write("\t\t\t\t\t<li class=\"dropdown\">\r\n");
-      out.write("\t\t\t\t\t<a href=\"#\" class=\"dropdown-toggle\"\r\n");
-      out.write("\t\t\t\t\t\tdata-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"\r\n");
-      out.write("\t\t\t\t\t\taria-expanded=\"false\">\r\n");
-      out.write("\t\t\t\t\t\t ");
-      if (_jspx_meth_c_if_0(_jspx_page_context))
-        return;
-      out.write("\r\n");
-      out.write("                         ");
-      if (_jspx_meth_c_if_1(_jspx_page_context))
-        return;
-      out.write("\r\n");
-      out.write("                         <span class=\"caret\"></span></a>\r\n");
->>>>>>> David
       out.write("\t\t\t\t\t\t<ul class=\"dropdown-menu login\">\r\n");
       out.write("\t\t\t\t\t\t\t");
       if (_jspx_meth_c_if_2(_jspx_page_context))
@@ -655,7 +537,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
-<<<<<<< HEAD
   private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -1031,8 +912,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
-=======
->>>>>>> David
   private boolean _jspx_meth_c_if_0(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -1144,7 +1023,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("\t\t\t\t\t\t\t\t<a href=\"/\" class=\"btn btn-lg btn-primary\"><span\r\n");
         out.write("\t\t\t\t\t\t\t\t\tclass=\"glyphicon glyphicon-fire\"></span> MY ACCOUNT SETTINGS</a>\r\n");
         out.write("\t\t\t\t\t\t\t\t<br>\r\n");
-<<<<<<< HEAD
         out.write("\t\t\t\t\t\t\t\t<p>\r\n");
         out.write("\t\t\t\t\t\t\t\t\t<a href=\"/logout\" onclick='return logout()'\r\n");
         out.write("\t\t\t\t\t\t\t\t\t\tclass=\"text-primary\"><strong>LOGOUT</strong></a>\r\n");
@@ -1153,10 +1031,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("\t\t\t\t\t\t\t\t\t<a href=\"/user-dashboard\" class=\"text-primary\"><strong>MY\r\n");
         out.write("\t\t\t\t\t\t\t\t\t\t\tACCOUNT</strong></a>\r\n");
         out.write("\t\t\t\t\t\t\t\t</p>\r\n");
-=======
-        out.write("\t\t\t\t\t\t\t\t<p> <a  href=\"/logout\" onclick='return logout()' class=\"text-primary\"><strong>LOGOUT</strong></a></p>\r\n");
-        out.write("\t\t\t\t\t\t\t\t<p> <a  href=\"/user-dashboard\"  class=\"text-primary\"><strong>MY ACCOUNT</strong></a></p>\r\n");
->>>>>>> David
         out.write("\t\t\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_if_3.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)

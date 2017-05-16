@@ -138,14 +138,7 @@ public class IndexController {
 	    String city =rootobj.get("city").getAsString()+", "+rootobj.get("region").getAsString()+", "+postal;
 	    session.setAttribute("nearbyTheaters", theaterService.findNearbyTheaters(postal));
 	    session.setAttribute("location", city);
-
-
-
-
 		return "index";
-		
-		
-		
 	}
 	
 	@RequestMapping(value="/",method=RequestMethod.POST)
@@ -166,6 +159,9 @@ public class IndexController {
 			int zip=Integer.parseInt(search);
 			System.out.println("zip:"+zip);
 			model.addAttribute("searchZip",theaterService.findNearbyTheaters(zip));
+		}
+		else{
+			model.addAttribute("searchZip",theaterService.findCityState(search));
 		}
 		return "search-result";
 	}

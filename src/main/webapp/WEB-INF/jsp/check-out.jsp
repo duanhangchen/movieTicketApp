@@ -11,10 +11,12 @@
 <!-- <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 
 
-<h1>${showing.movie.name}</h1>
-<h1>${showing.theater.name}</h1>
-<h1>${showing.startTime}</h1>
-
+<h1>Movie Name: ${showing.movie.name}</h1>
+<h1>Theater Name: ${showing.theater.name}</h1>
+<h1>Movie Time: ${showing.startTime}</h1>
+<br>
+<br>
+<br>
 
 <form class="form-inline">
 	<label class="mr-sm-2" for="inlineFormCustomSelect">Adult
@@ -39,37 +41,9 @@
 		<option value="2">Two</option>
 		<option value="3">Three</option>
 	</select>
-
-
-
-
-
-
-	<div class="wrapper">
-		<div class="container">
-			<h1>jQuery Seat Charts Plugin Demo</h1>
-			<div id="seat-map">
-				<div class="front-indicator">Front</div>
-			</div>
-			<div class="booking-details">
-				<h2>Booking Details</h2>
-				<h3>
-					Selected Seats (<span id="counter">0</span>):
-				</h3>
-				<ul id="selected-seats">
-				</ul>
-				Total: <b>$<span id="total">0</span></b>
-				<button class="checkout-button">Checkout &raquo;</button>
-				<div id="legend"></div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<button type="submit" class="btn btn-primary" style="position: absolute; right: 0;">Submit</button>
+	<button type="submit" class="btn btn-primary"
+		style="position: absolute; right: 0;">Submit</button>
 </form>
-
 <script>
 	var firstSeatLabel = 1;
 	$(document)
