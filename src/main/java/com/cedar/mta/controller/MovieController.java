@@ -231,6 +231,7 @@ public class MovieController {
 				reviewRepository.incReviewCount(reviewId);
 			}
 			else if(value.equals("white")){
+				System.out.println("In Decrement");
 				userRepository.deleteReviewLike(user.getAccountId(), reviewId);
 				reviewRepository.decReviewCount(reviewId);
 			}

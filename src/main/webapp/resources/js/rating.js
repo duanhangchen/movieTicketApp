@@ -189,14 +189,19 @@ $(document).ready(function() {
 			
 			var reviewId = $(this).attr('id');
 			var value = $(this).parent()[0].value
-			//console.log($(this).parent().children()[1].text());
+			console.log($(this).parent().children()[1].innerHTML);
+			var reviewCount = parseInt($(this).parent().children()[1].innerHTML);
+			console.log(reviewCount);
 			console.log("review Id "+reviewId)
 			
 		
 			if (value == "red") {
+				$(this).parent().children()[1].innerHTML =parseInt($(this).parent().children()[1].innerHTML) - 1; 
 				$(this).parent()[0].value = "white";
 			}
 			if (value == "white") {
+				
+				$(this).parent().children()[1].innerHTML =parseInt($(this).parent().children()[1].innerHTML) + 1; 
 				$(this).parent()[0].value = "red";
 			}
 			$(this).toggleClass('red');

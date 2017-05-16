@@ -34,7 +34,7 @@ public interface ReviewRepository extends JpaRepository<Review, Integer>{
 	
 	@Transactional
 	@Modifying
-	@Query(value="UPDATE review SET likeCount=likeCount-1 where id= :reviewId;", nativeQuery = true)
+	@Query(value="UPDATE review SET likeCount=likeCount-1 where id= :reviewId", nativeQuery = true)
 	void decReviewCount(@Param("reviewId") Integer reviewId);
 	
 	@Query(value="SELECT reviews_id from ratereviews where User_accountId in (select user_id from review where movie_id = :movie_id and user_id= :user_id)", nativeQuery = true)
