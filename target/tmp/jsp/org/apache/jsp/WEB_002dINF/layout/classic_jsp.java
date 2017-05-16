@@ -135,7 +135,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_spring_url_0(_jspx_page_context))
         return;
       out.write("'><img\n");
-      out.write("\t\t\t\t\tsrc=\"/resources/img/movie.png\" alt=\"Team Cedar\"></a>\n");
+      out.write("\t\t\t\t\tsrc=\"/resources/img/newLogo.png\" alt=\"Team Cedar\"></a>\n");
       out.write("\t\t\t</div>\n");
       out.write("\n");
       out.write("\t\t\t<!-- Collect the nav links, forms, and other content for toggling -->\n");
@@ -214,7 +214,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t<div class=\"row\">\n");
       out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-8\">\n");
       out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li>Nearby Theaters</li>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<li id=\"nearby\"> Nearby Theaters</li>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t");
       if (_jspx_meth_c_forEach_4(_jspx_page_context))
         return;
@@ -226,6 +226,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t\t\t\t\t<br>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t<br>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t<br>\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t<li>LOCATION</li>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t<big><cite title=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${location}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write('"');
@@ -278,18 +279,6 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">More Batman News: Nightwing Is\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\tGetting His Own Movie</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t</ul>\n");
-      out.write("\t\t\t\t\t\t\t\t</div>\n");
-      out.write("\t\t\t\t\t\t\t\t<div class=\"col-sm-3\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t<ul class=\"multi-column-dropdown\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li class=\"coloumn-heading\"><a href=\"#\">EXPLORE\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t\tCONTENT</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">MOVIE REVIEWS</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">FAMILY</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">INDIE MOVIE GUIDE</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">AWARDS MATCH</a></li>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">WEEKEND TICKET</a></li>\n");
-      out.write("\n");
       out.write("\t\t\t\t\t\t\t\t\t</ul>\n");
       out.write("\t\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t\t</div>\n");
@@ -861,7 +850,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_forEach_4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
-          out.write("\t\t\t\t\t\t\t\t\t\t<li><a href=\"");
+          out.write("\t\t\t\t\t\t\t\t\t\t<li id=\"theatername\"><a href=\"");
           if (_jspx_meth_spring_url_7((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_4, _jspx_page_context, _jspx_push_body_count_c_forEach_4))
             return true;
           out.write('"');

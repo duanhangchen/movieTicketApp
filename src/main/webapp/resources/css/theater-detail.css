@@ -99,3 +99,12 @@ a {
  .card{
  background-color:white;
 } 
+
+.panel-heading.theaters{
+	background-color: #44211e;
+	color : white;
+}
+
+a.direction{
+	color : blue;
+}

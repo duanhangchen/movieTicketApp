@@ -58,3 +58,10 @@ url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
     outline: 0px auto -webkit-focus-ring-color;
     outline-offset: -2px;
 }
+
+#alert-button{
+	padding-bottom: 20px;
+}
+#stars{
+	padding-left: 5px;
+}

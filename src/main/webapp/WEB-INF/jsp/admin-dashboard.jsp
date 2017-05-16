@@ -22,9 +22,6 @@
 		<li class="active"><a href="#1a" data-toggle="tab">DASHBOARD</a></li>
 		<li><a href="#2a" data-toggle="tab">USER ACTIVITY</a></li>
 		<li><a href="#3a" data-toggle="tab">SEND ALERTS</a></li>
-		<li><a href="#4a" data-toggle="tab">SUBSCRIPTIONS</a></li>
-		<li><a href="#5a" data-toggle="tab">GIFT CARD</a></li>
-		<li><a href="#6a" data-toggle="tab">REDEEM GIFT CARD</a></li>
 	</ul>
 	<div class="tab-content clearfix">
 		<div class="tab-pane active" id="1a">
@@ -52,46 +49,6 @@
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-
-
-						<div class="container">
-							<h1>MY THEATRE</h1>
-							<div class="row pricing">
-								<c:forEach items="${userTheaters}" var="theater">
-									<div class="col-md-3">
-										<div class="well card">
-											<h3>
-												<b>${theater.name}</b>
-											</h3>
-											<hr>
-											<p>Theatre Address Line 1</p>
-											<hr>
-											<p>NY</p>
-											<hr>
-											<p>ZIP: 11790</p>
-										</div>
-									</div>
-								</c:forEach>
-							</div>
-						</div>
-						<div class="container">
-							<h1>MY REVIEWS</h1>
-							<div class="row pricing">
-							<c:forEach items="${userreviews}" var="review">
-								<div class="col-md-3">
-									<div class="well card">
-										<h3>
-											<b>${review.movie.name}</b>
-										</h3>
-										<hr>
-										<p>Review Title</p>
-										<hr>
-										<p>${review.review}</p>
-									</div>
-								</div>
-								</c:forEach>
 							</div>
 						</div>
 					</div>
@@ -150,34 +107,5 @@
 
 			</div>
 		</div>
-		<div class="tab-pane" id="4a">
-			<div class="row actor">
-				<div class="container">
-				<form action="/newsletter" method="POST" class="form-signin">
-					<h2>News Letter Subscription</h2>
-					<input  id="toggle-event" type="checkbox"  name= "subscribed" <c:if test="${subscribed}">checked</c:if> data-toggle="toggle" data-on="Subscribed" data-off="Unsubscribed" data-width= "10%">
- 				</form>
-				</div>
-			</div>
 		</div>
-		<div class="tab-pane" id="6a">
-			
-
-			<div class="container">
-			    <div class="row">
-			        <div class="col-md-offset-5 col-md-3">
-			            <form action="/redeemCard" role=form method=POST>
-				            <h4>Current Balance: $${balance}</h4>				            
-				            <h4>Redeem Gift Code</h4>
-				            <input type="text" name="giftCode" class="form-control input-sm chat-input" placeholder="code" />      
-					        <input type="submit" value="Redeem Code" name="submit" class="btn btn-success btn-lg btn-block">
-			            </form>
-			            </div>
-			        
-			        </div>
-			    </div>
-			</div>
 		</div>
-		
-		
-	</div>

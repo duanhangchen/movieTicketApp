@@ -47,7 +47,7 @@
 				</button>
 
 				<a class="navbar-brand" href='<spring:url value="/" />'><img
-					src="/resources/img/movie.png" alt="Team Cedar"></a>
+					src="/resources/img/newLogo.png" alt="Team Cedar"></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -120,9 +120,9 @@
 							<div class="row">
 								<div class="col-sm-8">
 									<ul class="multi-column-dropdown">
-										<li>Nearby Theaters</li>
+										<li id="nearby"> Nearby Theaters</li>
 										<c:forEach items="${nearbyTheaters}" var="theaters">
-										<li><a href="<spring:url value="/theaters/${theaters.id}"/>">${theaters.name}</a></li>
+										<li id="theatername"><a href="<spring:url value="/theaters/${theaters.id}"/>">${theaters.name}</a></li>
 										</c:forEach>
 									</ul>
 								</div>
@@ -131,6 +131,7 @@
 										<br>
 										<br>
 										<br>
+										<li>LOCATION</li>
 										<big><cite title="${location}">${location}<i class="glyphicon glyphicon-map-marker"></i>
 										</cite></big>
 										<li class="divider"></li>
@@ -178,18 +179,6 @@
 
 										<li><a href="#">More Batman News: Nightwing Is
 												Getting His Own Movie</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-3">
-									<ul class="multi-column-dropdown">
-										<li class="coloumn-heading"><a href="#">EXPLORE
-												CONTENT</a></li>
-										<li><a href="#">MOVIE REVIEWS</a></li>
-										<li><a href="#">FAMILY</a></li>
-										<li><a href="#">INDIE MOVIE GUIDE</a></li>
-										<li><a href="#">AWARDS MATCH</a></li>
-										<li><a href="#">WEEKEND TICKET</a></li>
-
 									</ul>
 								</div>
 							</div>

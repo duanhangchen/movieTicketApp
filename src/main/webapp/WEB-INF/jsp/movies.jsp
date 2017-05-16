@@ -17,7 +17,7 @@
 
 <div id="site-content">
 	<div class="site-header">
-		<div class="container">
+		<div class="container move">
 			<div class="main-navigation">
 				<button class="toggle-menu">
 					<i class="fa fa-bars"></i>

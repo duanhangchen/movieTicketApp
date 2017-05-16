@@ -9,7 +9,7 @@
 	rel="stylesheet">
 <link href="<c:url value="/resources/css/rating.css"/>" rel="stylesheet">
 <script src="<c:url value="/resources/js/rating.js" />"></script>
-<a href="http://www.jqueryscript.net/tags.php?/jQuery UI/">jQuery UI</a>
+<a href="http://www.jqueryscript.net/tags.php?/jQuery UI/"></a>
 
 <div id="exTab1" class="container">
 
@@ -23,7 +23,6 @@
 	<ul class="nav nav-pills">
 		<li class="active"><a href="#1a" data-toggle="tab">Overview</a></li>
 		<li><a href="#2a" data-toggle="tab">Biography</a></li>
-		<li><a href="#3a" data-toggle="tab">Reviews</a></li>
 	</ul>
 	<div class="tab-content clearfix">
 		<div class="tab-pane active" id="1a">
@@ -71,29 +70,6 @@
 				</div>
 				<div class="col-sm-6">
 					<p class="video-description">${actor.biography}</p>
-				</div>
-			</div>
-		</div>
-		<div class="tab-pane" id="3a">
-			<div class="row actor">
-				<div class="col-sm-3 biographyAndPhoto">
-					<div class="row photo">
-						<div class="col-sm-6 biographyAndPhoto">
-							<%-- <a> <img class="pop-headshot--photo-img" src="${movie.url}"
-								alt="${movie.name}"></a> --%>
-						</div>
-						<div class="col-sm-6">
-							<div class="dob">
-								DOB: ${actor.doB}
-							</div>
-						</div>
-					</div>
-					<div class="row bio">
-						<div class="col-sm-12"></div>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<p class="video-description">Reviews</p>
 				</div>
 			</div>
 		</div>

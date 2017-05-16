@@ -142,10 +142,15 @@
 			</button>
 			</c:if>
 			</h1>
+			<h2 style="font-size: 15px">
+			${theaterAddress} /
+			<a id = "directions" href ="https://www.google.com/maps/dir/${coordinate}/${theaterAddressDirection}" style="font-size: 15px">Get Directions</a>
+			</h2>
 		</div>
+		<br>
 		<c:forEach items="${moviesInThisTheater}" var="movies">
 			<div class="panel panel-default">
-				<div class="panel-body">
+				<div class="panel-body theaters">
 					<div class="media">
 						<div class="media-left">
 							<div class="blur">

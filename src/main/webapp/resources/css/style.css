@@ -1997,7 +1997,7 @@ form textarea {
 .site-header > .container {
   *zoom: 1;
   position: relative;
-  padding: 60px 15px 0;
+  /* padding: 60px 15px 0; */
 }
 .site-header > .container:after {
   content: " ";
@@ -2056,12 +2056,12 @@ form textarea {
 
 .main-navigation {
   *zoom: 1;
-  margin-top: 30px;
   position: relative;
   z-index: 999;
   clear: both;
   width: 100%;
-  background-color: white;
+  background-color: #2b2b2b;
+  color: white;
   border-radius: 3px;
 }
 .main-navigation:after {
@@ -2725,4 +2725,12 @@ table.cart .fa-times {
     text-overflow:    ellipsis;   /* IE, Safari (WebKit) */
     overflow:hidden;              /* don't show excess chars */
     white-space:nowrap;           /* force single line */
+}
+.move{
+	padding-top:0px;
+}
+
+.panel-heading.theaters{
+	background-color: #44211e;
+	color : white;
 }

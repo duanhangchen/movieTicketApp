@@ -28,7 +28,6 @@
 }
 .navbar-brand>img {
     height: 100%;
-    padding: 15px;
     padding-left: 20px;
     width: auto;
 }
@@ -94,7 +93,7 @@ h3 {
 }
 
 #reviewfont {
-    color: black;
+    color: white;
     /* font-size: 2.25em; */
     text-align: center;
     margin-top: 1em;
@@ -156,3 +155,13 @@ h3 {
 #username{
 	text-transform: uppercase;
 }
+
+#theatername{
+	text-transform: uppercase;
+}
+
+#nearby{
+	 color: #B27300;
+}
+
+

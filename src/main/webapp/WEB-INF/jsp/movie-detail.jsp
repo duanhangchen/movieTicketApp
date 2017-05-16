@@ -28,7 +28,7 @@
  			</form>
  			</c:if>
  			<c:if test="${user.role=='admin'}">
-			<div class="container">
+			<div id="alert-button" class="container">
 					<a href="/sendmoviealert/${movie.id}" class="btn btn-lg btn-primary"><span
 									class="glyphicon glyphicon-fire"></span>SEND MOVIE ALERT</a>
 			</div>
@@ -87,9 +87,6 @@
 						<div class="col-sm-6">
 							<div class="dob">
 								Release Date: ${movie.releaseDate}
-								<div class="row lead">
-									<div id="stars" class="starrr" data-rating='${movie.rating}'></div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -113,9 +110,6 @@
 						<div class="col-sm-6">
 							<div class="dob">
 								Release Date: ${movie.releaseDate}
-								<div class="row lead">
-									<div id="stars" class="starrr" data-rating='${movie.rating}'></div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -142,6 +136,9 @@
 								<div id="reviewfont"><strong>${review.review}</strong></div>
 								<div class="span2 muted mycenter" style="text-align: right;">
 									<a>${review.user.firstName}</a>
+									<c:if test="${empty user}">
+									<p style="color:red;"><a href="/movies/${movie.id}/delete/${review.id}" target="_blank">DELETE</a></p>
+									</c:if>
 								</div>
 							</div>
 						</div>

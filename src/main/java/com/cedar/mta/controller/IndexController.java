@@ -1,17 +1,10 @@
 package com.cedar.mta.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
@@ -23,25 +16,16 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.portlet.ModelAndView;
-
-
-import com.cedar.mta.entity.Movie;
 
 import com.cedar.mta.entity.Ads;
-
-import com.cedar.mta.entity.Ads;
-
 import com.cedar.mta.entity.Movie;
-
 import com.cedar.mta.entity.User;
-import com.cedar.mta.repository.GiftRepository;
 import com.cedar.mta.service.AdService;
 import com.cedar.mta.service.GiftService;
 import com.cedar.mta.service.MailService;
@@ -145,8 +129,12 @@ public class IndexController {
 	    JsonObject rootobj = root.getAsJsonObject();
 	    int postal = rootobj.get("postal").getAsInt();
 	    String city =rootobj.get("city").getAsString()+", "+rootobj.get("region").getAsString()+", "+postal;
+	    String coordinate = rootobj.get("loc").getAsString();
 	    session.setAttribute("nearbyTheaters", theaterService.findNearbyTheaters(postal));
 	    session.setAttribute("location", city);
+
+	    session.setAttribute("coordinate", coordinate);
+	    
 
 		return "index";
 	}

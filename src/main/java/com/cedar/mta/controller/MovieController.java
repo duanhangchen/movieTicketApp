@@ -250,6 +250,7 @@ public class MovieController {
 		return "success";
 	}
 	
+
 	
 	@RequestMapping(value = "/movieAlert/{movieId}", method = RequestMethod.POST)
 	public @ResponseBody String toggleNewsLetter(Model model, HttpSession session, @RequestParam Boolean value,@PathVariable int movieId) {
@@ -271,4 +272,18 @@ public class MovieController {
 		}
 		return "Success";
 	}
+
+	@RequestMapping(value="/movies/{id}/delete/{reviewid}",method=RequestMethod.GET)
+	public String deleteReview(Model model,HttpSession session,@PathVariable int id,@PathVariable int reviewid){
+		//User user=(User) session.getAttribute("user");
+		System.out.println("movieid="+id+"  reviewid="+reviewid);
+		//if(user.getRole().equals("admin")){
+		reviewService.deleteReview1();
+		reviewService.deleteReview2(reviewid);
+		reviewService.deleteReview3();
+		//}
+		return "";
+	}
+	
+
 }
