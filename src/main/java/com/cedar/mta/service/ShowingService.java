@@ -30,7 +30,7 @@ public class ShowingService {
 		return showingRepository.findShowing(theaterid);
 	}
 	
-	public List<Showing> findShowingByMovie(Integer theaterid,Integer movieid,java.sql.Date date){
+	public List<Showing> findShowingByMovie(Integer theaterid,Integer movieid,String date){
 		return showingRepository.findShowingByMovie(theaterid, movieid, date);
 	}
 	

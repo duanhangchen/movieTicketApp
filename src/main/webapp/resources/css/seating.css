@@ -19,11 +19,7 @@ a {
 /* 	text-align: center; */
   margin-top:150px;
 }
-.container {
-	margin: 0 auto;
-	width: 500px;
-	text-align: left;
-}
+
 .booking-details {
 	float: left;
 	text-align: left;

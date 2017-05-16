@@ -16,7 +16,7 @@ public interface ShowingRepository extends JpaRepository<Showing,Integer> {
 	List<Showing> findShowing(@Param("theater_id") Integer theaterid);
 	
 	@Query(value="select * from showing where theaterId= :theater_id and movieId= :movie_id and showingDate= :date order by startTime asc",nativeQuery=true)
-	List<Showing> findShowingByMovie(@Param("theater_id")Integer theaterid,@Param("movie_id")Integer movieid,@Param("date")java.sql.Date date);
+	List<Showing> findShowingByMovie(@Param("theater_id")Integer theaterid,@Param("movie_id")Integer movieid,@Param("date")String date);
 
 }
  

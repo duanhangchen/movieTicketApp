@@ -26,6 +26,7 @@ C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\MailMail.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\repository\ShowingRepository.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Photo.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\controller\SignupController.java
+C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\TransactionService.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Actor.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\LoginService.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\ShowingService.java
@@ -34,6 +35,7 @@ C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\repository\ActorReposit
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\repository\SupportFormRepository.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\SupportFormService.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\service\TheaterService.java
+C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\repository\TransactionRepository.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\repository\UserRepository.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\User.java
 C:\springWork\movieTicketApp\src\main\java\com\cedar\mta\entity\Review.java
