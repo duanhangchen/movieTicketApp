@@ -47,7 +47,7 @@ url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
     .well
     {
         border: 1px solid blue;
-        background-color : #2b2b2b;
+        /* background-color : #2b2b2b; */
     }
     
     .card{
