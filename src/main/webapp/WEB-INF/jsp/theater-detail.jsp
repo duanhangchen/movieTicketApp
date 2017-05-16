@@ -140,6 +140,10 @@
 					<span class="glyphicon glyphicon-heart"></span>
 				</button>
 			</h1>
+			<h2 style="font-size: 15px">
+			${theaterAddress} /
+			<a href ="https://www.google.com/maps/dir/${coordinate}/${theaterAddressDirection}" style="font-size: 15px">Get Directions</a>
+			</h2>
 		</div>
 		<c:forEach items="${moviesInThisTheater}" var="movies">
 			<div class="panel panel-default">

@@ -2,6 +2,8 @@ package com.cedar.mta.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.cedar.mta.entity.Movie;
 import com.cedar.mta.entity.Showing;
+import com.cedar.mta.entity.Theater;
 import com.cedar.mta.service.MovieService;
 import com.cedar.mta.service.ShowingService;
 import com.cedar.mta.service.TheaterService;
@@ -46,6 +49,18 @@ public class TheaterController {
 			}
 		}
 		model.addAttribute("moviesInThisTheater",movies);
+		Theater theaterTemp = theaterService.findById(id);
+		String addressInitial = theaterTemp.getAddressLine() + " " 
+				+ theaterTemp.getCity() + " " 
+				+ theaterTemp.getState() + " "
+				+ theaterTemp.getZipcode();
+		String address = theaterTemp.getAddressLine().replaceAll(" ", "+");
+		String address2 = theaterTemp.getCity().replaceAll(" ", "+");
+		String addressFinal = address + "+" + address2 + "+" + theaterTemp.getState() + "+" + theaterTemp.getZipcode();
+		System.out.println(addressFinal);
+		model.addAttribute("theaterAddressDirection",addressFinal);
+		model.addAttribute("theaterAddress",addressInitial);
+		
 		return "theater-detail";
 	}
 

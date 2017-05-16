@@ -132,12 +132,11 @@ public class IndexController {
 	    JsonObject rootobj = root.getAsJsonObject();
 	    int postal = rootobj.get("postal").getAsInt();
 	    String city =rootobj.get("city").getAsString()+", "+rootobj.get("region").getAsString()+", "+postal;
+	    String coordinate = rootobj.get("loc").getAsString();
 	    session.setAttribute("nearbyTheaters", theaterService.findNearbyTheaters(postal));
 	    session.setAttribute("location", city);
-
-
-
-
+	    session.setAttribute("coordinate", coordinate);
+	    
 		return "index";
 		
 		
