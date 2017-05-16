@@ -102,3 +102,7 @@ form_main {
 .table > tbody > tr > .thick-line {
     border-top: 2px solid;
 }
+
+#contactFrm{
+	color: black;
+}

@@ -250,4 +250,13 @@ public class MovieController {
 		return "";
 	}
 	
+	@RequestMapping(value="/movies/{id}/edit-movie",method=RequestMethod.POST)
+	public String updateMovie(Model model, HttpSession session, @PathVariable int id, @RequestParam String editMovieName, @RequestParam double editBoxOffice, 
+			@RequestParam String editRated, @RequestParam Date editReleaseDate, @RequestParam String editRunTime, @RequestParam String editMoviePoster,
+			@RequestParam String editPlot){
+		System.out.println(editMovieName + editBoxOffice + editRated + editReleaseDate + editRunTime + editMoviePoster + editPlot + id);
+		movieService.updateMovie(editMovieName, editBoxOffice, editRated, editReleaseDate, editRunTime, editMoviePoster, editPlot, id);
+		
+		return "redirect:/movies/" + id;
+	}
 }
