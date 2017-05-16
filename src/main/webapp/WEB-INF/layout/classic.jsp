@@ -149,7 +149,7 @@
 									<ul class="multi-column-dropdown">
 										<li id="nearby" class="coloumn-heading"><a href="#">FEATURED
 												MOVIE NEWS</a></li>
-										<li><a href="#"><img class="nav-movie-news-img"
+										<li><a href="http://www.fandango.com/movie-news/news-briefs-charlize-theron-seth-rogen-to-star-in-flarsky-751962"><img class="nav-movie-news-img"
 												alt=""
 												src="http://images.fandango.com/r103.4/ImageRenderer/300/210/redesign/static/img/noxlandscape.jpg/0/cp/cpc/images/fandangoblog/everettcollection_huntsman2-neighbors2_170223.jpg"></a>
 										</li>
@@ -160,7 +160,7 @@
 								<div class="col-sm-3">
 									<ul class="multi-column-dropdown">
 										<li class="coloumn-heading"><a href="#"><br></a></li>
-										<li><a href="#"><img class="nav-movie-news-img"
+										<li><a href="http://www.fandango.com/movie-news/logan-buzz-is-there-a-postcredits-scene-plus-what-might-bring-hugh-jackman-back-as-wolverine-751964"><img class="nav-movie-news-img"
 												alt=""
 												src="https://images.fandango.com/images/spotlight/everettcollection_logan-170220.jpg"></a>
 										</li>
@@ -172,7 +172,7 @@
 								<div class="col-sm-3">
 									<ul class="multi-column-dropdown">
 										<li class="coloumn-heading"><a href="#"><br></a></li>
-										<li><a href="#"><img class="nav-movie-news-img"
+										<li><a href="http://www.fandango.com/movie-news/more-batman-news-nightwing-is-getting-his-own-movie-751965"><img class="nav-movie-news-img"
 												alt=""
 												src="https://images.fandango.com/images/fandangoblog/nightwing-arkham.jpg"></a>
 										</li>
