@@ -2,6 +2,7 @@ package com.cedar.mta.controller;
 
 import java.math.BigDecimal;
 import java.security.NoSuchAlgorithmException;
+import java.sql.Date;
 
 import javax.servlet.http.HttpSession;
 
@@ -17,14 +18,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.cedar.mta.entity.GiftCard;
 import com.cedar.mta.entity.NewsLetter;
 import com.cedar.mta.entity.User;
+import com.cedar.mta.repository.ActorRepository;
 import com.cedar.mta.repository.GiftRepository;
+import com.cedar.mta.repository.MovieRepository;
 import com.cedar.mta.repository.NewsLetterRepository;
 
 import com.cedar.mta.repository.TheaterRepository;
+import com.cedar.mta.service.ActorService;
 import com.cedar.mta.service.GiftService;
 import com.cedar.mta.service.MailService;
+import com.cedar.mta.service.MovieService;
 import com.cedar.mta.service.NewsLetterService;
 import com.cedar.mta.service.ReviewService;
+import com.cedar.mta.service.TheaterService;
 import com.cedar.mta.service.UserService;
 
 @Controller
@@ -48,6 +54,21 @@ public class UserDashboard {
 	@Autowired
 	private NewsLetterRepository newsRepository;
 
+	
+	@Autowired
+	private MovieService movieService;
+	
+	@Autowired
+	private MovieRepository movieRepository;
+	
+	@Autowired
+	private TheaterService theaterService;
+	
+	@Autowired
+	private ActorService actorService;
+	
+	@Autowired
+	private ActorRepository actorRepository;
 	
 	@Autowired
 	private GiftService giftService;
@@ -145,19 +166,40 @@ public class UserDashboard {
 		return "user-dashboard";
 	}
 	
+	@RequestMapping(value = "/clientMovie", method = RequestMethod.POST)
+	public String updateDataBaseMovie(Model model,HttpSession session,
+			@RequestParam Integer movieId, @RequestParam String boxOffice, @RequestParam String movieName, 
+			@RequestParam String rated, @RequestParam String releaseDate, @RequestParam String runtime, 
+			@RequestParam String moviePoster, @RequestParam String plot){
+		
+		
+			movieService.insertMovie(movieId, boxOffice, movieName, plot, rated, releaseDate, runtime, moviePoster);
+		
+		
+		return "redirect:user-dashboard";
+	}
 	
+	@RequestMapping(value = "/clientTheater", method = RequestMethod.POST)
+	public String updateDataBaseTheater(Model model,HttpSession session,
+			@RequestParam Integer theaterId, @RequestParam String theaterName, @RequestParam String addressLine,
+			@RequestParam String city, @RequestParam String state, @RequestParam String zipcode){
+		
+		
+			theaterService.insertTheater(theaterId, addressLine, city, state, theaterName, zipcode);
+		
+		
+		return "redirect:user-dashboard";
+	}
 	
-
-	// @RequestMapping(value = "/user-dashboard", method = RequestMethod.POST)
-	// public String handleSignUp(HttpSession session, ModelMap model,
-	// @RequestParam String firstName,
-	// @RequestParam String lastName, @RequestParam String email, @RequestParam
-	// String password) throws NoSuchAlgorithmException {
-	// User currentUser = userService.createNewUser(firstName, lastName, email,
-	// password);
-	// session.setAttribute("user",currentUser);
-	// mailService.sendMailForSignUp(currentUser.getEmail());
-	// return "redirect: ";
-	// }
+	@RequestMapping(value = "/clientActor", method = RequestMethod.POST)
+	public String updateDataBaseActor(Model model,HttpSession session,
+			@RequestParam Integer actorId, @RequestParam String dob, @RequestParam String actorName, @RequestParam String biography){
+		
+		
+			actorService.insertActor(actorId, biography, dob, actorName);
+		
+		
+		return "redirect:user-dashboard";
+	}
 
 }

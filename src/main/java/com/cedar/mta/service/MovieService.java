@@ -58,5 +58,8 @@ public class MovieService {
 	public void updateMovie(String movieName, double boxOffice, String rated, Date releaseDate, String runtime, String moviePoster, String plot, Integer movieId){
 		movieRepository.updateMovie(movieName, boxOffice, rated, releaseDate, runtime, moviePoster, plot, movieId);
 	}
-
+	
+	public void insertMovie(Integer movieId, String boxOffice, String movieName, String plot, String rated, String releaseDate, String runtime, String moviePoster){
+		movieRepository.insertMovie(movieId, boxOffice, movieName, plot, rated, releaseDate, runtime, moviePoster);
+	}
 }

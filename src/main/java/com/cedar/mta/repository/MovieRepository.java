@@ -43,5 +43,10 @@ public interface MovieRepository extends JpaRepository<Movie,Integer> {
 	@Modifying
 	@Query(value="update movie set movieName = :mName, boxOffice = :bOffice, rated = :eRated, releaseDate = :releaseD, runtime = :rTime, moviePoster = :mPoster, plot = :pt where movieId = :id", nativeQuery=true)
 	void updateMovie(@Param("mName")String movieName, @Param("bOffice")double boxOffice, @Param("eRated")String rated, @Param("releaseD")Date releaseDate, @Param("rTime")String runtime, @Param("mPoster")String moviePoster, @Param("pt")String plot, @Param("id")Integer movieId);
+	
+	@Transactional
+	@Modifying
+	@Query(value="insert into movie (movieId, boxOffice, movieName, plot, rated, releaseDate, runtime, moviePoster) values(:movieId, :boxOffice, :movieName, :plot, :rated, :releaseDate, :runtime, :moviePoster)", nativeQuery=true)
+	void insertMovie(@Param("movieId")Integer movieId, @Param("boxOffice")String boxOffice, @Param("movieName")String movieName, @Param("plot")String plot, @Param("rated")String rated, @Param("releaseDate")String releaseDate, @Param("runtime")String runtime, @Param("moviePoster")String moviePoster);
 }
  

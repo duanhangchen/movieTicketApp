@@ -1,8 +1,12 @@
 package com.cedar.mta.repository;
 
+import java.sql.Date;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -23,5 +27,9 @@ public interface TheaterRepository extends JpaRepository<Theater,Integer> {
 	@Query(value="select * from theater where city like %:key% or state like %:key%",nativeQuery=true)
 	List<Theater> findCityState(@Param("key") String key);
 
+	@Transactional
+	@Modifying
+	@Query(value="insert into theater (theaterId, AddressLine, city, state, theaterName, zipcode) values(:theaterId, :address, :city, :state, :theaterName, :zipcode)", nativeQuery=true)
+	void insertTheater(@Param("theaterId")Integer theaterId, @Param("address")String address, @Param("city")String city, @Param("state")String state, @Param("theaterName")String theaterName, @Param("zipcode")String zipcode);
 }
  
