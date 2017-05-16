@@ -39,6 +39,10 @@ public class User {
 	@JoinTable(name="MyTheaters")
 	private List<Theater> theaters;
 	
+	@ManyToMany
+	@JoinTable(name="RateReviews")
+	private List<Review> reviews;
+	
 	
 	public Integer getAccountId() {
 		return accountId;

@@ -248,7 +248,7 @@
 			    <div class="row">
 			        <div class="col-md-offset-5 col-md-3">
 			            <form action="/redeemCard" role=form method=POST>
-				            <h4>Current Balance: ${balance}</h4>				            
+				            <h4>Current Balance: $${balance}</h4>				            
 				            <h4>Redeem Gift Code</h4>
 				            <input type="text" name="giftCode" class="form-control input-sm chat-input" placeholder="code" />      
 					        <input type="submit" value="Redeem Code" name="submit" class="btn btn-success btn-lg btn-block">

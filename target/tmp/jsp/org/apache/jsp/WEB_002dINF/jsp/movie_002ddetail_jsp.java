@@ -495,7 +495,7 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
     _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${reviews}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    _jspx_th_c_forEach_0.setVar("reviews");
+    _jspx_th_c_forEach_0.setVar("review");
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
@@ -504,12 +504,16 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
           out.write("\n");
           out.write("\t\t\t\t\t\t<div class=\"well\">\n");
           out.write("\t\t\t\t\t\t\t<div class=\"row-fluid\">\n");
+          out.write("\t\t\t\t\t\t\t\t");
+          if (_jspx_meth_c_if_3((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+            return true;
+          out.write("\n");
           out.write("\t\t\t\t\t\t\t\t<div id=\"reviewfont\"><strong>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${reviews.review}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.review}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</strong></div>\n");
           out.write("\t\t\t\t\t\t\t\t<div class=\"span2 muted mycenter\" style=\"text-align: right;\">\n");
           out.write("\t\t\t\t\t\t\t\t\t<a>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${reviews.user.firstName}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.user.firstName}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</a>\n");
           out.write("\t\t\t\t\t\t\t\t</div>\n");
           out.write("\t\t\t\t\t\t\t</div>\n");
@@ -531,6 +535,51 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       _jspx_th_c_forEach_0.doFinally();
       _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
     }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_if_3(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_3 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_3.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
+    _jspx_th_c_if_3.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty user}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_3 = _jspx_th_c_if_3.doStartTag();
+    if (_jspx_eval_c_if_3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("\t\t\t\t\t\t\t\t<button id = \"favouriteReview\" name=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("\" value=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.color}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("\"\n");
+        out.write("\t\t\t\t\t\t\t\t\tonClick=\"toggleValue()\" type=\"submit\" class=\"btn btn-lg \">\t\t\t\t\t\t\t\t\n");
+        out.write("\t\t\t\t\t\t\t\t\t<span id=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("\" class=\"glyphicon glyphicon-heart ");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.color}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write(" review\"> </span>\n");
+        out.write("\t\t\t\t\t\t\t\t\t<span>");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.likeCount}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("</span>\n");
+        out.write("\t\t\t\t\t\t\t\t\t<input id= \"reviewId\" type=\"hidden\" value= \"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("\">\n");
+        out.write("\t\t\t\t\t\t\t\t</button>\n");
+        out.write("\t\t\t\t\t\t\t\t");
+        int evalDoAfterBody = _jspx_th_c_if_3.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_3);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_3);
     return false;
   }
 

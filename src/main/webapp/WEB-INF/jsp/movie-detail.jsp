@@ -115,12 +115,20 @@
 						data-target="#reviewModal">Write Review</button>
 
 					<br> <br>
-					<c:forEach items="${reviews}" var="reviews">
+					<c:forEach items="${reviews}" var="review">
 						<div class="well">
 							<div class="row-fluid">
-								<div id="reviewfont"><strong>${reviews.review}</strong></div>
+								<c:if test="${not empty user}">
+								<button id = "favouriteReview" name="${review.id}" value="${review.color}"
+									onClick="toggleValue()" type="submit" class="btn btn-lg ">								
+									<span id="${review.id}" class="glyphicon glyphicon-heart ${review.color} review"> </span>
+									<span>${review.likeCount}</span>
+									<input id= "reviewId" type="hidden" value= "${review.id}">
+								</button>
+								</c:if>
+								<div id="reviewfont"><strong>${review.review}</strong></div>
 								<div class="span2 muted mycenter" style="text-align: right;">
-									<a>${reviews.user.firstName}</a>
+									<a>${review.user.firstName}</a>
 								</div>
 							</div>
 						</div>

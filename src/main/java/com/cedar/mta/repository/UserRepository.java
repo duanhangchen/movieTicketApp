@@ -52,5 +52,16 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
 	@Query(value="select balance from user where accountId = :account_id", nativeQuery= true)
 	BigDecimal getBalanceById(@Param("account_id") Integer accountId);
+	
+	
+	@Transactional
+	@Modifying
+	@Query(value="insert into ratereviews VALUES (:userId, :reviewId)", nativeQuery = true)
+	void addReviewLike(@Param ("userId") Integer userId, @Param ("reviewId") Integer reviewId);
+	
+	@Transactional
+	@Modifying
+	@Query(value="delete from ratereviews where User_accountId = :userId and reviews_Id = :reviewId", nativeQuery = true)
+	void deleteReviewLike(@Param ("userId") Integer userId, @Param ("reviewId") Integer reviewId);
 
 }

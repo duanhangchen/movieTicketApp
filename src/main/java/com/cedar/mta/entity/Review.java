@@ -4,6 +4,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 
 @Entity
 public class Review {
@@ -21,6 +22,20 @@ public class Review {
 	
 	private String review;
 
+	@Transient
+	private String color="white";
+	
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	private int likeCount;
+	
+	
 	public Integer getId() {
 		return id;
 	}
@@ -51,6 +66,14 @@ public class Review {
 
 	public void setReview(String review) {
 		this.review = review;
+	}
+
+	public int getLikeCount() {
+		return likeCount;
+	}
+
+	public void setLikeCount(int likeCount) {
+		this.likeCount = likeCount;
 	}
 	
 	
