@@ -127,7 +127,7 @@
 
 					<br> <br>
 					<c:forEach items="${reviews}" var="review">
-						<div class="well">
+						<div class="well reviews">
 							<div class="row-fluid">
 								<c:if test="${not empty user}">
 								<button id = "favouriteReview" name="${review.id}" value="${review.color}"

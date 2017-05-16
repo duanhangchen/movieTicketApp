@@ -45,17 +45,20 @@
 		<put-attribute name="title" value="SIGN-UP" />
 		<put-attribute name="body" value="/WEB-INF/jsp/user-dashboard.jsp" />
 	</definition>
+
 	<definition name="admin-dashboard" extends="common">
 		<put-attribute name="title" value="ADMIN" />
 		<put-attribute name="body" value="/WEB-INF/jsp/admin-dashboard.jsp" />
 	</definition>
+
 	<definition name="giftcard" extends="common">
 		<put-attribute name="title" value="SIGN-UP" />
 		<put-attribute name="body" value="/WEB-INF/jsp/giftcard.jsp" />
 	</definition>
 	<definition name="giftcard-confirmation" extends="common">
 		<put-attribute name="title" value="SIGN-UP" />
-		<put-attribute name="body" value="/WEB-INF/jsp/giftcard-confirmation.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/giftcard-confirmation.jsp" />
 	</definition>
 	<definition name="check-out" extends="common">
 		<put-attribute name="title" value="Check Out Page" />
@@ -64,5 +67,13 @@
 	<definition name="search-result" extends="common">
 		<put-attribute name="title" value="Search Result Page" />
 		<put-attribute name="body" value="/WEB-INF/jsp/search-result.jsp" />
+	</definition>
+	<definition name="payment" extends="common">
+		<put-attribute name="title" value="Payment Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/payment.jsp" />
+	</definition>
+	<definition name="confirmation" extends="common">
+		<put-attribute name="title" value="Confirmation Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/confirmation.jsp" />
 	</definition>
 </tiles-definitions>

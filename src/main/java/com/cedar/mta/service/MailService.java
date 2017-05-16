@@ -1,6 +1,7 @@
 package com.cedar.mta.service;
 
 import java.math.BigDecimal;
+import java.sql.Time;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -51,6 +52,13 @@ public class MailService {
 				+"This is the movie alert for "
 				+ movie + " \n\n\n"
 				+ "Happy Movie Watching!";
+	}
+
+	public void sendMailForTicket(String email,String recipient,double price,int adult,int senior,int child,String theaterName,Time time){
+		String sender2 = "teamcedar308@gmail.com";
+		String subject = "You Just Bought Tickets";
+		String body ="Hi, "+recipient+'\n'
+				+"   You just bought "+adult+" adult tickets, " + senior+" senior tickets "+child+" child tickets with a total cost of " + price + " in " + theaterName + " at " +time+ ".";
 		mail.sendMail(sender2, email, subject, body);
 	}
 }

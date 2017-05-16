@@ -67,7 +67,7 @@ url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
 	padding-left: 5px;
 }
 #reviewtext{
-	color: white;
+	color: black;
 }
 
 #reviewCount{
@@ -79,4 +79,8 @@ url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
 }
 #delete{
 	color: red;
+}
+
+.well.reviews{
+	color:black;
 }

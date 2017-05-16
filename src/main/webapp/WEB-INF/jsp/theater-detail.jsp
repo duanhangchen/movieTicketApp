@@ -23,42 +23,50 @@
 			<div class="item active">
 				<div class="col-md-2 col-sm-6 col-xs-12">
 					<a href="#">
+					<c:set var = "time" value = "2017-05-17"/>
 						<div class="card">
-							<div class="card-block">
-								<h4 class="card-title">
-									<center>Tuesday</center>
-								</h4>
-								<p class="card-text">
-								<center>May 17</center>
-								</p>
-								<br>
-							</div>
+							<a href="/showing/${theater.id}/${time}">
+								<div class="card-block" value="2017-05-17" name="showDay">
+									<h4 class="card-title">
+										<center>Tuesday</center>
+									</h4>
+									<p class="card-text">
+									<center>May 17</center>
+									</p>
+									<br>
+								</div>
+							</a>
+
 						</div>
 					</a>
 				</div>
 			</div>
 			<div class="item">
 				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#">
-						<div class="card">
-							<div class="card-block">
-								<h4 class="card-title">
-									<center>Wednesday</center>
-								</h4>
-								<p class="card-text">
-								<center>May 18</center>
-								</p>
-								<br>
+				<c:set var = "time" value = "2017-05-18"/>
+				
+					<a href="#"> <a href="/showing/${theater.id}/${time}">
+							<div class="card">
+								<div class="card-block" name="showDay">
+									<h4 class="card-title">
+										<center>Wednesday</center>
+									</h4>
+									<p class="card-text">
+									<center>May 18</center>
+									</p>
+									<br>
+								</div>
 							</div>
-						</div>
+					</a>
 					</a>
 				</div>
 			</div>
 			<div class="item">
 				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#">
+				<c:set var = "time" value = "2017-05-19"/>
+					<a href="href="/showing/${theater.id}/${time}"">
 						<div class="card">
-							<div class="card-block">
+							<div class="card-block" name="showDay">
 								<h4 class="card-title">
 									<center>Thursday</center>
 								</h4>
@@ -73,7 +81,7 @@
 			</div>
 			<div class="item">
 				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#">
+					<a href="/showing/${theater.id}/${time}">
 						<div class="card">
 							<div class="card-block">
 								<h4 class="card-title">
@@ -90,7 +98,7 @@
 			</div>
 			<div class="item">
 				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#">
+					<a href="/showing/${theater.id}/${time}">
 						<div class="card">
 							<div class="card-block">
 								<h4 class="card-title">
@@ -107,7 +115,7 @@
 			</div>
 			<div class="item">
 				<div class="col-md-2 col-sm-6 col-xs-12">
-					<a href="#">
+					<a href="/showing/${theater.id}/${time}">
 						<div class="card">
 							<div class="card-block">
 								<h4 class="card-title">
@@ -164,7 +172,17 @@
 								<a href="<spring:url value="/movies/${movies.id}"/>">${movies.name}</a>
 							</h1>
 							<c:forEach items="${movies.showings}" var="movie">
-							<button class="ui orange button"><a id = "showing-button" href="<spring:url value="/theaters/${theater.id}/${movie.showingId}"/>">${movie.startTime}<a></button>
+
+								<c:if test="${not empty user}">
+									<button class="ui orange button">
+										<a id = "showing-button" href="<spring:url value="/theaters/${theater.id}/${movie.showingId}"/>">${movie.startTime}<a>
+									</button>
+								</c:if>
+								<c:if test="${empty user}">
+									<button class="ui orange button">
+										<a id = "showing-button" href="<spring:url value="/login"/>">${movie.startTime}<a>
+									</button>
+								</c:if>
 							</c:forEach>
 						</div>
 					</div>

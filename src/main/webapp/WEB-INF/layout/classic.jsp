@@ -216,6 +216,10 @@
 									<a href="/user-dashboard" class="text-primary"><strong>MY
 											ACCOUNT</strong></a>
 								</c:if>
+								<c:if test="${user.role=='client'}">
+									<a href="/user-dashboard" class="text-primary"><strong>CLIENT
+											ACCOUNT</strong></a>
+								</c:if>
 								<p>
 								<c:if test="${user.role=='user'}">
 									<a href="/giftcard" class="text-primary"> <strong>BUY GIFT CARD</strong></a>

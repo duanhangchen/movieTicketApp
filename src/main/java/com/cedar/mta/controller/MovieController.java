@@ -190,7 +190,7 @@ public class MovieController {
 		System.out.println("Actors"+ actors.toString());
 		session.setAttribute("cast",actorService.findActor(id));
 		model.addAttribute("reviews",reviewService.findReviews(id));
-		return "movie-detail";
+		return "redirect:/movies/"+id;
 	}
 	
 	
