@@ -4,7 +4,6 @@
 		<class>com.cedar.mta.entity.Movie</class>
 		<class>com.cedar.mta.entity.Theater</class>
 		<class>com.cedar.mta.entity.Photo</class>
-		<class>com.cedar.mta.entity.Address</class>
 		<class>com.cedar.mta.entity.Showing</class>
 		<class>com.cedar.mta.entity.User</class>
 		<class>com.cedar.mta.entity.Transactions</class>
@@ -17,5 +16,6 @@
 		<class>com.cedar.mta.entity.Ads</class>
 <class>com.cedar.mta.entity.NewsLetter</class>
 <class>com.cedar.mta.entity.GiftCard</class>
+<class>com.cedar.mta.entity.SupportForm</class>
 	</persistence-unit>
 </persistence>

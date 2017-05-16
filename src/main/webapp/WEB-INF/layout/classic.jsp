@@ -13,7 +13,7 @@
 <link href="<c:url value="/resources/css/navbar.css" />"
 	rel="stylesheet">
 <%-- <script src="<c:url value="/resources/js/jquery-3.2.1.min.js" />"></script> --%>
-<script src="<c:url value="/resources/js/jquery-3.2.1.min.js" />"></script> 
+<script src="<c:url value="/resources/js/jquery-3.2.1.min.js" />"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="<c:url value="/resources/semantic/dist/semantic.min.css" />"
 	rel="stylesheet">
@@ -54,14 +54,15 @@
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 
-				<form class="navbar-form navbar-left" role="search">
+				<form class="navbar-form navbar-left" role="search" method="POST" action="/searchResult">
 					<div class="form-group">
-						<a class="team-name" href="/"> TEAM CEDAR</a> <input type="text"
-							class="form-control search-bar" placeholder="Search">
+						<a class="team-name" href="/"> TEAM CEDAR</a> 
+						<input type="text"
+							class="form-control search-bar" placeholder="Search" name="search">
 						<button type="submit" class="btn btn-primary">
 							<span class="glyphicon glyphicon-search"></span>
 						</button>
-						
+
 					</div>
 					<li><a href="/giftcard"> Buy Gift Card</a></li>
 				</form>
@@ -76,9 +77,11 @@
 							<div class="row">
 								<div class="col-sm-3">
 									<ul class="multi-column-dropdown">
-										<li class="coloumn-heading" id="reviewfont"><a href="#">NOW PLAYING</a></li>
+										<li class="coloumn-heading" id="reviewfont"><a href="#">NOW
+												PLAYING</a></li>
 										<c:forEach items="${now_playing}" var="now_playing">
-											<li><a href="<spring:url value="/movies/${now_playing.id}"/>">${now_playing.name}</a></li>
+											<li><a
+												href="<spring:url value="/movies/${now_playing.id}"/>">${now_playing.name}</a></li>
 										</c:forEach>
 									</ul>
 								</div>
@@ -86,62 +89,52 @@
 									<ul class="multi-column-dropdown">
 										<li class="coloumn-heading"><a href="#"></a></li>
 										<c:forEach items="${now_playing2}" var="now_playing">
-											<li><a href="<spring:url value="/movies/${now_playing.id}"/>">${now_playing.name}</a></li>
+											<li><a
+												href="<spring:url value="/movies/${now_playing.id}"/>">${now_playing.name}</a></li>
 										</c:forEach>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="multi-column-dropdown">
-										<li class="coloumn-heading" id="reviewfont"><a href="#">COMING SOON</a></li>
+										<li class="coloumn-heading" id="reviewfont"><a href="#">COMING
+												SOON</a></li>
 										<c:forEach items="${coming_soon}" var="coming_soon">
-											<li><a href="<spring:url value="/movies/${coming_soon.id}"/>">${coming_soon.name}</a></li>
+											<li><a
+												href="<spring:url value="/movies/${coming_soon.id}"/>">${coming_soon.name}</a></li>
 										</c:forEach>
 									</ul>
 								</div>
 								<div class="col-sm-3">
 									<ul class="multi-column-dropdown">
 										<c:forEach items="${coming_soon2}" var="coming_soon">
-											<li><a href="<spring:url value="/movies/${coming_soon.id}"/>">${coming_soon.name}</a></li>
+											<li><a
+												href="<spring:url value="/movies/${coming_soon.id}"/>">${coming_soon.name}</a></li>
 										</c:forEach>
 									</ul>
 								</div>
 							</div>
 						</ul></li>
-					<li class="dropdown"><a href='<spring:url value="/theaters" />'
-						class="dropdown">THEATERS<b class="caret"></b></a>
+					<li class="dropdown"><a
+						href='<spring:url value="/theaters" />' class="dropdown">THEATERS<b
+							class="caret"></b></a>
 						<ul class="dropdown-menu multi-column columns-3">
 							<div class="row">
-								<div class="col-sm-4">
+								<div class="col-sm-8">
 									<ul class="multi-column-dropdown">
-										<li><a href="#">Action</a></li>
-										<li><a href="#">Another action</a></li>
-										<li><a href="#">Something else here</a></li>
-										<li class="divider"></li>
-										<li><a href="#">Separated link</a></li>
-										<li class="divider"></li>
-										<li><a href="#">One more separated link</a></li>
+										<li>Nearby Theaters</li>
+										<c:forEach items="${nearbyTheaters}" var="theaters">
+										<li><a href="<spring:url value="/theaters/${theaters.id}"/>">${theaters.name}</a></li>
+										</c:forEach>
 									</ul>
 								</div>
 								<div class="col-sm-4">
 									<ul class="multi-column-dropdown">
-										<li><a href="#">Action</a></li>
-										<li><a href="#">Another action</a></li>
-										<li><a href="#">Something else here</a></li>
+										<br>
+										<br>
+										<br>
+										<big><cite title="${location}">${location}<i class="glyphicon glyphicon-map-marker"></i>
+										</cite></big>
 										<li class="divider"></li>
-										<li><a href="#">Separated link</a></li>
-										<li class="divider"></li>
-										<li><a href="#">One more separated link</a></li>
-									</ul>
-								</div>
-								<div class="col-sm-4">
-									<ul class="multi-column-dropdown">
-										<li><a href="#">Action</a></li>
-										<li><a href="#">Another action</a></li>
-										<li><a href="#">Something else here</a></li>
-										<li class="divider"></li>
-										<li><a href="#">Separated link</a></li>
-										<li class="divider"></li>
-										<li><a href="#">One more separated link</a></li>
 									</ul>
 								</div>
 							</div>
@@ -202,17 +195,13 @@
 								</div>
 							</div>
 						</ul></li>
-					<li class="dropdown">
-					<a href="#" class="dropdown-toggle"
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">
-						 <c:if test="${not empty user}">
+						aria-expanded="false"> <c:if test="${not empty user}">
                             ${user.firstName}
-                        </c:if>
-                         <c:if test="${empty user}">
+                        </c:if> <c:if test="${empty user}">
                             LOGIN
-                        </c:if>
-                         <span class="caret"></span></a>
+                        </c:if> <span class="caret"></span></a>
 						<ul class="dropdown-menu login">
 							<c:if test="${empty user}">
 								<a href="/sign-up" class="btn btn-lg btn-primary"><span
@@ -230,8 +219,14 @@
 								<a href="/" class="btn btn-lg btn-primary"><span
 									class="glyphicon glyphicon-fire"></span> MY ACCOUNT SETTINGS</a>
 								<br>
-								<p> <a  href="/logout" onclick='return logout()' class="text-primary"><strong>LOGOUT</strong></a></p>
-								<p> <a  href="/user-dashboard"  class="text-primary"><strong>MY ACCOUNT</strong></a></p>
+								<p>
+									<a href="/logout" onclick='return logout()'
+										class="text-primary"><strong>LOGOUT</strong></a>
+								</p>
+								<p>
+									<a href="/user-dashboard" class="text-primary"><strong>MY
+											ACCOUNT</strong></a>
+								</p>
 							</c:if>
 						</ul></li>
 				</ul>

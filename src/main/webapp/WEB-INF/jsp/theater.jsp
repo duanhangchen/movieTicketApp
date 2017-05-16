@@ -27,20 +27,18 @@
 				</header>
 				<div class="w3-container">
 					<c:forEach items="${theaters}" var="theater">
-					
-					<div class="panel panel-default">
-					  <div class="panel-heading">
-					  	<h1 class="panel-title">
-								<a href="<spring:url value="/theaters/${theater.id}"/>">${theater.name}</a>
-								<button name="favouriteMovie" value="${favouriteMovie}" onClick="toggleValue()" type="submit" class="btn btn-lg">
-								<span class="glyphicon glyphicon-heart"></span>
-								</button>
-						</h1>
-					  </div>
-						  
-					</div>
 
-						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h1 class="panel-title">
+									<a href="<spring:url value="/theaters/${theater.id}"/>">${theater.name}</a>
+									<button name="favouriteMovie" value="${favouriteMovie}"
+										onClick="toggleValue()" type="submit" class="btn btn-lg">
+										<span class="glyphicon glyphicon-heart"></span>
+									</button>
+								</h1>
+							</div>
+						</div>
 					</c:forEach>
 				</div>
 			</section>

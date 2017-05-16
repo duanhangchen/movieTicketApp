@@ -56,21 +56,21 @@ public class UserDashboard {
 	private GiftRepository giftRepository;
 	
 
+
 	@RequestMapping("/user-dashboard")
 	public String showUserDashboardPage(Model model, HttpSession session) {
 
 		User user = (User) session.getAttribute("user");
 
+
 		model.addAttribute("userreviews", reviewService.findPersonalReview(user.getAccountId()));
-		
+
 
 		model.addAttribute("userTheaters", theaterRepository.findPersonalTheater(user.getAccountId()));
 
 		BigDecimal balance = userService.getBalanceById(user.getAccountId());
 		model.addAttribute("balance", balance);
-		
-		model.addAttribute("userreviews",reviewService.findPersonalReview(user.getAccountId()));
-		
+
 		NewsLetter news = newsRepository.findOne(user.getAccountId());
 		if (news != null) {
 			model.addAttribute("subscribed", true);
