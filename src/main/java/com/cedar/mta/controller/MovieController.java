@@ -273,16 +273,16 @@ public class MovieController {
 		return "Success";
 	}
 
-	@RequestMapping(value="/movies/{id}/delete/{reviewid}",method=RequestMethod.GET)
-	public String deleteReview(Model model,HttpSession session,@PathVariable int id,@PathVariable int reviewid){
+	@RequestMapping(value="/movies/{movieid}/delete/{reviewid}",method=RequestMethod.GET)
+	public String deleteReview(Model model,HttpSession session,@PathVariable("reviewid") int reviewId,@PathVariable("movieid") int movieid){
 		//User user=(User) session.getAttribute("user");
-		System.out.println("movieid="+id+"  reviewid="+reviewid);
 		//if(user.getRole().equals("admin")){
 		reviewService.deleteReview1();
-		reviewService.deleteReview2(reviewid);
-		reviewService.deleteReview3();
+		reviewService.deleteReview2(reviewId);
+		reviewService.deleteReview3(reviewId);
+		reviewService.deleteReview4();
 		//}
-		return "";
+		return "redirect:/movies/"+ movieid;
 	}
 	
 

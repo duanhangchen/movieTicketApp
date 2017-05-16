@@ -133,11 +133,11 @@
 									<input id= "reviewId" type="hidden" value= "${review.id}">
 								</button>
 								</c:if>
-								<div id="reviewfont"><strong>${review.review}</strong></div>
+								<div id="reviewtext"><strong>${review.review}</strong></div>
 								<div class="span2 muted mycenter" style="text-align: right;">
 									<a>${review.user.firstName}</a>
-									<c:if test="${empty user}">
-									<p style="color:red;"><a href="/movies/${movie.id}/delete/${review.id}" target="_blank">DELETE</a></p>
+									<c:if test="${user.role=='admin'}">
+									<p style="color:red;"><a id="delete" href="/movies/${movie.id}/delete/${review.id}">DELETE</a></p>
 									</c:if>
 								</div>
 							</div>
@@ -158,12 +158,12 @@
 								<div class="modal-body">
 									<form role="form" method="POST">
 										<div>
-											<h5 id="reviewfont">${movie.name}</h5>
+											<h5>${movie.name}</h5>
 										</div>
 										<div class="form-group">
-											<label for="message-text" id="reviewfont"
+											<label for="message-text"
 												class="form-control-label">Review:</label>
-											<textarea type="text" class="form-control" id="reviewText" 
+											<textarea type="text" class="form-control" 
 												name="reviewText">${review.review}</textarea>
 										</div>
 										<div class="modal-footer">

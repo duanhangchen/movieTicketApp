@@ -232,14 +232,14 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\t\t\t\t\t\t\t\t<div class=\"modal-body\">\n");
       out.write("\t\t\t\t\t\t\t\t\t<form role=\"form\" method=\"POST\">\n");
       out.write("\t\t\t\t\t\t\t\t\t\t<div>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t<h5 id=\"reviewfont\">");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t<h5>");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</h5>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t<label for=\"message-text\" id=\"reviewfont\"\n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t<label for=\"message-text\"\n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\tclass=\"form-control-label\">Review:</label>\n");
-      out.write("\t\t\t\t\t\t\t\t\t\t\t<textarea type=\"text\" class=\"form-control\" id=\"reviewText\" \n");
+      out.write("\t\t\t\t\t\t\t\t\t\t\t<textarea type=\"text\" class=\"form-control\" \n");
       out.write("\t\t\t\t\t\t\t\t\t\t\t\tname=\"reviewText\">");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.review}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</textarea>\n");
@@ -602,7 +602,7 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
           if (_jspx_meth_c_if_6((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("\n");
-          out.write("\t\t\t\t\t\t\t\t<div id=\"reviewfont\"><strong>");
+          out.write("\t\t\t\t\t\t\t\t<div id=\"reviewtext\"><strong>");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.review}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</strong></div>\n");
           out.write("\t\t\t\t\t\t\t\t<div class=\"span2 muted mycenter\" style=\"text-align: right;\">\n");
@@ -689,16 +689,16 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_7 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_if_7.setPageContext(_jspx_page_context);
     _jspx_th_c_if_7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_if_7.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${empty user}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_if_7.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user.role=='admin'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_if_7 = _jspx_th_c_if_7.doStartTag();
     if (_jspx_eval_c_if_7 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("\t\t\t\t\t\t\t\t\t<p style=\"color:red;\"><a href=\"/movies/");
+        out.write("\t\t\t\t\t\t\t\t\t<p style=\"color:red;\"><a id=\"delete\" href=\"/movies/");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("/delete/");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("\" target=\"_blank\">DELETE</a></p>\n");
+        out.write("\">DELETE</a></p>\n");
         out.write("\t\t\t\t\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_if_7.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
