@@ -39,4 +39,19 @@ public interface ReviewRepository extends JpaRepository<Review, Integer>{
 	
 	@Query(value="SELECT reviews_id from ratereviews where User_accountId in (select user_id from review where movie_id = :movie_id and user_id= :user_id)", nativeQuery = true)
 	List<Integer> findRatedReview(@Param("user_id") Integer userId,@Param("movie_id") Integer movieId);
+	
+	@Transactional
+	@Modifying
+	@Query(value="SET FOREIGN_KEY_CHECKS = 0;", nativeQuery = true)
+	void deleteReview1();
+	
+	@Transactional
+	@Modifying
+	@Query(value="delete from review where id = :id;", nativeQuery = true)
+	void deleteReview2(@Param ("id") Integer reviewID);
+	
+	@Transactional
+	@Modifying
+	@Query(value="SET FOREIGN_KEY_CHECKS = 1", nativeQuery = true)
+	void deleteReview3();
 }

@@ -37,6 +37,14 @@ public class ReviewService {
 		return reviewRepository.findOne(id);
 	}
 	
-	
+	public void deleteReview1(){
+		reviewRepository.deleteReview1();
+	}
+	public void deleteReview2(Integer reviewId){
+		reviewRepository.deleteReview2(reviewId);
+	}
+	public void deleteReview3(){
+		reviewRepository.deleteReview3();
+	}
 
 }
