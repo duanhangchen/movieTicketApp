@@ -562,7 +562,7 @@ public final class movie_002ddetail_jsp extends org.apache.jasper.runtime.HttpJs
         out.write("\" class=\"glyphicon glyphicon-heart ");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.color}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write(" review\"> </span>\n");
-        out.write("\t\t\t\t\t\t\t\t\t<span>");
+        out.write("\t\t\t\t\t\t\t\t\t<span id= \"reviewCount\">");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${review.likeCount}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("</span>\n");
         out.write("\t\t\t\t\t\t\t\t\t<input id= \"reviewId\" type=\"hidden\" value= \"");

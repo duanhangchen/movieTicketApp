@@ -122,7 +122,7 @@
 								<button id = "favouriteReview" name="${review.id}" value="${review.color}"
 									onClick="toggleValue()" type="submit" class="btn btn-lg ">								
 									<span id="${review.id}" class="glyphicon glyphicon-heart ${review.color} review"> </span>
-									<span>${review.likeCount}</span>
+									<span id= "reviewCount">${review.likeCount}</span>
 									<input id= "reviewId" type="hidden" value= "${review.id}">
 								</button>
 								</c:if>
