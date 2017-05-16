@@ -130,7 +130,7 @@
 								<div class="span2 muted mycenter" style="text-align: right;">
 									<a>${review.user.firstName}</a>
 									<c:if test="${user.role=='admin'}">
-									<p style="color:red;"><a href="/movies/${movie.id}/delete/${review.id}/">DELETE</a></p>
+									<p style="color:red;"><a href="/movies/${movie.id}/delete/${review.id}">DELETE</a></p>
 									</c:if>
 								</div>
 							</div>

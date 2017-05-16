@@ -245,7 +245,8 @@ public class MovieController {
 		//if(user.getRole().equals("admin")){
 		reviewService.deleteReview1();
 		reviewService.deleteReview2(reviewId);
-		reviewService.deleteReview3();
+		reviewService.deleteReview3(reviewId);
+		reviewService.deleteReview4();
 		//}
 		return "redirect:/movies/"+movieid+"#3a";
 	}
