@@ -36,7 +36,7 @@ public class MailService {
 		String subject = "NEWS LETTER!";
 		String body = "Hi, " + '\n' 
 				+"This is out Monthly News Letter"
-				+ " SANCHAY, THE GALAXY WON'T SAVE ITSELF\n\n\n"
+				+ " THE GALAXY WON'T SAVE ITSELF\n\n\n"
 				+"	See ‘Guardians of the Galaxy Vol. 2’ this weekend\n\n\n"
 				+ "Happy Movie Watching!";
 		mail.sendMail(sender2, email, subject, body);
