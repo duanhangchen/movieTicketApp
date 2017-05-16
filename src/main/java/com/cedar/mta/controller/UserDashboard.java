@@ -19,6 +19,8 @@ import com.cedar.mta.entity.NewsLetter;
 import com.cedar.mta.entity.User;
 import com.cedar.mta.repository.GiftRepository;
 import com.cedar.mta.repository.NewsLetterRepository;
+
+import com.cedar.mta.repository.TheaterRepository;
 import com.cedar.mta.service.GiftService;
 import com.cedar.mta.service.MailService;
 import com.cedar.mta.service.NewsLetterService;
@@ -30,6 +32,9 @@ public class UserDashboard {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private TheaterRepository theaterRepository;
 
 	@Autowired
 	private ReviewService reviewService;
@@ -56,12 +61,15 @@ public class UserDashboard {
 	public String showUserDashboardPage(Model model, HttpSession session) {
 
 		User user = (User) session.getAttribute("user");
-		
-		BigDecimal balance = userService.getBalanceById(user.getAccountId());
-		model.addAttribute("balance", balance);
+
 
 		model.addAttribute("userreviews", reviewService.findPersonalReview(user.getAccountId()));
 
+
+		model.addAttribute("userTheaters", theaterRepository.findPersonalTheater(user.getAccountId()));
+
+		BigDecimal balance = userService.getBalanceById(user.getAccountId());
+		model.addAttribute("balance", balance);
 
 		NewsLetter news = newsRepository.findOne(user.getAccountId());
 		if (news != null) {
@@ -84,11 +92,13 @@ public class UserDashboard {
 		model.addAttribute("userreviews", reviewService.findPersonalReview(user.getAccountId()));
 		userService.updateUserInfo(firstName, lastName, user.getAccountId());
 		NewsLetter news = newsRepository.findOne(user.getAccountId());
-		if (news != null) {
-			model.addAttribute("subscribed", true);
-		} else {
+
+		if(news!= null){
+			model.addAttribute("subscribed",true);
+		}
+		else{
 			System.out.println("Hello Im in newletter");
-			model.addAttribute("subscribed", false);
+			model.addAttribute("subscribed",false);
 		}
 		return "user-dashboard";
 	}

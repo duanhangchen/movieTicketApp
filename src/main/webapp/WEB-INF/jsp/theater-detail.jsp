@@ -135,10 +135,12 @@
 		<div class="w3-container">
 			<h1>
 				<a href="<spring:url value="/theaters/${theater.id}"/>">${theater.name}</a>
-				<button name="favouriteMovie" value="${favouriteMovie}"
-					onClick="toggleValue()" type="submit" class="btn btn-lg">
-					<span class="glyphicon glyphicon-heart"></span>
-				</button>
+				<c:if test="${not empty user}">
+			<button id = "favouriteTheatre" name="favouriteTheatre" value="${favouriteTheatre}"
+				onClick="toggleValue()" type="submit" class="btn btn-lg ">
+				<span id="theatre-like" class="glyphicon glyphicon-heart ${favouriteTheatre}"> </span>
+			</button>
+			</c:if>
 			</h1>
 			<h2 style="font-size: 15px">
 			${theaterAddress} /

@@ -32,5 +32,11 @@ public class ReviewService {
 	public List<Review> findPersonalReview(Integer user_id){
 		return reviewRepository.findPersonalReview(user_id);
 	}
+	
+	public Review findReviewById(Integer id){
+		return reviewRepository.findOne(id);
+	}
+	
+	
 
 }

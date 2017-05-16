@@ -1,5 +1,8 @@
 package com.cedar.mta.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 
@@ -28,6 +31,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.portlet.ModelAndView;
 
+
+import com.cedar.mta.entity.Movie;
+
+import com.cedar.mta.entity.Ads;
 
 import com.cedar.mta.entity.Ads;
 
@@ -78,6 +85,10 @@ public class IndexController {
 	
 	@Autowired
 	private TheaterService theaterService;
+	
+	public boolean isNumeric(String s) {  
+	    return s != null && s.matches("[-+]?\\d*\\.?\\d+");  
+	}  
 
 	@RequestMapping("/")
 	public String index(Model model, HttpSession session) throws IOException {
@@ -122,6 +133,8 @@ public class IndexController {
 		session.setAttribute("now_playing2", nowPlaying2);
 		session.setAttribute("coming_soon", comingSoon1);
 		session.setAttribute("coming_soon2", comingSoon2);
+
+
 		
 		String surl = "https://ipinfo.io/json";
 		URL url = new URL(surl);
@@ -135,12 +148,11 @@ public class IndexController {
 	    String coordinate = rootobj.get("loc").getAsString();
 	    session.setAttribute("nearbyTheaters", theaterService.findNearbyTheaters(postal));
 	    session.setAttribute("location", city);
+
 	    session.setAttribute("coordinate", coordinate);
 	    
+
 		return "index";
-		
-		
-		
 	}
 	
 	@RequestMapping(value="/",method=RequestMethod.POST)
@@ -148,6 +160,24 @@ public class IndexController {
 		User user = (User) session.getAttribute("user");
 		supportFormService.addSupport(body, title, user.getEmail());
 		return "redirect: ";
+	}
+	
+	
+	@RequestMapping(value = "/searchResult", method = RequestMethod.POST)
+	public String searchResult(Model model,HttpSession session,@RequestParam String search){
+		User user = (User) session.getAttribute("user");
+		System.out.println(search);
+		model.addAttribute("keyword", search);
+		model.addAttribute("searchMovie",movieService.searchMovie(search));
+		if(isNumeric(search)){
+			int zip=Integer.parseInt(search);
+			System.out.println("zip:"+zip);
+			model.addAttribute("searchZip",theaterService.findNearbyTheaters(zip));
+		}
+		else{
+			model.addAttribute("searchZip",theaterService.findCityState(search));
+		}
+		return "search-result";
 	}
 
 	@RequestMapping("/giftcard")

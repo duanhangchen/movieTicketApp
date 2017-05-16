@@ -12,6 +12,7 @@ public final class theater_002ddetail_jsp extends org.apache.jasper.runtime.Http
   private static java.util.List<String> _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_spring_url_value_nobody;
 
@@ -23,12 +24,14 @@ public final class theater_002ddetail_jsp extends org.apache.jasper.runtime.Http
 
   public void _jspInit() {
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_spring_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_forEach_var_items.release();
+    _jspx_tagPool_c_if_test.release();
     _jspx_tagPool_c_url_value_nobody.release();
     _jspx_tagPool_spring_url_value_nobody.release();
   }
@@ -217,12 +220,10 @@ public final class theater_002ddetail_jsp extends org.apache.jasper.runtime.Http
       out.write('>');
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${theater.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</a>\r\n");
-      out.write("\t\t\t\t<button name=\"favouriteMovie\" value=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${favouriteMovie}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\"\r\n");
-      out.write("\t\t\t\t\tonClick=\"toggleValue()\" type=\"submit\" class=\"btn btn-lg\">\r\n");
-      out.write("\t\t\t\t\t<span class=\"glyphicon glyphicon-heart\"></span>\r\n");
-      out.write("\t\t\t\t</button>\r\n");
+      out.write("\t\t\t\t");
+      if (_jspx_meth_c_if_0(_jspx_page_context))
+        return;
+      out.write("\r\n");
       out.write("\t\t\t</h1>\r\n");
       out.write("\t\t\t<h2 style=\"font-size: 15px\">\r\n");
       out.write("\t\t\t");
@@ -386,6 +387,41 @@ public final class theater_002ddetail_jsp extends org.apache.jasper.runtime.Http
       _jspx_th_spring_url_0.doFinally();
       _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_0);
     }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_if_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_0.setParent(null);
+    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty user}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
+    if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("\t\t\t<button id = \"favouriteTheatre\" name=\"favouriteTheatre\" value=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${favouriteTheatre}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("\"\r\n");
+        out.write("\t\t\t\tonClick=\"toggleValue()\" type=\"submit\" class=\"btn btn-lg \">\r\n");
+        out.write("\t\t\t\t<span id=\"theatre-like\" class=\"glyphicon glyphicon-heart ");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${favouriteTheatre}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("\"> </span>\r\n");
+        out.write("\t\t\t</button>\r\n");
+        out.write("\t\t\t");
+        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
     return false;
   }
 

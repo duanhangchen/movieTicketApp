@@ -13,6 +13,7 @@ public class Theater {
 	@Id
 	@GeneratedValue
 	private Integer theaterId;	
+	
 	private String theaterName;	
 	private String AddressLine;
 	private String city;
@@ -37,6 +38,7 @@ public class Theater {
 	public void setName(String theaterName) {
 		this.theaterName = theaterName;
 	}
+
 	public String getAddressLine() {
 		return AddressLine;
 	}
@@ -55,5 +57,6 @@ public class Theater {
 	public void setZipcode(String zipcode) {
 		this.zipcode = zipcode;
 	}
+
 	
 }

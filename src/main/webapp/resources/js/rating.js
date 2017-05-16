@@ -135,7 +135,7 @@ $(document).ready(function() {
 		$('#count-existing').html(value);
 	});
 
-	$(".glyphicon.glyphicon-heart").click(function(value) {
+	$("#movie-like").click(function(value) {
 		var value = document.getElementById("favourite").value;
 		if (value == "red") {
 			document.getElementById("favourite").value = "white";
@@ -183,6 +183,42 @@ $(document).ready(function() {
 			});
 	    })
 	  })
+	  
+	  $(".review").click(function(value) {
+			//var value = document.getElementById("favouriteReview").value;
+			
+			var reviewId = $(this).attr('id');
+			var value = $(this).parent()[0].value
+			//console.log($(this).parent().children()[1].text());
+			console.log("review Id "+reviewId)
+			
+		
+			if (value == "red") {
+				$(this).parent()[0].value = "white";
+			}
+			if (value == "white") {
+				$(this).parent()[0].value = "red";
+			}
+			$(this).toggleClass('red');
+
+			var toggleFavouriteReview = {
+				value : $(this).parent()[0].value,
+				reviewId : reviewId
+			}
+			var movieid = window.location.pathname.split('/')[2];
+			$.ajax({
+				type : "POST",
+				url : "/review/"+reviewId+"/toggleFavourite" ,
+				data : toggleFavouriteReview,
+				success : function(result) {
+					console.log("YOLO")
+					console.log("SUCCESS");
+				},
+				error : function(result) {
+					console.log('ERROR');
+				}
+			});
+		});
 	
 	
 	

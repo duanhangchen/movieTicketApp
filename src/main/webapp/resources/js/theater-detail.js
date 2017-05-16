@@ -16,4 +16,34 @@ $( document ).ready(function() {
     	    next.children(':first-child').clone().appendTo($(this));
     	  }
     	});
+    
+    
+    $("#theatre-like").click(function(value) {
+		
+    		var value = document.getElementById("favouriteTheatre").value;
+    		console.log("Hellp"+value);
+		if (value == "red") {
+			document.getElementById("favouriteTheatre").value = "white";
+		}
+		if (value == "white") {
+			document.getElementById("favouriteTheatre").value = "red";
+		}
+		$(this).toggleClass('red');
+
+		var toggleFavourite = {
+			value : document.getElementById("favouriteTheatre").value
+		}
+		var theatreid = window.location.pathname.split('/')[2];
+		$.ajax({
+			type : "POST",
+			url : "/theatres/"+theatreid+"/toggleFavourite" ,
+			data : toggleFavourite,
+			success : function(result) {
+				console.log("SUCCESS");
+			},
+			error : function(result) {
+				console.log('ERROR');
+			}
+		});
+	});
 });

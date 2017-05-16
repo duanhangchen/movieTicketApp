@@ -142,10 +142,11 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<div class=\"collapse navbar-collapse\"\r\n");
       out.write("\t\t\t\tid=\"bs-example-navbar-collapse-1\">\r\n");
       out.write("\r\n");
-      out.write("\t\t\t\t<form class=\"navbar-form navbar-left\" role=\"search\">\r\n");
+      out.write("\t\t\t\t<form class=\"navbar-form navbar-left\" role=\"search\" method=\"POST\" action=\"/searchResult\">\r\n");
       out.write("\t\t\t\t\t<div class=\"form-group\">\r\n");
-      out.write("\t\t\t\t\t\t<a class=\"team-name\" href=\"/\"> TEAM CEDAR</a> <input type=\"text\"\r\n");
-      out.write("\t\t\t\t\t\t\tclass=\"form-control search-bar\" placeholder=\"Search\">\r\n");
+      out.write("\t\t\t\t\t\t<a class=\"team-name\" href=\"/\"> TEAM CEDAR</a> \r\n");
+      out.write("\t\t\t\t\t\t<input type=\"text\"\r\n");
+      out.write("\t\t\t\t\t\t\tclass=\"form-control search-bar\" placeholder=\"Search\" name=\"search\">\r\n");
       out.write("\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">\r\n");
       out.write("\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-search\"></span>\r\n");
       out.write("\t\t\t\t\t\t</button>\r\n");

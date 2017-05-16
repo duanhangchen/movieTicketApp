@@ -121,10 +121,23 @@ public class MovieController {
 			else {
 				model.addAttribute("favouriteMovie", "red");
 			}
+			List<Integer> ratedReviews = reviewRepository.findRatedReview(user.getAccountId(), id);
+			List<Review> dam=reviewService.findReviews(id);
+			for(int j=0;j<ratedReviews.size();j++){
+				//movies.get(i).addShowing(temp.get(j));
+				for(int i=0;i<dam.size();i++){
+					if(dam.get(i).getId()==ratedReviews.get(j)){
+						dam.get(i).setColor("red");
+					}
+				}
+			}
 			
+			model.addAttribute("reviews", dam);
 		}
 		model.addAttribute("movie",movieService.findById(id));
-		model.addAttribute("reviews",reviewService.findReviews(id));
+		if(user==null){
+			model.addAttribute("reviews",reviewService.findReviews(id));
+		}
 		List<Actor> actors=actorService.findActor(id);
 		model.addAttribute("cast",actors);
 		return "movie-detail";
@@ -200,6 +213,26 @@ public class MovieController {
 			}
 			else if(value.equals("white")){
 				userRepository.deleteMovieFromUser(user.getAccountId(), id);
+			}
+		}
+		return "success";
+	}
+	
+	@RequestMapping(value="/review/{id}/toggleFavourite",method=RequestMethod.POST)
+	public @ResponseBody String toggleFavouriteReview(Model model,HttpSession session,@PathVariable int id,@RequestParam String value,@RequestParam int reviewId){
+		
+		
+		User user=(User) session.getAttribute("user");
+		System.out.println("I am in Review Controller"+ reviewId);
+		if(user!=null){
+			if(value.equals("red")){
+				System.out.println("I am red");
+				userRepository.addReviewLike(user.getAccountId(), reviewId);
+				reviewRepository.incReviewCount(reviewId);
+			}
+			else if(value.equals("white")){
+				userRepository.deleteReviewLike(user.getAccountId(), reviewId);
+				reviewRepository.decReviewCount(reviewId);
 			}
 		}
 		return "success";

@@ -29,7 +29,10 @@ public class GiftService {
 		return giftRepository.findAllGiftCardByAccountId(id);
 	}
 	
+	
+
 	public GiftCard findGiftCardByCode(String code){
+
 		return giftRepository.findGiftCardByCode(code);
 	}
 	
