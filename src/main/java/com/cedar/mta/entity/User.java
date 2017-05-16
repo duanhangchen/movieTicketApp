@@ -30,6 +30,7 @@ public class User {
 	private String lastName;
 	private Date doB;
 	private BigDecimal balance = BigDecimal.ZERO;
+	private String role;
 	
 	@ManyToMany
 	@JoinTable(name="MyMovies")
@@ -106,6 +107,12 @@ public class User {
 	}
 	public void setBalance(BigDecimal balance) {
 		this.balance = balance;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 }

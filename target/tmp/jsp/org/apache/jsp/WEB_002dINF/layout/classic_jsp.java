@@ -297,10 +297,12 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t\t</ul></li>\n");
       out.write("\t\t\t\t\t<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\"\n");
       out.write("\t\t\t\t\t\tdata-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"\n");
-      out.write("\t\t\t\t\t\taria-expanded=\"false\"> ");
+      out.write("\t\t\t\t\t\taria-expanded=\"false\">\n");
+      out.write("\t\t\t\t\t\t ");
       if (_jspx_meth_c_if_0(_jspx_page_context))
         return;
-      out.write(' ');
+      out.write(" \n");
+      out.write("                        ");
       if (_jspx_meth_c_if_1(_jspx_page_context))
         return;
       out.write(" <span class=\"caret\"></span></a>\n");
@@ -313,6 +315,7 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_c_if_3(_jspx_page_context))
         return;
       out.write("\n");
+      out.write("\t\t\t\t\t\t\t\n");
       out.write("\t\t\t\t\t\t</ul></li>\n");
       out.write("\t\t\t\t</ul>\n");
       out.write("\t\t\t</div>\n");
@@ -1020,16 +1023,20 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\n");
-        out.write("\t\t\t\t\t\t\t\t<a href=\"/\" class=\"btn btn-lg btn-primary\"><span\n");
-        out.write("\t\t\t\t\t\t\t\t\tclass=\"glyphicon glyphicon-fire\"></span> MY ACCOUNT SETTINGS</a>\n");
-        out.write("\t\t\t\t\t\t\t\t<br>\n");
+        out.write("\t\t\t\t\t\t\t\t\n");
         out.write("\t\t\t\t\t\t\t\t<p>\n");
         out.write("\t\t\t\t\t\t\t\t\t<a href=\"/logout\" onclick='return logout()'\n");
         out.write("\t\t\t\t\t\t\t\t\t\tclass=\"text-primary\"><strong>LOGOUT</strong></a>\n");
         out.write("\t\t\t\t\t\t\t\t</p>\n");
         out.write("\t\t\t\t\t\t\t\t<p>\n");
-        out.write("\t\t\t\t\t\t\t\t\t<a href=\"/user-dashboard\" class=\"text-primary\"><strong>MY\n");
-        out.write("\t\t\t\t\t\t\t\t\t\t\tACCOUNT</strong></a>\n");
+        out.write("\t\t\t\t\t\t\t\t");
+        if (_jspx_meth_c_if_4((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_3, _jspx_page_context))
+          return true;
+        out.write("\n");
+        out.write("\t\t\t\t\t\t\t\t");
+        if (_jspx_meth_c_if_5((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_3, _jspx_page_context))
+          return true;
+        out.write("\n");
         out.write("\t\t\t\t\t\t\t\t</p>\n");
         out.write("\t\t\t\t\t\t\t");
         int evalDoAfterBody = _jspx_th_c_if_3.doAfterBody();
@@ -1042,6 +1049,64 @@ public final class classic_jsp extends org.apache.jasper.runtime.HttpJspBase
       return true;
     }
     _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_3);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_if_4(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_3, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_4 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_4.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_3);
+    _jspx_th_c_if_4.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user.role!= 'admin'}  ", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_4 = _jspx_th_c_if_4.doStartTag();
+    if (_jspx_eval_c_if_4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("\t\t\t\t\t\t\t\t\t<a href=\"/user-dashboard\" class=\"text-primary\"><strong>MY\n");
+        out.write("\t\t\t\t\t\t\t\t\t\t\tACCOUNT</strong></a>\n");
+        out.write("\t\t\t\t\t\t\t\t");
+        int evalDoAfterBody = _jspx_th_c_if_4.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_4);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_4);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_if_5(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_3, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_5 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_5.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_3);
+    _jspx_th_c_if_5.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user.role=='admin'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_5 = _jspx_th_c_if_5.doStartTag();
+    if (_jspx_eval_c_if_5 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("\t\t\t\t\t\t\t\t\n");
+        out.write("\t\t\t\t\t\t\t\t<a href=\"/admin-dashboard\" class=\"text-primary\"><strong>ADMIN DASHBOARD</strong></a>\n");
+        out.write("\t\t\t\t\t\t\t\t");
+        int evalDoAfterBody = _jspx_th_c_if_5.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_5);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_5);
     return false;
   }
 

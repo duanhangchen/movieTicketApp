@@ -8,8 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-
-import com.cedar.mta.entity.Movie;
 import com.cedar.mta.entity.NewsLetter;
 
 public interface NewsLetterRepository extends JpaRepository<NewsLetter,Integer> {
@@ -28,5 +26,8 @@ public interface NewsLetterRepository extends JpaRepository<NewsLetter,Integer> 
 	@Modifying
 	@Query(value="delete from newsletter where userId = :userId", nativeQuery = true)
 	void deleteUserFromNewsLetter(@Param ("userId") Integer userId);
+	
+	@Query(value="select * from newsletter", nativeQuery = true)
+	List<NewsLetter> findSubscribers();
 
 }

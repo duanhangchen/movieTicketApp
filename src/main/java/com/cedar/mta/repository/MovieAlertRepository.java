@@ -31,5 +31,8 @@ public interface MovieAlertRepository extends JpaRepository<MovieAlert,Integer> 
 	
 	@Query(value="select * from moviealert where movieId= :movieId and userId= :userId", nativeQuery = true)
 	MovieAlert findMoviesAlert(@Param("movieId") Integer movieId,@Param("userId") Integer userId);
+	
+	@Query(value="select * from moviealert where movieId= :movieId", nativeQuery = true)
+	List<MovieAlert> findMoviesAlertByMovie(@Param("movieId") Integer movieId);
 
 }

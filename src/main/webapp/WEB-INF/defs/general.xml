@@ -44,7 +44,11 @@
 	<definition name="user-dashboard" extends="common">
 		<put-attribute name="title" value="SIGN-UP" />
 		<put-attribute name="body" value="/WEB-INF/jsp/user-dashboard.jsp" />
-</definition>
+	</definition>
+	<definition name="admin-dashboard" extends="common">
+		<put-attribute name="title" value="ADMIN" />
+		<put-attribute name="body" value="/WEB-INF/jsp/admin-dashboard.jsp" />
+	</definition>
 	<definition name="giftcard" extends="common">
 		<put-attribute name="title" value="SIGN-UP" />
 		<put-attribute name="body" value="/WEB-INF/jsp/giftcard.jsp" />

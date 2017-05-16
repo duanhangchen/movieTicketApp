@@ -39,10 +39,12 @@ public class AuthenticationController {
 			model.put("errorMessage", "Invalid Credentials");
 			return "login";
 		} else {
+
 			session.setAttribute("user", user);
 			return "redirect: ";
 		}
 	}
+	
 	
 	@RequestMapping(value = "/fblogin", method = RequestMethod.POST)
 	public @ResponseBody String handleFBLogin(HttpSession session, ModelMap model, @RequestParam String firstName,

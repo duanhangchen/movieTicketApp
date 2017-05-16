@@ -197,9 +197,11 @@
 						</ul></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false"> <c:if test="${not empty user}">
+						aria-expanded="false">
+						 <c:if test="${not empty user}">
                             ${user.firstName}
-                        </c:if> <c:if test="${empty user}">
+                        </c:if> 
+                        <c:if test="${empty user}">
                             LOGIN
                         </c:if> <span class="caret"></span></a>
 						<ul class="dropdown-menu login">
@@ -216,18 +218,23 @@
 								</p>
 							</c:if>
 							<c:if test="${not empty user}">
-								<a href="/" class="btn btn-lg btn-primary"><span
-									class="glyphicon glyphicon-fire"></span> MY ACCOUNT SETTINGS</a>
-								<br>
+								
 								<p>
 									<a href="/logout" onclick='return logout()'
 										class="text-primary"><strong>LOGOUT</strong></a>
 								</p>
 								<p>
+								<c:if test="${user.role!= 'admin'}  ">
 									<a href="/user-dashboard" class="text-primary"><strong>MY
 											ACCOUNT</strong></a>
+								</c:if>
+								<c:if test="${user.role=='admin'}">
+								
+								<a href="/admin-dashboard" class="text-primary"><strong>ADMIN DASHBOARD</strong></a>
+								</c:if>
 								</p>
 							</c:if>
+							
 						</ul></li>
 				</ul>
 			</div>

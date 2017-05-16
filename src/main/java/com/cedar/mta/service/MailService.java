@@ -30,4 +30,27 @@ public class MailService {
 				+ "Happy Movie Watching!";
 		mail.sendMail(sender2, email, subject, body);
 	}
+	
+	public void sendNewLetter(String email){
+		String sender2 = "teamcedar308@gmail.com";
+		String subject = "NEWS LETTER!";
+		String body = "Hi, " + '\n' 
+				+"This is out Monthly News Letter"
+				+ " SANCHAY, THE GALAXY WON'T SAVE ITSELF\n\n\n"
+				+"	See ‘Guardians of the Galaxy Vol. 2’ this weekend\n\n\n"
+				+ "Happy Movie Watching!";
+		mail.sendMail(sender2, email, subject, body);
+	}
+	
+	
+	public void sendMovieAlert(String email, String movie){
+		System.out.println("Sending ALert");
+		String sender2 = "teamcedar308@gmail.com";
+		String subject = "MOVIE ALERT!";
+		String body = "Hi, " + '\n' 
+				+"This is the movie alert for "
+				+ movie + " \n\n\n"
+				+ "Happy Movie Watching!";
+		mail.sendMail(sender2, email, subject, body);
+	}
 }

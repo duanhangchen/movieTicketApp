@@ -22,9 +22,17 @@
 				onClick="toggleValue()" type="submit" class="btn btn-lg ">
 				<span id= "movie-like" class="glyphicon glyphicon-heart ${favouriteMovie}"> </span>
 			</button>
+			<c:if test="${user.role!='admin'}">
 			<form action="/movieAlert/${movie.id}" method="POST" class="form-signin">
 					<input  id="moviealert" type="checkbox"  name= "subscribed" <c:if test="${subscribed}">checked</c:if> data-toggle="toggle" data-on="Movie Alert On" data-off="Movie Alert Off" data-width= "13%">
  			</form>
+ 			</c:if>
+ 			<c:if test="${user.role=='admin'}">
+			<div class="container">
+					<a href="/sendmoviealert/${movie.id}" class="btn btn-lg btn-primary"><span
+									class="glyphicon glyphicon-fire"></span>SEND MOVIE ALERT</a>
+			</div>
+ 			</c:if>
 			</c:if>
 		</h1>
 	</span>

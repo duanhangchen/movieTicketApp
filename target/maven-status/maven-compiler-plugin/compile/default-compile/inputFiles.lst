@@ -48,5 +48,6 @@
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Photo.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/repository/GenreRepository.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Ticket.java
+/Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/controller/AdminController.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/entity/Movie.java
 /Users/sanchay/movieTicketApp/src/main/java/com/cedar/mta/service/GenreService.java
