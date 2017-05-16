@@ -43,8 +43,11 @@ public class ReviewService {
 	public void deleteReview2(Integer servreviewId){
 		reviewRepository.deleteReview2(servreviewId);
 	}
-	public void deleteReview3(){
-		reviewRepository.deleteReview3();
+	public void deleteReview3(Integer servreviewId){
+		reviewRepository.deleteReview3(servreviewId);
+	}
+	public void deleteReview4(){
+		reviewRepository.deleteReview4();
 	}
 
 }
