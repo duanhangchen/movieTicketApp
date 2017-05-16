@@ -131,9 +131,8 @@
 								<div id="reviewfont"><strong>${review.review}</strong></div>
 								<div class="span2 muted mycenter" style="text-align: right;">
 									<a>${review.user.firstName}</a>
-									<c:if test="${user.role!=null}">
-									<p style="color:red;"><a href="/movies/${movie.id}/delete/${review.id}" target="_blank">DELETE</a></p>
-									</c:if>
+									<p style="color:red;"><a href="/movies/${movie.id}/delete/${review.id}/">DELETE</a></p>
+
 								</div>
 							</div>
 						</div>
