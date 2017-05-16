@@ -25,6 +25,9 @@
 		<li><a href="#4a" data-toggle="tab">SUBSCRIPTIONS</a></li>
 		<li><a href="#5a" data-toggle="tab">GIFT CARD</a></li>
 		<li><a href="#6a" data-toggle="tab">REDEEM GIFT CARD</a></li>
+		<c:if test="${user.role=='client'}">
+		<li><a href="#7a" data-toggle="tab">CLIENT DATABASE</a></li>
+		</c:if>
 	</ul>
 	<div class="tab-content clearfix">
 		<div class="tab-pane active" id="1a">
@@ -258,7 +261,106 @@
 			        </div>
 			    </div>
 			</div>
+			<div class="tab-pane" id="7a">
+			
+			
+			<div class="row">
+			 <div class="col-sm-12">
+	          <div class="well">
+					<div class="container">
+					    <div class="row">
+					        <div class="col-md-4">
+						        <div class="form_main">
+						        <h2>CLient Database Insertion</h2>
+								  
+								 </div>
+					        </div>
+			        	</div>
+			    	</div>
+		    	</div>
+	    	</div>
+	    	</div>
+	    	
+	    	<div class="row">
+	        <div class="col-sm-4">
+	          <div class="well">
+	            <div class="container">
+					<div class="row">
+				    <div class="col-md-4">
+						<div class="form_main">
+						<form action="/clientMovie" role="form" method="POST" id="contactFrm" name="contactFrm">
+				        	<h4 class="heading"><strong>New </strong> Movie <span></span></h4>
+			                    <input type="text"  placeholder="Movie Id..." value="" name="movieId" class="txt">
+			                    <input type="text"  placeholder="Box Office..." value="" name="boxOffice" class="txt">
+			                    <input type="text"  placeholder="Movie Name..." value="" name="movieName" class="txt">
+			                    <input type="text"  placeholder="Rated..." value="" name="rated" class="txt">
+			                    <input type="text"  placeholder="Release Date..." value="" name="releaseDate" class="txt">
+			                    <input type="text"  placeholder="Runtime..." value="" name="runtime" class="txt">
+			                    <input type="text"  placeholder="Movie Poster..." value="" name="moviePoster" class="txt">
+			                    <textarea type="text" placeholder="Plot..." name="plot" class="txt_3"></textarea>
+				       <input type="submit" value="Add Movie" name="submit" class="btn btn-success btn-lg btn-block">
+				       </form>
+				       </div>
+		            </div>
+		            </div>
+				</div>
+			 </div>
+				
+          </div>
+          
+          <div class="col-sm-4">
+	          <div class="well">
+	            <div class="container">
+					<div class="row">
+				    <div class="col-md-4">
+						<div class="form_main">
+						<form action="/clientTheater" role="form" method="POST" id="contactFrm" name="contactFrm">
+				        	<h4 class="heading"><strong>New </strong> Theater <span></span></h4>
+			                    <input type="text"  placeholder="Theater Id..." value="" name="theaterId" class="txt">
+			                    <input type="text"  placeholder="Theater Name..." value="" name="theaterName" class="txt">
+			                    <input type="text"  placeholder="Address Line..." value="" name="addressLine" class="txt">
+			                    <input type="text"  placeholder="City..." value="" name="city" class="txt">
+			                    <input type="text"  placeholder="State..." value="" name="state" class="txt">
+			                    <input type="text"  placeholder="Zipcode..." value="" name="zipcode" class="txt">
+				       <input type="submit" value="Add Theater" name="submit" class="btn btn-success btn-lg btn-block">
+				       </form>
+				       </div>
+		            </div>
+		            </div>
+				</div>
+			 </div>
+				
+          </div>
+          
+          <div class="col-sm-4">
+	          <div class="well">
+	            <div class="container">
+					<div class="row">
+				    <div class="col-md-4">
+						<div class="form_main">
+						<form action="/clientActor" role="form" method="POST" id="contactFrm" name="contactFrm">
+				        	<h4 class="heading"><strong>New </strong> Actor<span></span></h4>
+			                    <input type="text"  placeholder="Actor Id..." value="" name="actorId" class="txt">
+			                    <input type="text"  placeholder="Date of Birth..." value="" name="dob" class="txt">
+			                    <input type="text"  placeholder="Name..." value="" name="actorName" class="txt">
+			                    <input type="text"  placeholder="Actor Image..." value="" name="actorImage" class="txt"> 
+			                    <textarea type="text" placeholder="Biography..." name="biography" class="txt_3"></textarea>
+				       <input type="submit" value="Add Actor" name="submit" class="btn btn-success btn-lg btn-block">
+       				   </form>
+				       </div>
+		            </div>
+		            </div>
+				</div>
+			 </div>
+				
+          </div>
+          
+        </div>
+        
+		</div>
 		</div>
 		
 		
-	</div>
+</div>
+
+		

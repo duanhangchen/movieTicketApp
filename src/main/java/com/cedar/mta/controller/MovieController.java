@@ -252,7 +252,7 @@ public class MovieController {
 	
 
 	
-	@RequestMapping(value = "/movieAlert/{movieId}", method = RequestMethod.POST)
+@RequestMapping(value = "/movieAlert/{movieId}", method = RequestMethod.POST)
 	public @ResponseBody String toggleNewsLetter(Model model, HttpSession session, @RequestParam Boolean value,@PathVariable int movieId) {
 
 		User user = (User) session.getAttribute("user");
@@ -273,17 +273,25 @@ public class MovieController {
 		return "Success";
 	}
 
+	
 	@RequestMapping(value="/movies/{movieid}/delete/{reviewid}",method=RequestMethod.GET)
 	public String deleteReview(Model model,HttpSession session,@PathVariable("reviewid") int reviewId,@PathVariable("movieid") int movieid){
 		//User user=(User) session.getAttribute("user");
-		//if(user.getRole().equals("admin")){
+	
 		reviewService.deleteReview1();
 		reviewService.deleteReview2(reviewId);
 		reviewService.deleteReview3(reviewId);
 		reviewService.deleteReview4();
-		//}
+	
 		return "redirect:/movies/"+ movieid;
 	}
-	
-
+	@RequestMapping(value="/movies/{id}/edit-movie",method=RequestMethod.POST)
+	public String updateMovie(Model model, HttpSession session, @PathVariable int id, @RequestParam String editMovieName, @RequestParam double editBoxOffice, 
+			@RequestParam String editRated, @RequestParam Date editReleaseDate, @RequestParam String editRunTime, @RequestParam String editMoviePoster,
+			@RequestParam String editPlot){
+		System.out.println(editMovieName + editBoxOffice + editRated + editReleaseDate + editRunTime + editMoviePoster + editPlot + id);
+		movieService.updateMovie(editMovieName, editBoxOffice, editRated, editReleaseDate, editRunTime, editMoviePoster, editPlot, id);
+		
+		return "redirect:/movies/" + id;
+	}
 }

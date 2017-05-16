@@ -8,6 +8,7 @@
 <link href="<c:url value="/resources/css/actor-overview.css"/>"
 	rel="stylesheet">
 <link href="<c:url value="/resources/css/rating.css"/>" rel="stylesheet">
+<link href="<c:url value="/resources/css/gift.css"/>" rel="stylesheet">
 <script src="<c:url value="/resources/js/rating.js" />"></script>
 <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
@@ -41,6 +42,9 @@
 		<li class="active"><a href="#1a" data-toggle="tab">Overview</a></li>
 		<li><a href="#2a" data-toggle="tab">Synopsis</a></li>
 		<li><a href="#3a" data-toggle="tab">Reviews</a></li>
+		<c:if test="${user.role=='admin'}">
+		<li><a href="#4a" data-toggle="tab">Edit Movie</a></li>
+		</c:if>
 	</ul>
 	<div class="tab-content clearfix">
 		<div class="tab-pane active" id="1a">
@@ -138,6 +142,7 @@
 									<a>${review.user.firstName}</a>
 									<c:if test="${user.role=='admin'}">
 									<p style="color:red;"><a id="delete" href="/movies/${movie.id}/delete/${review.id}">DELETE</a></p>
+
 									</c:if>
 								</div>
 							</div>
@@ -182,6 +187,34 @@
 				</div>
 			</div>
 		</div>
+		<c:if test="${user.role=='admin'}">
+		<div class="tab-pane" id="4a">
+			<div class="row actor">
+				<div class="container">
+					<div class="row">
+				    <div class="col-md-4">
+						<div class="form_main">
+				                <h4 class="heading"><strong>Edit </strong> Movie <span></span></h4>
+				                <div class="form">
+				                <form method="post" id="contactFrm" name="contactFrm" action="/movies/${movie.id}/edit-movie" role="form">
+				                    <input type="text" required="" placeholder="" value="${movie.name}" name="editMovieName" class="txt">
+				                    <input type="text" required="" placeholder="" value="${movie.boxOffice}" name="editBoxOffice" class="txt">
+				                    <input type="text" required="" placeholder="" value="${movie.rated}" name="editRated" class="txt">
+				                    <input type="text" required="" placeholder="" value="${movie.releaseDate}" name="editReleaseDate" class="txt">
+				                    <input type="text" required="" placeholder="" value="${movie.runtime}" name="editRunTime" class="txt">
+				                    <input type="text" required="" placeholder="" value="${movie.url}" name="editMoviePoster" class="txt">
+				                    
+				                	 <textarea type="text" placeholder="" name="editPlot" class="txt_3">${movie.plot}</textarea>
+				                     <input type="submit" value="submit" name="submit" class="txt2">
+				                </form>
+				            </div>
+				            </div>
+				            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</c:if>
 	</div>
 	<div class="container actor">
 	<div class="row">

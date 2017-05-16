@@ -1,5 +1,6 @@
 package com.cedar.mta.service;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,10 @@ public class ActorService {
 	
 	public List<Actor> findActor(int movieid) {
 		return actorRepository.findActors(movieid);
+	}
+	
+	public void insertActor(Integer actorId, String biography, String doB, String name){
+		actorRepository.insertActor(actorId, biography, doB, name);
 	}
 	
 }

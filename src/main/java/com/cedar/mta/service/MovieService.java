@@ -1,5 +1,6 @@
 package com.cedar.mta.service;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,5 +54,12 @@ public class MovieService {
 	public List<Movie> searchMovie(String keyword){
 		return movieRepository.searchMovie(keyword);
 	}
-
+	
+	public void updateMovie(String movieName, double boxOffice, String rated, Date releaseDate, String runtime, String moviePoster, String plot, Integer movieId){
+		movieRepository.updateMovie(movieName, boxOffice, rated, releaseDate, runtime, moviePoster, plot, movieId);
+	}
+	
+	public void insertMovie(Integer movieId, String boxOffice, String movieName, String plot, String rated, String releaseDate, String runtime, String moviePoster){
+		movieRepository.insertMovie(movieId, boxOffice, movieName, plot, rated, releaseDate, runtime, moviePoster);
+	}
 }

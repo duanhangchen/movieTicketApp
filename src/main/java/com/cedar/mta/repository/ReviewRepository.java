@@ -47,6 +47,11 @@ public interface ReviewRepository extends JpaRepository<Review, Integer>{
 	
 	
 	
+//	@Transactional
+//	@Modifying
+//	@Query(value="delete from ratereviews where reviews_id= :reviewId", nativeQuery = true)
+//	void deleteReview2(@Param("reviewId") Integer reviewId);
+	
 	@Transactional
 	@Modifying
 	@Query(value="delete from ratereviews where reviews_id= :reviewId", nativeQuery = true)

@@ -1,5 +1,6 @@
 package com.cedar.mta.service;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,5 +31,9 @@ public class TheaterService {
 	
 	public List<Theater> findCityState(String key){
 		return theaterRepository.findCityState(key);
+	}
+	
+	public void insertTheater(Integer theaterId, String address, String city, String state, String theaterName, String zipcode){
+		theaterRepository.insertTheater(theaterId, address, city, state, theaterName, zipcode);
 	}
 }
